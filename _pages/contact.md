@@ -380,7 +380,7 @@ author_profile: true
       <p>Fill out the form below and I'll respond within 24 hours</p>
     </div>
 
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contactForm">
+    <form action="https://formspree.io/f/mpwlnraw" method="POST" id="contactForm">
       <div class="form-row">
         <div class="form-group">
           <label for="name">Full Name *</label>
@@ -403,16 +403,18 @@ author_profile: true
       </div>
       
       <!-- Hidden fields for better organization -->
-      <input type="hidden" name="_subject" value="New message from your website">
+      <input type="hidden" name="_subject" value="New message from Ali AlAsiri Portfolio">
       <input type="hidden" name="_replyto" value="">
       <input type="hidden" name="_next" value="{{ site.url }}/contact/?sent=true">
+      <input type="hidden" name="_captcha" value="false">
       
       <button type="submit" class="submit-btn">
         <span>Send Message</span>
       </button>
       
       <p class="form-note">
-        Your message will be sent directly to my inbox. I typically respond within 24 hours.
+        🔒 Your message will be sent securely to aliasiri.dev@gmail.com<br>
+        📧 I typically respond within 24 hours during business days
       </p>
     </form>
   </div>
@@ -428,7 +430,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contactForm');
     const successMessage = document.createElement('div');
     successMessage.className = 'message success';
-    successMessage.innerHTML = '✅ Message sent successfully! I\'ll get back to you soon.';
+    successMessage.innerHTML = '🎉 Message sent successfully! Thank you for reaching out.<br>📧 I\'ll get back to you within 24 hours!';
     form.parentNode.insertBefore(successMessage, form);
     
     // Clear the URL parameter
