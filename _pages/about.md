@@ -15,3 +15,4 @@ During my academic journey, I transitioned from a solid foundation in informatio
 My goal with this site is to document my learning journey and build a bridge to connect with innovative minds. Whether you are here to explore a project, read a post, or just out of curiosity, I'm glad you're here.
 
 just trying....
+<img src="/assets/images/homephoto.jpg" alt= "this photo for home page and this is just testing ">
