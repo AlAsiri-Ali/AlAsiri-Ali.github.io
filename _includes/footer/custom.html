@@ -5,7 +5,7 @@
 
 <!-- Theme toggle button styles -->
 <style>
-  /* زر التبديل - مع خاصية الاختفاء التلقائي */
+  /* Smart theme toggle button with auto-hide functionality */
   .theme-toggle-btn {
     position: fixed;
     bottom: 80px;
@@ -28,18 +28,23 @@
     transform: scale(1);
   }
   
-  /* حالة الاختفاء التلقائي */
+  /* Auto-hide state - highly transparent */
   .theme-toggle-btn.auto-hide {
-    opacity: 0.2;
-    transform: scale(0.8);
+    opacity: 0.05;
+    transform: scale(0.6);
+    pointer-events: auto; /* Still clickable */
   }
   
   .theme-toggle-btn:hover,
-  .theme-toggle-btn:focus,
+  .theme-toggle-btn:focus {
+    opacity: 1 !important;
+    transform: scale(1.15) !important;
+    background: #005a9e !important;
+  }
+  
   .theme-toggle-btn.show-temporary {
     opacity: 1 !important;
-    transform: scale(1.1) !important;
-    background: #005a9e !important;
+    transform: scale(1) !important;
   }
 
   body.theme-dark .theme-toggle-btn {
@@ -52,7 +57,7 @@
     background: #4db6ac !important;
   }
   
-  /* للشاشات الصغيرة */
+  /* Mobile screens */
   @media (max-width: 768px) {
     .theme-toggle-btn {
       bottom: 100px;
@@ -62,10 +67,16 @@
       font-size: 20px;
     }
     
-    /* على الجوال يختفي أكثر لتوفير المساحة */
+    /* Nearly invisible on mobile for space saving */
     .theme-toggle-btn.auto-hide {
-      opacity: 0.1;
-      transform: scale(0.7);
+      opacity: 0.03;
+      transform: scale(0.5);
+    }
+    
+    /* Show only on direct touch */
+    .theme-toggle-btn:active {
+      opacity: 1 !important;
+      transform: scale(1.2) !important;
     }
   }
   
@@ -79,7 +90,7 @@
     }
   }
   
-  /* للمس على الجوال - منطقة أكبر للمس */
+  /* Larger touch area for mobile */
   @media (max-width: 768px) {
     .theme-toggle-btn::before {
       content: '';
@@ -93,7 +104,7 @@
   }
 </style>
 
-<!-- Theme toggle button - موقع آمن -->
+<!-- Smart theme toggle button with auto-hide -->
 <button class="theme-toggle-btn" id="theme-toggle-btn" title="Toggle Theme">
   🌙
 </button>
@@ -101,6 +112,7 @@
 <script>
 let hideTimer;
 let isUserActive = false;
+let scrollTimer;
 
 function toggleTheme() {
   const body = document.body;
@@ -116,7 +128,7 @@ function toggleTheme() {
     localStorage.setItem('website-theme', 'dark');
   }
   
-  // إظهار الزر مؤقتاً بعد الضغط
+  // Show button temporarily after click
   showButtonTemporarily();
 }
 
@@ -124,30 +136,27 @@ function showButtonTemporarily() {
   const button = document.getElementById('theme-toggle-btn');
   if (!button) return;
   
-  // إلغاء أي timer سابق
+  // Clear any previous timer
   clearTimeout(hideTimer);
   
-  // إظهار الزر
+  // Show button
   button.classList.remove('auto-hide');
   button.classList.add('show-temporary');
   
-  // إخفاء الزر بعد 3 ثواني من عدم النشاط
+  // Hide button after 2 seconds only
   hideTimer = setTimeout(() => {
-    if (!isUserActive) {
-      button.classList.remove('show-temporary');
-      button.classList.add('auto-hide');
-    }
-  }, 3000);
+    button.classList.remove('show-temporary');
+    button.classList.add('auto-hide');
+  }, 2000);
 }
 
-function handleUserActivity() {
-  isUserActive = true;
-  showButtonTemporarily();
+function hideButtonForcefully() {
+  const button = document.getElementById('theme-toggle-btn');
+  if (!button) return;
   
-  // إعادة تعيين النشاط بعد فترة قصيرة
-  setTimeout(() => {
-    isUserActive = false;
-  }, 100);
+  clearTimeout(hideTimer);
+  button.classList.remove('show-temporary');
+  button.classList.add('auto-hide');
 }
 
 // Load saved theme
@@ -167,79 +176,109 @@ function updateButton() {
     button.innerHTML = savedTheme === 'dark' ? '☀️' : '🌙';
     button.addEventListener('click', toggleTheme);
     
-    // إضافة مستمعات للأحداث
-    button.addEventListener('mouseenter', handleUserActivity);
-    button.addEventListener('mouseleave', () => {
-      setTimeout(() => {
-        if (!isUserActive) {
-          button.classList.add('auto-hide');
-          button.classList.remove('show-temporary');
-        }
-      }, 1000);
+    // Show only on direct button hover
+    button.addEventListener('mouseenter', () => {
+      clearTimeout(hideTimer);
+      button.classList.remove('auto-hide');
+      button.classList.add('show-temporary');
     });
     
-    // للجوال - إظهار عند اللمس
-    button.addEventListener('touchstart', handleUserActivity);
+    button.addEventListener('mouseleave', () => {
+      hideButtonForcefully();
+    });
     
-    // بدء الاختفاء التلقائي بعد تحميل الصفحة
+    // Mobile - show on direct touch only
+    button.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      showButtonTemporarily();
+    });
+    
+    // Start auto-hide after page load
     setTimeout(() => {
       button.classList.add('auto-hide');
-    }, 2000);
+    }, 1500);
+    
+    // Force hide every 5 seconds
+    setInterval(() => {
+      if (!button.matches(':hover')) {
+        hideButtonForcefully();
+      }
+    }, 5000);
   }
 }
 
-// إظهار الزر عند حركة الماوس في المنطقة السفلية اليمنى
+// Show button only when approaching bottom-right corner
 function handleMouseMove(e) {
   const windowWidth = window.innerWidth;
   const windowHeight = window.innerHeight;
   
-  // منطقة الاستشعار - الربع السفلي الأيمن من الشاشة
+  // Very small area - only 100px from corner
   const isInTriggerZone = (
-    e.clientX > windowWidth * 0.75 && 
-    e.clientY > windowHeight * 0.75
+    e.clientX > windowWidth - 100 && 
+    e.clientY > windowHeight - 150
   );
   
   if (isInTriggerZone) {
-    handleUserActivity();
+    showButtonTemporarily();
   }
 }
 
-// إظهار الزر عند التمرير
+// Prevent showing on normal scrolling
 function handleScroll() {
-  handleUserActivity();
+  clearTimeout(scrollTimer);
+  
+  // Immediate hide on scroll
+  hideButtonForcefully();
+  
+  // Prevent showing for a period after scrolling
+  scrollTimer = setTimeout(() => {
+    // Do nothing - keep it hidden
+  }, 1000);
 }
 
-// تشغيل كل شيء
+// Initialize everything
 function initializeThemeToggle() {
   updateButton();
   
-  // مستمعات للماوس والتمرير
+  // Mouse listener - very small area only
   document.addEventListener('mousemove', handleMouseMove);
+  
+  // Hide on scroll
   document.addEventListener('scroll', handleScroll);
   
-  // للجوال - إظهار عند اللمس في أي مكان
+  // Mobile - very small touch area only
   document.addEventListener('touchstart', (e) => {
     const windowWidth = window.innerWidth;
     const windowHeight = window.innerHeight;
+    const touch = e.touches[0];
     
-    // إذا كان اللمس في النصف السفلي الأيمن
-    if (e.touches[0].clientX > windowWidth * 0.5 && 
-        e.touches[0].clientY > windowHeight * 0.5) {
-      handleUserActivity();
+    // Very small area - 80px from corner only
+    if (touch.clientX > windowWidth - 80 && 
+        touch.clientY > windowHeight - 120) {
+      showButtonTemporarily();
+    } else {
+      // Hide if touched anywhere else
+      hideButtonForcefully();
     }
   });
 }
 
-// تشغيل عند تحميل الصفحة
+// Run on page load
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initializeThemeToggle);
 } else {
   initializeThemeToggle();
 }
 
-// ضمان إضافي - تشغيل بعد تأخير
-setTimeout(initializeThemeToggle, 500);
-setTimeout(initializeThemeToggle, 1500);
+// Safety backup - run only once
+setTimeout(() => {
+  initializeThemeToggle();
+  
+  // Force hide after loading
+  setTimeout(() => {
+    hideButtonForcefully();
+  }, 2000);
+}, 500);
 </script>
 
 <!-- end custom footer snippets -->
