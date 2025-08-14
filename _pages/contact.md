@@ -254,11 +254,17 @@ author_profile: true
 }
 
 [data-theme="dark"] .contact-method h3 {
-  color: #e2e8f0;
+  background: linear-gradient(45deg, #90cdf4, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 [data-theme="dark"] .contact-method p {
-  color: #a0aec0;
+  background: linear-gradient(45deg, #cbd5e0, #90cdf4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 [data-theme="dark"] .contact-form {
@@ -267,15 +273,24 @@ author_profile: true
 }
 
 [data-theme="dark"] .form-header h2 {
-  color: #e2e8f0;
+  background: linear-gradient(45deg, #90cdf4, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 [data-theme="dark"] .form-header p {
-  color: #a0aec0;
+  background: linear-gradient(45deg, #cbd5e0, #90cdf4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 [data-theme="dark"] .form-group label {
-  color: #e2e8f0;
+  background: linear-gradient(45deg, #90cdf4, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 [data-theme="dark"] .form-group input,
@@ -291,11 +306,17 @@ author_profile: true
 }
 
 [data-theme="dark"] .contact-subtitle {
-  color: #a0aec0;
+  background: linear-gradient(45deg, #cbd5e0, #90cdf4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 [data-theme="dark"] .form-note {
-  color: #a0aec0;
+  background: linear-gradient(45deg, #cbd5e0, #90cdf4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Mobile responsiveness */

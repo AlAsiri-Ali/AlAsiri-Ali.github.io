@@ -233,7 +233,10 @@ author_profile: true
   gap: 15px;
   margin-bottom: 15px;
   font-size: 0.85em;
-  color: #666;
+  background: linear-gradient(45deg, #4a5568, #667eea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .post-category {
@@ -267,13 +270,19 @@ author_profile: true
 .post-title {
   font-size: 1.3em;
   font-weight: 600;
-  color: #333;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 10px;
   line-height: 1.4;
 }
 
 .post-excerpt {
-  color: #666;
+  background: linear-gradient(45deg, #4a5568, #667eea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   line-height: 1.6;
   margin-bottom: 20px;
   display: -webkit-box;
@@ -325,19 +334,31 @@ author_profile: true
 }
 
 [data-theme="dark"] .post-title {
-  color: #e2e8f0;
+  background: linear-gradient(45deg, #90cdf4, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 [data-theme="dark"] .post-excerpt {
-  color: #a0aec0;
+  background: linear-gradient(45deg, #cbd5e0, #90cdf4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 [data-theme="dark"] .post-meta {
-  color: #a0aec0;
+  background: linear-gradient(45deg, #cbd5e0, #90cdf4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 [data-theme="dark"] .blog-subtitle {
-  color: #a0aec0;
+  background: linear-gradient(45deg, #cbd5e0, #90cdf4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 [data-theme="dark"] .search-box {

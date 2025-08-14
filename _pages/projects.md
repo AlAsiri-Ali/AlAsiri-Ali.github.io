@@ -7,8 +7,15 @@ author_profile: true
 ---
 
 <style>
-.projects-container {
-  max-width: 1200px;
+.projects-container .project-title {
+  font-size: 1.5em;
+  font-weight: 600;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
+}ax-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -153,7 +160,10 @@ author_profile: true
 }
 
 .project-excerpt {
-  color: #666;
+  background: linear-gradient(45deg, #4a5568, #667eea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   line-height: 1.6;
   margin-bottom: 20px;
   display: -webkit-box;
@@ -234,15 +244,24 @@ author_profile: true
 }
 
 [data-theme="dark"] .project-title {
-  color: #e2e8f0;
+  background: linear-gradient(45deg, #90cdf4, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 [data-theme="dark"] .project-excerpt {
-  color: #a0aec0;
+  background: linear-gradient(45deg, #cbd5e0, #90cdf4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 [data-theme="dark"] .projects-subtitle {
-  color: #a0aec0;
+  background: linear-gradient(45deg, #cbd5e0, #90cdf4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Responsive */
