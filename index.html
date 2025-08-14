@@ -9,20 +9,24 @@ header:
 excerpt: "Master's student in AI, passionate about data and building real-world solutions. Welcome to my digital space."
 ---
 
-<div style="text-align: center; padding: 2rem 1rem;">
-  <h2 style="font-size: 2em;">A Little Bit About Me</h2>
-  <p style="font-size: 1.2em; max-width: 600px; margin: auto;">
-    I'm a passionate AI student dedicated to building impactful, data-driven solutions. This space is where I document my journey, share my projects, and connect with like-minded individuals.
-  </p>
-  <a href="/about/" style="display: inline-block; margin-top: 1rem; padding: 10px 20px; background-color: #007bff; color: white; border-radius: 5px; text-decoration: none;">Learn More About Me</a>
-</div>
-
-<hr>
-
-<div style="text-align: center; padding: 2rem 1rem;">
-  <h2 style="font-size: 2em;">From the Blog</h2>
-  <p style="font-size: 1.2em;">
-    Check out my latest articles and tutorials on AI and technology.
-  </p>
-  <a href="/blog/" style="display: inline-block; margin-top: 1rem; padding: 10px 20px; background-color: #28a745; color: white; border-radius: 5px; text-decoration: none;">Go to the Blog</a>
-</div>
+# ... (Your existing front matter, like layout: splash, etc.) ...
+feature_row:
+  - image_path: /assets/images/feature-projects.jpg 
+    title: "Projects"
+    excerpt: "Explore my hands-on projects in Machine Learning and Data Engineering."
+    url: "/projects/"
+    btn_label: "View Projects"
+    btn_class: "btn--inverse"
+  - image_path: /assets/images/feature-blog.jpg 
+    title: "Blog & Articles"
+    excerpt: "I share my thoughts, tutorials, and insights on the latest in AI."
+    url: "/blog/"
+    btn_label: "Read the Blog"
+    btn_class: "btn--inverse"
+  - image_path: /assets/images/feature-about.jpg 
+    title: "About Me"
+    excerpt: "Learn more about my background, skills, and academic journey."
+    url: "/about/"
+    btn_label: "Get to Know Me"
+    btn_class: "btn--inverse"
+---
