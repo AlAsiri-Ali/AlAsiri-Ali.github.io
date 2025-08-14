@@ -14,9 +14,6 @@
     {% include_cached masthead.html %}
 
     <div class="initial-content">
-      {% unless page.layout == "splash" %}
-        {% include breadcrumbs.html %}
-      {% endunless %}
       {{ content }}
       {% include after-content.html %}
     </div>
