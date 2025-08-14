@@ -28,10 +28,10 @@
     transform: scale(1);
   }
   
-  /* Auto-hide state - highly transparent */
+  /* Auto-hide state - more visible but not intrusive */
   .theme-toggle-btn.auto-hide {
-    opacity: 0.05;
-    transform: scale(0.6);
+    opacity: 0.3;
+    transform: scale(0.85);
     pointer-events: auto; /* Still clickable */
   }
   
@@ -62,18 +62,18 @@
     .theme-toggle-btn {
       bottom: 100px;
       right: 15px;
-      width: 50px;
-      height: 50px;
-      font-size: 20px;
+      width: 55px;
+      height: 55px;
+      font-size: 22px;
     }
     
-    /* Nearly invisible on mobile for space saving */
+    /* More visible on mobile but still subtle */
     .theme-toggle-btn.auto-hide {
-      opacity: 0.03;
-      transform: scale(0.5);
+      opacity: 0.4;
+      transform: scale(0.9);
     }
     
-    /* Show only on direct touch */
+    /* Show clearly on direct touch */
     .theme-toggle-btn:active {
       opacity: 1 !important;
       transform: scale(1.2) !important;
@@ -84,22 +84,23 @@
     .theme-toggle-btn {
       bottom: 90px;
       right: 10px;
-      width: 45px;
-      height: 45px;
-      font-size: 18px;
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
     }
   }
   
-  /* Larger touch area for mobile */
+  /* Much larger touch area for mobile */
   @media (max-width: 768px) {
     .theme-toggle-btn::before {
       content: '';
       position: absolute;
-      top: -10px;
-      left: -10px;
-      right: -10px;
-      bottom: -10px;
+      top: -15px;
+      left: -15px;
+      right: -15px;
+      bottom: -15px;
       z-index: -1;
+      border-radius: 50%;
     }
   }
 </style>
@@ -143,11 +144,11 @@ function showButtonTemporarily() {
   button.classList.remove('auto-hide');
   button.classList.add('show-temporary');
   
-  // Hide button after 2 seconds only
+  // Hide button after 5 seconds instead of 2
   hideTimer = setTimeout(() => {
     button.classList.remove('show-temporary');
     button.classList.add('auto-hide');
-  }, 2000);
+  }, 5000);
 }
 
 function hideButtonForcefully() {
@@ -184,7 +185,10 @@ function updateButton() {
     });
     
     button.addEventListener('mouseleave', () => {
-      hideButtonForcefully();
+      // Don't hide immediately, wait a bit
+      setTimeout(() => {
+        hideButtonForcefully();
+      }, 1000);
     });
     
     // Mobile - show on direct touch only
@@ -198,12 +202,12 @@ function updateButton() {
       button.classList.add('auto-hide');
     }, 1500);
     
-    // Force hide every 5 seconds
+    // Force hide every 10 seconds instead of 5
     setInterval(() => {
       if (!button.matches(':hover')) {
         hideButtonForcefully();
       }
-    }, 5000);
+    }, 10000);
   }
 }
 
@@ -212,10 +216,10 @@ function handleMouseMove(e) {
   const windowWidth = window.innerWidth;
   const windowHeight = window.innerHeight;
   
-  // Very small area - only 100px from corner
+  // Very small area - only 120px from corner
   const isInTriggerZone = (
-    e.clientX > windowWidth - 100 && 
-    e.clientY > windowHeight - 150
+    e.clientX > windowWidth - 120 && 
+    e.clientY > windowHeight - 180
   );
   
   if (isInTriggerZone) {
@@ -223,17 +227,14 @@ function handleMouseMove(e) {
   }
 }
 
-// Prevent showing on normal scrolling
+// Less aggressive scroll hiding
 function handleScroll() {
   clearTimeout(scrollTimer);
   
-  // Immediate hide on scroll
-  hideButtonForcefully();
-  
-  // Prevent showing for a period after scrolling
+  // Don't hide immediately on scroll, just delay showing
   scrollTimer = setTimeout(() => {
-    // Do nothing - keep it hidden
-  }, 1000);
+    // Allow showing again after scroll stops
+  }, 500);
 }
 
 // Initialize everything
@@ -246,19 +247,16 @@ function initializeThemeToggle() {
   // Hide on scroll
   document.addEventListener('scroll', handleScroll);
   
-  // Mobile - very small touch area only
+  // Mobile - larger touch area for easier access
   document.addEventListener('touchstart', (e) => {
     const windowWidth = window.innerWidth;
     const windowHeight = window.innerHeight;
     const touch = e.touches[0];
     
-    // Very small area - 80px from corner only
-    if (touch.clientX > windowWidth - 80 && 
-        touch.clientY > windowHeight - 120) {
+    // Larger area - 150px from corner for easier mobile use
+    if (touch.clientX > windowWidth - 150 && 
+        touch.clientY > windowHeight - 200) {
       showButtonTemporarily();
-    } else {
-      // Hide if touched anywhere else
-      hideButtonForcefully();
     }
   });
 }
