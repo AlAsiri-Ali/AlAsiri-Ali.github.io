@@ -13,3 +13,5 @@ During my academic journey, I transitioned from a solid foundation in informatio
 * **The Blog:** A space where I share my ideas, simplified technical tutorials, and my reflections on the latest developments in AI and its impact on our lives.
 
 My goal with this site is to document my learning journey and build a bridge to connect with innovative minds. Whether you are here to explore a project, read a post, or just out of curiosity, I'm glad you're here.
+
+just trying....
