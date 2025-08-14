@@ -32,4 +32,17 @@ html[data-theme="dark"] .page__content {
   cursor: pointer;
   font-size: 1.2em;
   padding: 0.5em;
+  transition: color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  color: #357edd;
+}
+
+/* تحسين شكل الزر في شريط التنقل */
+.greedy-nav .theme-toggle {
+  display: inline-block;
+  margin-left: 1rem;
+  padding: 0.5rem;
+  text-decoration: none;
 }
