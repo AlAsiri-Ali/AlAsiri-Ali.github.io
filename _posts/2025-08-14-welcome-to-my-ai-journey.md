@@ -8,6 +8,7 @@ tags:
   - introduction
   - machine learning
   - journey
+  - blogging
 header:
   teaser: /assets/images/homephoto.jpg
 excerpt: "The story behind this blog and what you can expect as I document my journey through the fascinating world of Artificial Intelligence."
