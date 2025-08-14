@@ -3,55 +3,72 @@
 <!-- Load dual theme CSS -->
 <link rel="stylesheet" href="{{ '/assets/css/dual-theme.css' | relative_url }}">
 
-<!-- Theme toggle button -->
+<!-- Simple theme toggle in footer -->
 <style>
-  .theme-toggle-btn {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: #007acc;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
-    cursor: pointer;
-    z-index: 1000;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-  }
-  
-  .theme-toggle-btn:hover {
-    background: #005a9e;
-    transform: scale(1.1);
-  }
+.footer-theme-toggle {
+  display: inline-block;
+  margin: 15px 0;
+  text-align: center;
+  width: 100%;
+}
 
-  body.theme-dark .theme-toggle-btn {
-    background: #00adb5;
-  }
+.footer-theme-btn {
+  background: #007acc;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
 
-  body.theme-dark .theme-toggle-btn:hover {
-    background: #4db6ac;
+.footer-theme-btn:hover {
+  background: #005a9e;
+  transform: scale(1.05);
+}
+
+body.theme-dark .footer-theme-btn {
+  background: #00adb5;
+}
+
+body.theme-dark .footer-theme-btn:hover {
+  background: #4db6ac;
+}
+
+@media (max-width: 768px) {
+  .footer-theme-btn {
+    padding: 12px 24px;
+    font-size: 18px;
+    gap: 10px;
   }
+}
 </style>
 
-<button class="theme-toggle-btn" id="theme-toggle-btn" title="Toggle Theme">
-  🌙
-</button>
+<div class="footer-theme-toggle">
+  <button class="footer-theme-btn" id="footer-theme-btn" title="Toggle Theme">
+    <span id="theme-icon">🌙</span>
+    <span>Toggle Theme</span>
+  </button>
+</div>
 
 <script>
 function toggleTheme() {
   const body = document.body;
-  const button = document.getElementById('theme-toggle-btn');
+  const icon = document.getElementById('theme-icon');
   
   if (body.classList.contains('theme-dark')) {
     body.classList.remove('theme-dark');
-    button.innerHTML = '🌙';
+    icon.innerHTML = '🌙';
     localStorage.setItem('website-theme', 'light');
   } else {
     body.classList.add('theme-dark');
-    button.innerHTML = '☀️';
+    icon.innerHTML = '☀️';
     localStorage.setItem('website-theme', 'dark');
   }
 }
@@ -65,20 +82,21 @@ function toggleTheme() {
 })();
 
 // Update button when ready
-function updateButton() {
+function updateThemeButton() {
   const savedTheme = localStorage.getItem('website-theme');
-  const button = document.getElementById('theme-toggle-btn');
+  const button = document.getElementById('footer-theme-btn');
+  const icon = document.getElementById('theme-icon');
   
-  if (button) {
-    button.innerHTML = savedTheme === 'dark' ? '☀️' : '🌙';
+  if (button && icon) {
+    icon.innerHTML = savedTheme === 'dark' ? '☀️' : '🌙';
     button.addEventListener('click', toggleTheme);
   }
 }
 
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', updateButton);
+  document.addEventListener('DOMContentLoaded', updateThemeButton);
 } else {
-  updateButton();
+  updateThemeButton();
 }
 </script>
 
