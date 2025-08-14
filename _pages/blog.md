@@ -251,6 +251,13 @@ author_profile: true
 .category-personal { background: #fff3e0; color: #f57c00; }
 .category-research { background: #fce4ec; color: #c2185b; }
 
+/* Dark theme - Enhanced contrast */
+[data-theme="dark"] .category-ai { background: #1976d2; color: #fff; }
+[data-theme="dark"] .category-data { background: #7b1fa2; color: #fff; }
+[data-theme="dark"] .category-code { background: #388e3c; color: #fff; }
+[data-theme="dark"] .category-personal { background: #f57c00; color: #fff; }
+[data-theme="dark"] .category-research { background: #c2185b; color: #fff; }
+
 .reading-time {
   display: flex;
   align-items: center;

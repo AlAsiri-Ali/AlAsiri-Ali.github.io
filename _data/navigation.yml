@@ -4,10 +4,6 @@ main:
     url: /
   - title: "About"
     url: /about/
-  - title: "Skills"
-    url: /skills/
-  - title: "Journey"
-    url: /journey/
   - title: "Projects"
     url: /projects/
   - title: "Blog"

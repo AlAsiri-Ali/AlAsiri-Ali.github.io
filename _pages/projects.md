@@ -186,6 +186,16 @@ author_profile: true
 .tag.javascript { background: #f7df1e; color: #333; }
 .tag.react { background: #61dafb; color: #333; }
 
+/* Dark theme - Enhanced contrast for better visibility */
+[data-theme="dark"] .tag.python { background: #4a9eff; color: #fff; }
+[data-theme="dark"] .tag.ml { background: #ff8a8a; color: #fff; }
+[data-theme="dark"] .tag.data { background: #6ee7de; color: #1a1a1a; }
+[data-theme="dark"] .tag.web { background: #66c7f4; color: #1a1a1a; }
+[data-theme="dark"] .tag.api { background: #b8e6d3; color: #1a1a1a; }
+[data-theme="dark"] .tag.cloud { background: #ffed4e; color: #1a1a1a; }
+[data-theme="dark"] .tag.javascript { background: #fff347; color: #1a1a1a; }
+[data-theme="dark"] .tag.react { background: #87e6fb; color: #1a1a1a; }
+
 .project-link {
   display: inline-flex;
   align-items: center;

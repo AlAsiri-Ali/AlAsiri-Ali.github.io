@@ -152,8 +152,12 @@ author_profile: true
   background: #2d3748;
 }
 
+[data-theme="dark"] .fact-number {
+  color: #81c9ff;
+}
+
 [data-theme="dark"] .fact-label {
-  color: #a0aec0;
+  color: #cbd5e0;
 }
 </style>
 
