@@ -4,6 +4,7 @@ excerpt: "نظام توصيات بسيط مبني بلغة بايثون يقوم
 header:
   image: /assets/images/homephoto.jpg
   teaser: /assets/images/homephoto.jpg
+tags: [python, ml, data]
 ---
 
 تفاصيل عن المشروع.

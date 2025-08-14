@@ -4,6 +4,7 @@ excerpt: "Interactive web dashboard for data visualization and analysis using Py
 header:
   image: /assets/images/homephoto.jpg
   teaser: /assets/images/homephoto.jpg
+tags: [python, web, data, api]
 gallery:
   - url: /assets/images/homephoto.jpg
     image_path: /assets/images/homephoto.jpg

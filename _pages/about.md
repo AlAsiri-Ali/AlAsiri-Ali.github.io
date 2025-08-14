@@ -253,4 +253,4 @@ Whether you're here to explore a project, read an article, or just out of curios
 
 ---
 
-*Currently working on my Master's thesis while building projects that matter. Always open to collaboration and new challenges.*
+*Currently pursuing my Executive Master's in AI while building practical projects that solve real-world problems. Always open to collaboration and new challenges.*
