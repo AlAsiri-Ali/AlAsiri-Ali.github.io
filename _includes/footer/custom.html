@@ -1,3 +1,79 @@
 <!-- start custom footer snippets -->
 
+<!-- Theme Toggle Button - Placed in footer to ensure it loads on all pages -->
+<style>
+  .theme-toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #007acc;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  }
+  
+  .theme-toggle-btn:hover {
+    background: #005a9e;
+    transform: scale(1.1);
+  }
+</style>
+
+<button class="theme-toggle-btn" onclick="toggleTheme()" title="Toggle Dark/Light Theme">
+  🌙
+</button>
+
+<script>
+function toggleTheme() {
+  const body = document.body;
+  const button = document.querySelector('.theme-toggle-btn');
+  
+  // Check current skin and toggle
+  if (body.classList.contains('skin--dirt')) {
+    // Switch to air (light) theme
+    body.className = body.className.replace(/skin--\w+/g, '');
+    body.classList.add('skin--air');
+    button.innerHTML = '🌙';
+    localStorage.setItem('theme', 'air');
+  } else {
+    // Switch to dirt (dark) theme
+    body.className = body.className.replace(/skin--\w+/g, '');
+    body.classList.add('skin--dirt');
+    button.innerHTML = '☀️';
+    localStorage.setItem('theme', 'dirt');
+  }
+}
+
+// Load saved theme immediately
+(function() {
+  const savedTheme = localStorage.getItem('theme') || 'air';
+  const body = document.body;
+  
+  // Apply saved theme immediately
+  body.className = body.className.replace(/skin--\w+/g, '');
+  body.classList.add('skin--' + savedTheme);
+})();
+
+// Update button when page is ready
+document.addEventListener('DOMContentLoaded', function() {
+  const savedTheme = localStorage.getItem('theme') || 'air';
+  const button = document.querySelector('.theme-toggle-btn');
+  
+  if (button) {
+    // Update button icon
+    if (savedTheme === 'dirt') {
+      button.innerHTML = '☀️';
+    } else {
+      button.innerHTML = '🌙';
+    }
+  }
+});
+</script>
+
 <!-- end custom footer snippets -->
