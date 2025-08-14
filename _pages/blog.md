@@ -411,46 +411,37 @@ author_profile: true
       </div>
     </article>
 
-    <!-- All Posts Grid (excluding featured) -->
-    {% assign remaining_posts = posts | offset: 1 %}
-    {% if remaining_posts.size > 0 %}
-      <div class="posts-grid" id="postsGrid">
-        {% for post in remaining_posts %}
-          <article class="post-card" data-category="{% if post.categories.first %}{{ post.categories.first | downcase }}{% else %}general{% endif %}" data-title="{{ post.title | downcase }}" data-content="{{ post.content | strip_html | downcase }}">
-            <div class="post-image">
-              {% if post.header.teaser %}
-                <img src="{{ post.header.teaser }}" alt="{{ post.title }}" />
-              {% else %}
-                <div class="post-placeholder">✍️</div>
+    <!-- All Posts Grid -->
+    <div class="posts-grid" id="postsGrid">
+      {% for post in posts %}
+        <article class="post-card" data-category="{% if post.categories.first %}{{ post.categories.first | downcase }}{% else %}general{% endif %}" data-title="{{ post.title | downcase }}" data-content="{{ post.content | strip_html | downcase }}">
+          <div class="post-image">
+            {% if post.header.teaser %}
+              <img src="{{ post.header.teaser }}" alt="{{ post.title }}" />
+            {% else %}
+              <div class="post-placeholder">✍️</div>
+            {% endif %}
+          </div>
+          <div class="post-content">
+            <div class="post-meta">
+              {% if post.categories.first %}
+                <span class="post-category category-{{ post.categories.first | downcase }}">{{ post.categories.first }}</span>
               {% endif %}
+              <span>📅 {{ post.date | date: "%b %d, %Y" }}</span>
+              <span class="reading-time">
+                <i class="fas fa-clock"></i>
+                {{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min
+              </span>
             </div>
-            <div class="post-content">
-              <div class="post-meta">
-                {% if post.categories.first %}
-                  <span class="post-category category-{{ post.categories.first | downcase }}">{{ post.categories.first }}</span>
-                {% endif %}
-                <span>📅 {{ post.date | date: "%b %d, %Y" }}</span>
-                <span class="reading-time">
-                  <i class="fas fa-clock"></i>
-                  {{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min
-                </span>
-              </div>
-              <h3 class="post-title">{{ post.title }}</h3>
-              <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
-              <a href="{{ post.url }}" class="post-link">
-                Read More <i class="fas fa-arrow-right"></i>
-              </a>
-            </div>
-          </article>
-        {% endfor %}
-      </div>
-    {% else %}
-      <div class="no-posts">
-        <i class="fas fa-edit"></i>
-        <h3>More Articles Coming Soon!</h3>
-        <p>I'm working on more amazing content. The journey has just begun!</p>
-      </div>
-    {% endif %}
+            <h3 class="post-title">{{ post.title }}</h3>
+            <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+            <a href="{{ post.url }}" class="post-link">
+              Read More <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
 
   {% else %}
     <div class="no-posts">
