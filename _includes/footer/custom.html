@@ -26,6 +26,12 @@
     justify-content: center;
     opacity: 1;
     transform: scale(1);
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
   }
   
   /* Auto-hide state - more visible but not intrusive */
@@ -90,17 +96,25 @@
     }
   }
   
-  /* Much larger touch area for mobile */
+  /* Much larger and more accessible touch area for mobile */
   @media (max-width: 768px) {
     .theme-toggle-btn::before {
       content: '';
       position: absolute;
-      top: -15px;
-      left: -15px;
-      right: -15px;
-      bottom: -15px;
+      top: -20px;
+      left: -20px;
+      right: -20px;
+      bottom: -20px;
       z-index: -1;
       border-radius: 50%;
+    }
+    
+    /* Make sure button is always touchable */
+    .theme-toggle-btn {
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+      user-select: none;
+      -webkit-user-select: none;
     }
   }
 </style>
@@ -118,6 +132,9 @@ let scrollTimer;
 function toggleTheme() {
   const body = document.body;
   const button = document.getElementById('theme-toggle-btn');
+  
+  // Debug log for mobile
+  console.log('Theme toggle activated');
   
   if (body.classList.contains('theme-dark')) {
     body.classList.remove('theme-dark');
@@ -175,9 +192,16 @@ function updateButton() {
   
   if (button) {
     button.innerHTML = savedTheme === 'dark' ? '☀️' : '🌙';
-    button.addEventListener('click', toggleTheme);
     
-    // Show only on direct button hover
+    // Primary click handler for all devices
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      console.log('Button clicked');
+      toggleTheme();
+    });
+    
+    // Show only on direct button hover (desktop)
     button.addEventListener('mouseenter', () => {
       clearTimeout(hideTimer);
       button.classList.remove('auto-hide');
@@ -191,10 +215,20 @@ function updateButton() {
       }, 1000);
     });
     
-    // Mobile - show on direct touch only
+    // Mobile touch events
     button.addEventListener('touchstart', (e) => {
       e.preventDefault();
+      e.stopPropagation();
+      console.log('Button touched');
       showButtonTemporarily();
+    });
+    
+    // Handle tap/touch end
+    button.addEventListener('touchend', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      console.log('Touch ended, calling toggle');
+      toggleTheme();
     });
     
     // Start auto-hide after page load
@@ -252,13 +286,31 @@ function initializeThemeToggle() {
     const windowWidth = window.innerWidth;
     const windowHeight = window.innerHeight;
     const touch = e.touches[0];
+    const button = document.getElementById('theme-toggle-btn');
+    
+    // Check if touch is on the button directly
+    if (button) {
+      const rect = button.getBoundingClientRect();
+      const touchX = touch.clientX;
+      const touchY = touch.clientY;
+      
+      // Extended touch area around the button
+      const extended = 30;
+      if (touchX >= rect.left - extended && 
+          touchX <= rect.right + extended && 
+          touchY >= rect.top - extended && 
+          touchY <= rect.bottom + extended) {
+        showButtonTemporarily();
+        return;
+      }
+    }
     
     // Larger area - 150px from corner for easier mobile use
     if (touch.clientX > windowWidth - 150 && 
         touch.clientY > windowHeight - 200) {
       showButtonTemporarily();
     }
-  });
+  }, { passive: false });
 }
 
 // Run on page load
