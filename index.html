@@ -4,68 +4,614 @@ header:
   overlay_image: /assets/images/homephoto.jpg
   overlay_filter: 0.5
   actions:
-    - label: "<i class='fas fa-briefcase'></i> Explore My Projects"
+    - label: "<i class='fas fa-code'></i> Explore Tech Hub"
       url: "/projects/"
-excerpt: "Master's student in AI, passionate about data and building real-world solutions. Welcome to my digital space."
+    - label: "<i class='fas fa-book-open'></i> Read Articles"
+      url: "/blog/"
+excerpt: ""
 ---
 
 <style>
-  .feature-card-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    background-color: #f9f9f9;
-    border-radius: 7px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Hero Section with Typing Animation */
+.hero-content {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  border-radius: 15px;
+  margin: 40px auto;
+  max-width: 1000px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.typing-text {
+  font-size: 2.5em;
+  font-weight: 700;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 20px;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background: #667eea;
+  animation: blink 1s infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.hero-subtitle {
+  font-size: 1.2em;
+  background: linear-gradient(45deg, #4a5568, #667eea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out 2s forwards;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Stats Counter */
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin: 40px auto;
+  max-width: 800px;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out 3s forwards;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.stat-number {
+  font-size: 2.5em;
+  font-weight: 700;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.stat-label {
+  font-size: 0.9em;
+  background: linear-gradient(45deg, #4a5568, #667eea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 500;
+}
+
+/* Tech Stack Section */
+.tech-stack {
+  background: #f8f9fa;
+  padding: 60px 20px;
+  margin: 60px 0;
+  border-radius: 15px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tech-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.tech-header h2 {
+  font-size: 2.2em;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 15px;
+}
+
+.tech-subtitle {
+  background: linear-gradient(45deg, #4a5568, #667eea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 1.1em;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.tech-item {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.tech-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+  border-color: #667eea;
+}
+
+.tech-icon {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tech-name {
+  font-size: 1.3em;
+  font-weight: 600;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
+}
+
+.tech-progress {
+  background: #e9ecef;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.tech-progress-bar {
+  height: 100%;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border-radius: 4px;
+  width: 0;
+  transition: width 2s ease-out;
+}
+
+.tech-description {
+  background: linear-gradient(45deg, #4a5568, #667eea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 0.9em;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.tech-item:hover .tech-description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Latest Insights Section */
+.insights-section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 60px auto;
+}
+
+.insights-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.insights-header h2 {
+  font-size: 2.2em;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 15px;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.insight-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.insight-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  border-color: #667eea;
+  text-decoration: none;
+  color: inherit;
+}
+
+.insight-icon {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.insight-title {
+  font-size: 1.4em;
+  font-weight: 600;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 15px;
+}
+
+.insight-description {
+  background: linear-gradient(45deg, #4a5568, #667eea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.insight-link {
+  display: inline-flex;
+  align-items: center;
+  color: #667eea;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.insight-link:hover {
+  color: #764ba2;
+  text-decoration: none;
+}
+
+.insight-link i {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.insight-link:hover i {
+  transform: translateX(5px);
+}
+
+/* Feature Cards (Original) */
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 60px auto 0;
+}
+
+.feature-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.feature-card-link:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  border-color: #667eea;
+  text-decoration: none;
+  color: inherit;
+}
+
+.feature-card-link .card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.feature-card-link:hover .card-image {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 25px;
+  text-align: center;
+}
+
+.card-content h2 {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.card-content p {
+  background: linear-gradient(45deg, #4a5568, #667eea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Dark theme support */
+[data-theme="dark"] .hero-content {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+}
+
+[data-theme="dark"] .tech-stack {
+  background: #2d3748;
+}
+
+[data-theme="dark"] .tech-item {
+  background: #4a5568;
+  border-color: #718096;
+}
+
+[data-theme="dark"] .tech-item:hover {
+  border-color: #90cdf4;
+}
+
+[data-theme="dark"] .insight-card {
+  background: #2d3748;
+  border-color: #4a5568;
+}
+
+[data-theme="dark"] .insight-card:hover {
+  border-color: #90cdf4;
+}
+
+[data-theme="dark"] .feature-card-link {
+  background-color: #2d3748;
+  border-color: #4a5568;
+}
+
+[data-theme="dark"] .feature-card-link:hover {
+  border-color: #90cdf4;
+}
+
+[data-theme="dark"] .stat-item {
+  background: rgba(45, 55, 72, 0.5);
+  border-color: rgba(144, 205, 244, 0.2);
+}
+
+[data-theme="dark"] .stat-item:hover {
+  background: rgba(144, 205, 244, 0.1);
+}
+
+/* Dark theme gradients */
+[data-theme="dark"] .typing-text,
+[data-theme="dark"] .tech-header h2,
+[data-theme="dark"] .insights-header h2,
+[data-theme="dark"] .tech-name,
+[data-theme="dark"] .insight-title,
+[data-theme="dark"] .card-content h2 {
+  background: linear-gradient(45deg, #90cdf4, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="dark"] .hero-subtitle,
+[data-theme="dark"] .tech-subtitle,
+[data-theme="dark"] .tech-description,
+[data-theme="dark"] .insight-description,
+[data-theme="dark"] .card-content p {
+  background: linear-gradient(45deg, #cbd5e0, #90cdf4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .typing-text {
+    font-size: 1.8em;
   }
-  .feature-card-link:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+  
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
-  .feature-card-link .card-image {
-    width: 100%;
-    transition: transform 0.3s ease;
+  
+  .tech-grid,
+  .insights-grid,
+  .feature-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
-  .feature-card-link:hover .card-image {
-    transform: scale(1.05);
+  
+  .hero-content,
+  .tech-stack,
+  .insights-section {
+    padding: 40px 15px;
   }
-  .card-content {
-    padding: 1.5rem;
-  }
-  .card-content h2 {
-    background: linear-gradient(45deg, #667eea, #764ba2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-  .card-content p {
-    background: linear-gradient(45deg, #4a5568, #667eea);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin: 0;
-  }
-  /* Dark theme support */
-  [data-theme="dark"] .feature-card-link {
-    background-color: #2d3748;
-  }
-  [data-theme="dark"] .card-content h2 {
-    background: linear-gradient(45deg, #90cdf4, #a78bfa);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-  [data-theme="dark"] .card-content p {
-    background: linear-gradient(45deg, #cbd5e0, #90cdf4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
+}
 </style>
+
+<!-- Hero Section with Dynamic Content -->
+<div class="hero-content">
+  <h1 class="typing-text" id="typingText"></h1>
+  <p class="hero-subtitle">Dive into the world of AI, data science, and cutting-edge technology</p>
+  
+  <!-- Live Stats -->
+  <div class="stats-container">
+    <div class="stat-item">
+      <span class="stat-number" data-target="150">0</span>
+      <span class="stat-label">Tech Articles</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="25">0</span>
+      <span class="stat-label">Projects</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="1000">0</span>
+      <span class="stat-label">Community Members</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="50">0</span>
+      <span class="stat-label">Tech Resources</span>
+    </div>
+  </div>
+</div>
+
+<!-- Interactive Tech Stack -->
+<section class="tech-stack">
+  <div class="tech-header">
+    <h2><i class="fas fa-rocket"></i> Current Tech Focus</h2>
+    <p class="tech-subtitle">Technologies shaping the future of development</p>
+  </div>
+  
+  <div class="tech-grid">
+    <div class="tech-item" data-skill="90">
+      <div class="tech-icon"><i class="fab fa-python"></i></div>
+      <h3 class="tech-name">Python & AI</h3>
+      <div class="tech-progress">
+        <div class="tech-progress-bar"></div>
+      </div>
+      <p class="tech-description">Machine learning, data analysis, and AI model development</p>
+    </div>
+    
+    <div class="tech-item" data-skill="85">
+      <div class="tech-icon"><i class="fas fa-database"></i></div>
+      <h3 class="tech-name">Data Science</h3>
+      <div class="tech-progress">
+        <div class="tech-progress-bar"></div>
+      </div>
+      <p class="tech-description">Advanced analytics, visualization, and statistical modeling</p>
+    </div>
+    
+    <div class="tech-item" data-skill="80">
+      <div class="tech-icon"><i class="fas fa-brain"></i></div>
+      <h3 class="tech-name">Deep Learning</h3>
+      <div class="tech-progress">
+        <div class="tech-progress-bar"></div>
+      </div>
+      <p class="tech-description">Neural networks, computer vision, and NLP technologies</p>
+    </div>
+    
+    <div class="tech-item" data-skill="75">
+      <div class="tech-icon"><i class="fab fa-js-square"></i></div>
+      <h3 class="tech-name">Web Technologies</h3>
+      <div class="tech-progress">
+        <div class="tech-progress-bar"></div>
+      </div>
+      <p class="tech-description">Modern web development and interactive applications</p>
+    </div>
+    
+    <div class="tech-item" data-skill="88">
+      <div class="tech-icon"><i class="fas fa-chart-line"></i></div>
+      <h3 class="tech-name">Analytics</h3>
+      <div class="tech-progress">
+        <div class="tech-progress-bar"></div>
+      </div>
+      <p class="tech-description">Business intelligence and predictive analytics</p>
+    </div>
+    
+    <div class="tech-item" data-skill="82">
+      <div class="tech-icon"><i class="fas fa-cloud"></i></div>
+      <h3 class="tech-name">Cloud Computing</h3>
+      <div class="tech-progress">
+        <div class="tech-progress-bar"></div>
+      </div>
+      <p class="tech-description">AWS, Azure, and scalable cloud solutions</p>
+    </div>
+  </div>
+</section>
+
+<!-- Latest Tech Insights -->
+<section class="insights-section">
+  <div class="insights-header">
+    <h2><i class="fas fa-lightbulb"></i> Latest Tech Insights</h2>
+    <p class="tech-subtitle">Trending topics and breakthrough discoveries</p>
+  </div>
+  
+  <div class="insights-grid">
+    <a href="/blog/" class="insight-card">
+      <div class="insight-icon"><i class="fas fa-robot"></i></div>
+      <h3 class="insight-title">AI Revolution 2025</h3>
+      <p class="insight-description">Exploring the latest breakthroughs in artificial intelligence and their impact on various industries.</p>
+      <span class="insight-link">Read More <i class="fas fa-arrow-right"></i></span>
+    </a>
+    
+    <a href="/projects/" class="insight-card">
+      <div class="insight-icon"><i class="fas fa-code-branch"></i></div>
+      <h3 class="insight-title">Open Source Projects</h3>
+      <p class="insight-description">Contributing to the developer community with innovative tools and libraries.</p>
+      <span class="insight-link">Explore Projects <i class="fas fa-arrow-right"></i></span>
+    </a>
+    
+    <a href="/skills/" class="insight-card">
+      <div class="insight-icon"><i class="fas fa-graduation-cap"></i></div>
+      <h3 class="insight-title">Learning Resources</h3>
+      <p class="insight-description">Curated collection of tutorials, courses, and guides for tech enthusiasts.</p>
+      <span class="insight-link">Start Learning <i class="fas fa-arrow-right"></i></span>
+    </a>
+  </div>
+</section>
+
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 2rem 1rem; max-width: 1200px; margin: auto;">
   
   <a href="/about/" class="feature-card-link">
@@ -93,3 +639,126 @@ excerpt: "Master's student in AI, passionate about data and building real-world 
   </a>
 
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Typing Animation
+  const typingTexts = [
+    "Welcome to Tech Hub 🚀",
+    "Explore AI & Data Science 🤖", 
+    "Build the Future Together 💡",
+    "Join Our Tech Community 🌟"
+  ];
+  
+  let textIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  const typingElement = document.getElementById('typingText');
+  
+  function typeText() {
+    const currentText = typingTexts[textIndex];
+    
+    if (isDeleting) {
+      typingElement.innerHTML = currentText.substring(0, charIndex - 1) + '<span class="cursor"></span>';
+      charIndex--;
+    } else {
+      typingElement.innerHTML = currentText.substring(0, charIndex + 1) + '<span class="cursor"></span>';
+      charIndex++;
+    }
+    
+    let typeSpeed = isDeleting ? 50 : 100;
+    
+    if (!isDeleting && charIndex === currentText.length) {
+      typeSpeed = 2000;
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      textIndex = (textIndex + 1) % typingTexts.length;
+      typeSpeed = 500;
+    }
+    
+    setTimeout(typeText, typeSpeed);
+  }
+  
+  // Start typing animation
+  typeText();
+  
+  // Animated Counters
+  const counters = document.querySelectorAll('.stat-number');
+  const animateCounters = () => {
+    counters.forEach(counter => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+      const increment = target / 200;
+      
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(() => animateCounters(), 20);
+      } else {
+        counter.innerText = target;
+      }
+    });
+  };
+  
+  // Intersection Observer for counters
+  const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounters();
+        statsObserver.unobserve(entry.target);
+      }
+    });
+  });
+  
+  const statsContainer = document.querySelector('.stats-container');
+  if (statsContainer) {
+    statsObserver.observe(statsContainer);
+  }
+  
+  // Tech Stack Progress Bars
+  const techObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const techItems = entry.target.querySelectorAll('.tech-item');
+        techItems.forEach((item, index) => {
+          setTimeout(() => {
+            const skill = item.getAttribute('data-skill');
+            const progressBar = item.querySelector('.tech-progress-bar');
+            progressBar.style.width = skill + '%';
+          }, index * 200);
+        });
+        techObserver.unobserve(entry.target);
+      }
+    });
+  });
+  
+  const techStack = document.querySelector('.tech-stack');
+  if (techStack) {
+    techObserver.observe(techStack);
+  }
+  
+  // Parallax Effect for Hero
+  window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const rate = scrolled * -0.5;
+    const heroContent = document.querySelector('.hero-content');
+    if (heroContent) {
+      heroContent.style.transform = `translateY(${rate}px)`;
+    }
+  });
+  
+  // Dynamic Tech Stack Updates
+  const techItems = document.querySelectorAll('.tech-item');
+  techItems.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      const progressBar = item.querySelector('.tech-progress-bar');
+      progressBar.style.background = 'linear-gradient(45deg, #ff6b6b, #4ecdc4)';
+    });
+    
+    item.addEventListener('mouseleave', () => {
+      const progressBar = item.querySelector('.tech-progress-bar');
+      progressBar.style.background = 'linear-gradient(45deg, #667eea, #764ba2)';
+    });
+  });
+});
+</script>
