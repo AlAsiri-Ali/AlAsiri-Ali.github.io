@@ -1,0 +1,128 @@
+/* Additional safety styles for theme toggle */
+
+/* Ensure navigation bar flexibility */
+.masthead__menu {
+  width: 100%;
+}
+
+.greedy-nav {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: nowrap !important;
+  width: 100% !important;
+}
+
+/* Prevent logo and title from taking too much space */
+.site-logo {
+  flex-shrink: 0;
+  margin-right: 0.5em;
+}
+
+.site-title {
+  flex-shrink: 1;
+  margin-right: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px;
+}
+
+/* Theme button positioning */
+.theme-toggle-nav-btn {
+  flex-shrink: 0 !important;
+  margin-left: 1em !important;
+  margin-right: 0 !important;
+  order: 0 !important;
+}
+
+/* Navigation links positioning */
+.visible-links {
+  flex-shrink: 0 !important;
+  margin-left: auto !important;
+  order: 1 !important;
+}
+
+/* Search and menu buttons */
+.search__toggle,
+.greedy-nav__toggle {
+  flex-shrink: 0;
+  margin-left: 0.5em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .site-title {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-title {
+    max-width: 200px;
+  }
+  
+  /* Ensure mobile toggle doesn't interfere with mobile menu */
+  .mobile-theme-toggle {
+    z-index: 1001 !important;
+  }
+  
+  .greedy-nav__toggle {
+    z-index: 1000;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-title {
+    max-width: 150px;
+  }
+  
+  .mobile-theme-toggle {
+    top: 5px;
+    left: 5px;
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+}
+
+/* Accessibility improvements */
+.theme-toggle-nav-btn:focus,
+.mobile-theme-toggle:focus {
+  outline: 2px solid #007acc;
+  outline-offset: 2px;
+}
+
+body.theme-dark .theme-toggle-nav-btn:focus,
+body.theme-dark .mobile-theme-toggle:focus {
+  outline-color: #00adb5;
+}
+
+/* Print styles - hide theme toggle when printing */
+@media print {
+  .theme-toggle-nav-btn,
+  .mobile-theme-toggle {
+    display: none !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .theme-toggle-nav-btn,
+  .mobile-theme-toggle {
+    border: 1px solid currentColor;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle-nav-btn,
+  .mobile-theme-toggle {
+    transition: none;
+  }
+  
+  .theme-toggle-nav-btn:hover,
+  .mobile-theme-toggle:hover {
+    transform: none;
+  }
+}

@@ -10,22 +10,30 @@
     color: white;
     border: none;
     border-radius: 20px;
-    padding: 8px 12px;
-    font-size: 16px;
+    padding: 6px 10px;
+    font-size: 14px;
     cursor: pointer;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 20px;
+    margin-right: auto;
     transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 40px;
-    height: 32px;
+    min-width: 36px;
+    height: 28px;
+    flex-shrink: 0; /* منع انكماش الزر */
+    order: 1; /* ترتيب العنصر */
+    vertical-align: middle;
   }
   
   .theme-toggle-nav-btn:hover {
     background: #005a9e;
     transform: scale(1.05);
+  }
+
+  .theme-toggle-nav-btn:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
   }
 
   body.theme-dark .theme-toggle-nav-btn {
@@ -36,26 +44,101 @@
     background: #4db6ac;
   }
   
-  /* Responsive - hide on small screens to save space */
+  /* التأكد من عدم التداخل مع العناصر الأخرى */
+  .greedy-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  
+  .site-title {
+    margin-right: 0;
+  }
+  
+  .visible-links {
+    order: 2;
+    margin-left: auto;
+  }
+  
+  /* للشاشات المتوسطة */
+  @media (max-width: 1024px) {
+    .theme-toggle-nav-btn {
+      font-size: 13px;
+      min-width: 32px;
+      height: 26px;
+      padding: 4px 8px;
+      margin-left: 15px;
+    }
+  }
+  
+  /* للشاشات الصغيرة - نخفي الزر لتوفير المساحة */
   @media (max-width: 768px) {
     .theme-toggle-nav-btn {
       display: none;
     }
+    
+    /* إضافة الزر كعنصر منفصل في الشاشات الصغيرة */
+    .mobile-theme-toggle {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      background: #007acc;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 16px;
+      cursor: pointer;
+      z-index: 1000;
+      transition: all 0.3s ease;
+      display: block;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    
+    .mobile-theme-toggle:hover {
+      background: #005a9e;
+      transform: scale(1.1);
+    }
+    
+    body.theme-dark .mobile-theme-toggle {
+      background: #00adb5;
+    }
+    
+    body.theme-dark .mobile-theme-toggle:hover {
+      background: #4db6ac;
+    }
+  }
+  
+  /* للشاشات الكبيرة جداً - نتأكد من عدم التمدد */
+  @media (min-width: 1200px) {
+    .greedy-nav {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
   }
 </style>
+
+<!-- Mobile theme toggle button -->
+<button class="mobile-theme-toggle" id="mobile-theme-toggle" title="Toggle Theme" style="display: none;">
+  🌙
+</button>
 
 <script>
 function toggleTheme() {
   const body = document.body;
-  const button = document.getElementById('theme-toggle-nav-btn');
+  const navButton = document.getElementById('theme-toggle-nav-btn');
+  const mobileButton = document.getElementById('mobile-theme-toggle');
   
   if (body.classList.contains('theme-dark')) {
     body.classList.remove('theme-dark');
-    button.innerHTML = '🌙';
+    if (navButton) navButton.innerHTML = '🌙';
+    if (mobileButton) mobileButton.innerHTML = '🌙';
     localStorage.setItem('website-theme', 'light');
   } else {
     body.classList.add('theme-dark');
-    button.innerHTML = '☀️';
+    if (navButton) navButton.innerHTML = '☀️';
+    if (mobileButton) mobileButton.innerHTML = '☀️';
     localStorage.setItem('website-theme', 'dark');
   }
 }
@@ -68,22 +151,51 @@ function toggleTheme() {
   }
 })();
 
-// Update button when ready
-function updateButton() {
+// Update buttons when ready
+function updateButtons() {
   const savedTheme = localStorage.getItem('website-theme');
-  const button = document.getElementById('theme-toggle-nav-btn');
+  const navButton = document.getElementById('theme-toggle-nav-btn');
+  const mobileButton = document.getElementById('mobile-theme-toggle');
   
-  if (button) {
-    button.innerHTML = savedTheme === 'dark' ? '☀️' : '🌙';
-    button.addEventListener('click', toggleTheme);
+  // Update navigation button
+  if (navButton) {
+    navButton.innerHTML = savedTheme === 'dark' ? '☀️' : '🌙';
+    navButton.addEventListener('click', toggleTheme);
   }
+  
+  // Update mobile button
+  if (mobileButton) {
+    mobileButton.innerHTML = savedTheme === 'dark' ? '☀️' : '🌙';
+    mobileButton.addEventListener('click', toggleTheme);
+  }
+  
+  // Show/hide mobile button based on screen size
+  function handleResize() {
+    if (mobileButton) {
+      if (window.innerWidth <= 768) {
+        mobileButton.style.display = 'block';
+      } else {
+        mobileButton.style.display = 'none';
+      }
+    }
+  }
+  
+  // Initial check
+  handleResize();
+  
+  // Listen for resize events
+  window.addEventListener('resize', handleResize);
 }
 
+// Initialize when DOM is ready
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', updateButton);
+  document.addEventListener('DOMContentLoaded', updateButtons);
 } else {
-  updateButton();
+  updateButtons();
 }
+
+// Additional safety check - run again after a short delay
+setTimeout(updateButtons, 500);
 </script>
 
 <!-- end custom footer snippets -->
