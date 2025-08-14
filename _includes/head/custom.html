@@ -3,6 +3,21 @@
 <!-- Theme toggle safety styles -->
 <link rel="stylesheet" href="{{ '/assets/css/theme-toggle-safety.css' | relative_url }}">
 
+<!-- Ensure theme toggle appears on all pages -->
+<style>
+  /* ضمان ظهور زر التبديل في جميع الصفحات */
+  body::after {
+    content: '';
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: 150px;
+    pointer-events: none;
+    z-index: 9998;
+  }
+</style>
+
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 
 <!-- end custom head snippets -->

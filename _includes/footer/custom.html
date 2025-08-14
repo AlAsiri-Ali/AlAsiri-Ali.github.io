@@ -5,7 +5,7 @@
 
 <!-- Theme toggle button styles -->
 <style>
-  /* زر التبديل - موقع آمن تماماً */
+  /* زر التبديل - مع خاصية الاختفاء التلقائي */
   .theme-toggle-btn {
     position: fixed;
     bottom: 80px;
@@ -18,25 +18,38 @@
     height: 55px;
     font-size: 22px;
     cursor: pointer;
-    z-index: 999;
-    transition: all 0.3s ease;
+    z-index: 9999 !important;
+    transition: all 0.5s ease;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
+    opacity: 1;
+    transform: scale(1);
   }
   
-  .theme-toggle-btn:hover {
-    background: #005a9e;
-    transform: scale(1.1);
+  /* حالة الاختفاء التلقائي */
+  .theme-toggle-btn.auto-hide {
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+  
+  .theme-toggle-btn:hover,
+  .theme-toggle-btn:focus,
+  .theme-toggle-btn.show-temporary {
+    opacity: 1 !important;
+    transform: scale(1.1) !important;
+    background: #005a9e !important;
   }
 
   body.theme-dark .theme-toggle-btn {
     background: #00adb5;
   }
 
-  body.theme-dark .theme-toggle-btn:hover {
-    background: #4db6ac;
+  body.theme-dark .theme-toggle-btn:hover,
+  body.theme-dark .theme-toggle-btn:focus,
+  body.theme-dark .theme-toggle-btn.show-temporary {
+    background: #4db6ac !important;
   }
   
   /* للشاشات الصغيرة */
@@ -47,6 +60,12 @@
       width: 50px;
       height: 50px;
       font-size: 20px;
+    }
+    
+    /* على الجوال يختفي أكثر لتوفير المساحة */
+    .theme-toggle-btn.auto-hide {
+      opacity: 0.1;
+      transform: scale(0.7);
     }
   }
   
@@ -59,6 +78,19 @@
       font-size: 18px;
     }
   }
+  
+  /* للمس على الجوال - منطقة أكبر للمس */
+  @media (max-width: 768px) {
+    .theme-toggle-btn::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      z-index: -1;
+    }
+  }
 </style>
 
 <!-- Theme toggle button - موقع آمن -->
@@ -67,6 +99,9 @@
 </button>
 
 <script>
+let hideTimer;
+let isUserActive = false;
+
 function toggleTheme() {
   const body = document.body;
   const button = document.getElementById('theme-toggle-btn');
@@ -80,6 +115,39 @@ function toggleTheme() {
     button.innerHTML = '☀️';
     localStorage.setItem('website-theme', 'dark');
   }
+  
+  // إظهار الزر مؤقتاً بعد الضغط
+  showButtonTemporarily();
+}
+
+function showButtonTemporarily() {
+  const button = document.getElementById('theme-toggle-btn');
+  if (!button) return;
+  
+  // إلغاء أي timer سابق
+  clearTimeout(hideTimer);
+  
+  // إظهار الزر
+  button.classList.remove('auto-hide');
+  button.classList.add('show-temporary');
+  
+  // إخفاء الزر بعد 3 ثواني من عدم النشاط
+  hideTimer = setTimeout(() => {
+    if (!isUserActive) {
+      button.classList.remove('show-temporary');
+      button.classList.add('auto-hide');
+    }
+  }, 3000);
+}
+
+function handleUserActivity() {
+  isUserActive = true;
+  showButtonTemporarily();
+  
+  // إعادة تعيين النشاط بعد فترة قصيرة
+  setTimeout(() => {
+    isUserActive = false;
+  }, 100);
 }
 
 // Load saved theme
@@ -98,14 +166,80 @@ function updateButton() {
   if (button) {
     button.innerHTML = savedTheme === 'dark' ? '☀️' : '🌙';
     button.addEventListener('click', toggleTheme);
+    
+    // إضافة مستمعات للأحداث
+    button.addEventListener('mouseenter', handleUserActivity);
+    button.addEventListener('mouseleave', () => {
+      setTimeout(() => {
+        if (!isUserActive) {
+          button.classList.add('auto-hide');
+          button.classList.remove('show-temporary');
+        }
+      }, 1000);
+    });
+    
+    // للجوال - إظهار عند اللمس
+    button.addEventListener('touchstart', handleUserActivity);
+    
+    // بدء الاختفاء التلقائي بعد تحميل الصفحة
+    setTimeout(() => {
+      button.classList.add('auto-hide');
+    }, 2000);
   }
 }
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', updateButton);
-} else {
-  updateButton();
+// إظهار الزر عند حركة الماوس في المنطقة السفلية اليمنى
+function handleMouseMove(e) {
+  const windowWidth = window.innerWidth;
+  const windowHeight = window.innerHeight;
+  
+  // منطقة الاستشعار - الربع السفلي الأيمن من الشاشة
+  const isInTriggerZone = (
+    e.clientX > windowWidth * 0.75 && 
+    e.clientY > windowHeight * 0.75
+  );
+  
+  if (isInTriggerZone) {
+    handleUserActivity();
+  }
 }
+
+// إظهار الزر عند التمرير
+function handleScroll() {
+  handleUserActivity();
+}
+
+// تشغيل كل شيء
+function initializeThemeToggle() {
+  updateButton();
+  
+  // مستمعات للماوس والتمرير
+  document.addEventListener('mousemove', handleMouseMove);
+  document.addEventListener('scroll', handleScroll);
+  
+  // للجوال - إظهار عند اللمس في أي مكان
+  document.addEventListener('touchstart', (e) => {
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+    
+    // إذا كان اللمس في النصف السفلي الأيمن
+    if (e.touches[0].clientX > windowWidth * 0.5 && 
+        e.touches[0].clientY > windowHeight * 0.5) {
+      handleUserActivity();
+    }
+  });
+}
+
+// تشغيل عند تحميل الصفحة
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initializeThemeToggle);
+} else {
+  initializeThemeToggle();
+}
+
+// ضمان إضافي - تشغيل بعد تأخير
+setTimeout(initializeThemeToggle, 500);
+setTimeout(initializeThemeToggle, 1500);
 </script>
 
 <!-- end custom footer snippets -->
