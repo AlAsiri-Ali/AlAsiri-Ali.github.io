@@ -8,9 +8,6 @@ main:
     url: /projects/
   - title: "About"
     url: /about/
-  - title: '<i class="fas fa-moon"></i>'
-    url: "javascript:void(0)"
-    class: "theme-toggle"
     
   # - title: "Quick-Start Guide"
   #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/

@@ -2,7 +2,47 @@
 
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 
+<!-- Auto Dark/Light Theme Support -->
+<style>
+  /* Default (light) theme - uses 'air' skin */
+  :root {
+    --mm-skin: 'air';
+  }
+  
+  /* Dark theme - switches to 'dirt' skin when user prefers dark mode */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --mm-skin: 'dirt';
+    }
+    
+    /* Override Minimal Mistakes to use dirt skin colors */
+    body {
+      background-color: #343434 !important;
+      color: #fff !important;
+    }
+    
+    .masthead {
+      background-color: #252525 !important;
+    }
+    
+    .page__content, .page__inner-wrap {
+      background-color: #343434 !important;
+      color: #fff !important;
+    }
+    
+    .sidebar {
+      background-color: #252525 !important;
+    }
+    
+    /* Links and text colors for dark theme */
+    a {
+      color: #88c999 !important;
+    }
+    
+    .page__title, .archive__item-title {
+      color: #fff !important;
+    }
+  }
+</style>
+
 <!-- end custom head snippets -->
- 
-<link rel="stylesheet" href="{{ '/assets/css/theme-toggle.css' | relative_url }}">
-<script src="{{ '/assets/js/theme-toggle.js' | relative_url }}" defer></script>
