@@ -111,33 +111,35 @@
 }
 
 .page__footer-follow li {
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 8px;
-  padding: 8px 16px;
+  background: none !important;
+  border-radius: 0;
+  padding: 4px 8px;
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: none;
   list-style: none;
 }
 
 .page__footer-follow li:hover {
-  background: rgba(255, 255, 255, 0.25);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: none !important;
+  transform: none;
+  box-shadow: none;
 }
 
 .page__footer-follow a {
-  color: #ffffff !important;
+  color: rgba(255, 255, 255, 0.9) !important;
   text-decoration: none;
-  font-weight: 500;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.9em;
+  gap: 6px;
+  font-size: 14px;
+  padding: 4px 6px;
+  transition: all 0.3s ease;
 }
 
 .page__footer-follow a:hover {
-  color: #f0f8ff !important;
+  color: #ffffff !important;
   text-decoration: none;
+  opacity: 0.8;
 }
 
 .page__footer-follow .fas,
