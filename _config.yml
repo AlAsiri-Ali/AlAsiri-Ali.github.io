@@ -333,3 +333,14 @@ defaults:
       comments: true
       share: true
       related: true
+
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:name/
+  recipes:
+    output: true
+    permalink: /:collection/:name/
+  pets:
+    output: true
+    permalink: /:collection/:name/
