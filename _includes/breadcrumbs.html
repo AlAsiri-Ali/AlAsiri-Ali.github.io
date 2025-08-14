@@ -76,13 +76,13 @@
   padding: 4px 8px;
 }
 
-/* Dark theme support - Multiple selectors for better compatibility */
+/* Dark theme support - Simple color fix */
 [data-theme="dark"] .breadcrumbs,
 .dark .breadcrumbs,
 body.dark .breadcrumbs,
 html[data-theme="dark"] .breadcrumbs {
-  background: rgba(102, 126, 234, 0.08) !important;
-  border-bottom-color: rgba(144, 205, 244, 0.15) !important;
+  background: rgba(45, 55, 72, 0.4) !important;
+  border-bottom-color: rgba(144, 205, 244, 0.2) !important;
 }
 
 [data-theme="dark"] .breadcrumbs a,
@@ -96,7 +96,7 @@ html[data-theme="dark"] .breadcrumbs a {
 .dark .breadcrumbs a:hover,
 body.dark .breadcrumbs a:hover,
 html[data-theme="dark"] .breadcrumbs a:hover {
-  background: rgba(144, 205, 244, 0.15) !important;
+  background: rgba(144, 205, 244, 0.2) !important;
   color: #ffffff !important;
 }
 
@@ -104,42 +104,18 @@ html[data-theme="dark"] .breadcrumbs a:hover {
 .dark .breadcrumbs .sep,
 body.dark .breadcrumbs .sep,
 html[data-theme="dark"] .breadcrumbs .sep {
-  color: #cbd5e0 !important;
+  color: #e2e8f0 !important;
 }
 
 [data-theme="dark"] .breadcrumbs .current,
 .dark .breadcrumbs .current,
 body.dark .breadcrumbs .current,
 html[data-theme="dark"] .breadcrumbs .current {
-  color: #e2e8f0 !important;
+  color: #ffffff !important;
   font-weight: 600;
 }
 
-/* Additional dark mode support with media query */
-@media (prefers-color-scheme: dark) {
-  .breadcrumbs {
-    background: rgba(102, 126, 234, 0.08) !important;
-    border-bottom-color: rgba(144, 205, 244, 0.15) !important;
-  }
-  
-  .breadcrumbs a {
-    color: #90cdf4 !important;
-  }
-  
-  .breadcrumbs a:hover {
-    background: rgba(144, 205, 244, 0.15) !important;
-    color: #ffffff !important;
-  }
-  
-  .breadcrumbs .sep {
-    color: #cbd5e0 !important;
-  }
-  
-  .breadcrumbs .current {
-    color: #e2e8f0 !important;
-    font-weight: 600;
-  }
-}
+
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
