@@ -1,8 +1,8 @@
 ---
 layout: splash
 header:
-  overlay_image: /assets/images/homephoto.jpg
-  overlay_filter: 0.5
+  overlay_image: /assets/images/background-hero.jpg
+  overlay_filter: 0.3
   actions:
     - label: "<i class='fas fa-code'></i> Explore Tech Hub"
       url: "/projects/"
@@ -12,16 +12,52 @@ excerpt: ""
 ---
 
 <style>
+/* Full Screen Background Image */
+.page__hero--overlay {
+  background-size: cover !important;
+  background-position: center center !important;
+  background-attachment: fixed !important;
+  min-height: 100vh !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.page__hero-wrap {
+  background-size: cover !important;
+  background-position: center center !important;
+  background-attachment: fixed !important;
+  min-height: 100vh !important;
+}
+
+/* Ensure overlay covers full screen */
+.page__hero--overlay .page__hero-wrap::before {
+  min-height: 100vh !important;
+}
+
 /* Hero Section with Typing Animation */
 .hero-content {
   text-align: center;
   padding: 60px 20px;
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(102, 126, 234, 0.4));
   border-radius: 15px;
   margin: 40px auto;
   max-width: 1000px;
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced text visibility */
+.typing-text {
+  color: #ffffff !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero-subtitle {
+  color: #f0f8ff !important;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .hero-content::before {
@@ -487,6 +523,33 @@ excerpt: ""
   .tech-stack,
   .insights-section {
     padding: 40px 15px;
+  }
+}
+
+/* Responsive Design for Full Screen Background */
+@media (max-width: 768px) {
+  .page__hero--overlay {
+    background-attachment: scroll !important;
+    min-height: 100vh !important;
+  }
+  
+  .hero-content {
+    margin: 20px;
+    padding: 40px 20px;
+  }
+  
+  .typing-text {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .typing-text {
+    font-size: 1.5em;
+  }
+  
+  .hero-subtitle {
+    font-size: 1em;
   }
 }
 </style>
