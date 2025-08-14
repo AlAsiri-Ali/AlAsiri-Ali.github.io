@@ -252,11 +252,11 @@ author_profile: true
 .category-research { background: #fce4ec; color: #c2185b; }
 
 /* Dark theme - Enhanced contrast */
-[data-theme="dark"] .category-ai { background: #1976d2; color: #fff; }
-[data-theme="dark"] .category-data { background: #7b1fa2; color: #fff; }
-[data-theme="dark"] .category-code { background: #388e3c; color: #fff; }
-[data-theme="dark"] .category-personal { background: #f57c00; color: #fff; }
-[data-theme="dark"] .category-research { background: #c2185b; color: #fff; }
+[data-theme="dark"] .category-ai { background: #1d4ed8; color: #ffffff; font-weight: 600; }
+[data-theme="dark"] .category-data { background: #7c3aed; color: #ffffff; font-weight: 600; }
+[data-theme="dark"] .category-code { background: #16a34a; color: #ffffff; font-weight: 600; }
+[data-theme="dark"] .category-personal { background: #ea580c; color: #ffffff; font-weight: 600; }
+[data-theme="dark"] .category-research { background: #be185d; color: #ffffff; font-weight: 600; }
 
 .reading-time {
   display: flex;

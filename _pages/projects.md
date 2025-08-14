@@ -175,6 +175,13 @@ author_profile: true
   font-size: 0.85em;
   font-weight: 500;
   color: white;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 .tag.python { background: #3776ab; }
@@ -187,14 +194,14 @@ author_profile: true
 .tag.react { background: #61dafb; color: #333; }
 
 /* Dark theme - Enhanced contrast for better visibility */
-[data-theme="dark"] .tag.python { background: #4a9eff; color: #fff; }
-[data-theme="dark"] .tag.ml { background: #ff8a8a; color: #fff; }
-[data-theme="dark"] .tag.data { background: #6ee7de; color: #1a1a1a; }
-[data-theme="dark"] .tag.web { background: #66c7f4; color: #1a1a1a; }
-[data-theme="dark"] .tag.api { background: #b8e6d3; color: #1a1a1a; }
-[data-theme="dark"] .tag.cloud { background: #ffed4e; color: #1a1a1a; }
-[data-theme="dark"] .tag.javascript { background: #fff347; color: #1a1a1a; }
-[data-theme="dark"] .tag.react { background: #87e6fb; color: #1a1a1a; }
+[data-theme="dark"] .tag.python { background: #2563eb; color: #ffffff; font-weight: 600; }
+[data-theme="dark"] .tag.ml { background: #dc2626; color: #ffffff; font-weight: 600; }
+[data-theme="dark"] .tag.data { background: #059669; color: #ffffff; font-weight: 600; }
+[data-theme="dark"] .tag.web { background: #0284c7; color: #ffffff; font-weight: 600; }
+[data-theme="dark"] .tag.api { background: #16a34a; color: #ffffff; font-weight: 600; }
+[data-theme="dark"] .tag.cloud { background: #ca8a04; color: #ffffff; font-weight: 600; }
+[data-theme="dark"] .tag.javascript { background: #eab308; color: #000000; font-weight: 600; }
+[data-theme="dark"] .tag.react { background: #06b6d4; color: #000000; font-weight: 600; }
 
 .project-link {
   display: inline-flex;
