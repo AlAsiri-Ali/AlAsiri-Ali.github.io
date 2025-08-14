@@ -380,7 +380,7 @@ author_profile: true
       <p>Fill out the form below and I'll respond within 24 hours</p>
     </div>
 
-    <form action="https://formspree.io/f/mpwlnraw" method="POST" id="contactForm">
+    <form action="https://formspree.io/aliasiri.dev@gmail.com" method="POST" id="contactForm">
       <div class="form-row">
         <div class="form-group">
           <label for="name">Full Name *</label>
@@ -388,13 +388,13 @@ author_profile: true
         </div>
         <div class="form-group">
           <label for="email">Email Address *</label>
-          <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+          <input type="email" id="email" name="_replyto" required placeholder="your.email@example.com">
         </div>
       </div>
       
       <div class="form-group">
         <label for="subject">Subject *</label>
-        <input type="text" id="subject" name="subject" required placeholder="What's this about?">
+        <input type="text" id="subject" name="_subject" required placeholder="What's this about?" value="Message from Portfolio Website">
       </div>
       
       <div class="form-group">
@@ -402,19 +402,20 @@ author_profile: true
         <textarea id="message" name="message" required placeholder="Tell me more about your project, question, or just say hello!"></textarea>
       </div>
       
-      <!-- Hidden fields for better organization -->
-      <input type="hidden" name="_subject" value="New message from Ali AlAsiri Portfolio">
-      <input type="hidden" name="_replyto" value="">
+      <!-- Hidden fields for Formspree configuration -->
       <input type="hidden" name="_next" value="{{ site.url }}/contact/?sent=true">
       <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_format" value="plain">
       
       <button type="submit" class="submit-btn">
         <span>Send Message</span>
       </button>
       
       <p class="form-note">
-        🔒 Your message will be sent securely to aliasiri.dev@gmail.com<br>
-        📧 I typically respond within 24 hours during business days
+        🔒 Your message will be sent directly to aliasiri.dev@gmail.com<br>
+        📧 I typically respond within 24 hours during business days<br>
+        ⚡ If you don't receive a confirmation, please check your spam folder
       </p>
     </form>
   </div>
@@ -437,12 +438,92 @@ document.addEventListener('DOMContentLoaded', function() {
     window.history.replaceState({}, document.title, window.location.pathname);
   }
   
-  // Form submission handling
+  // Enhanced form submission handling
   const contactForm = document.getElementById('contactForm');
   contactForm.addEventListener('submit', function(e) {
-    const submitBtn = contactForm.querySelector('.submit-btn');
-    submitBtn.innerHTML = '<span>Sending...</span>';
+    e.preventDefault();
+    
+    const form = this;
+    const submitBtn = form.querySelector('.submit-btn');
+    const originalText = submitBtn.innerHTML;
+    
+    // Show loading state
+    submitBtn.innerHTML = '<span>Sending Message... ⏳</span>';
     submitBtn.disabled = true;
+    
+    // Remove any existing messages
+    const existingMessages = form.parentNode.querySelectorAll('.success-message, .error-message');
+    existingMessages.forEach(msg => msg.remove());
+    
+    // Submit form data
+    fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        // Show success message
+        submitBtn.innerHTML = '<span>Message Sent Successfully! ✅</span>';
+        submitBtn.style.background = 'linear-gradient(45deg, #4CAF50, #45a049)';
+        
+        // Show detailed success message
+        const successMessage = document.createElement('div');
+        successMessage.className = 'success-message';
+        successMessage.innerHTML = `
+          <div style="background: linear-gradient(45deg, #d4edda, #c3e6cb); color: #155724; padding: 25px; border-radius: 15px; margin-top: 25px; border-left: 5px solid #28a745; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2);">
+            <h3 style="margin: 0 0 15px 0; color: #155724; font-size: 1.3em;">✅ Message Sent Successfully!</h3>
+            <p style="margin: 0; line-height: 1.8; font-size: 1.05em;">
+              🎯 Your message has been delivered to <strong>aliasiri.dev@gmail.com</strong><br>
+              📧 You should receive a confirmation email shortly<br>
+              ⏰ I'll respond within 24 hours during business days<br>
+              📂 If you don't see a response, please check your spam folder<br>
+              🔄 The page will refresh in 5 seconds...
+            </p>
+          </div>
+        `;
+        
+        form.parentNode.insertBefore(successMessage, form.nextSibling);
+        form.reset();
+        
+        // Redirect after 5 seconds
+        setTimeout(() => {
+          window.location.href = form.querySelector('input[name="_next"]').value;
+        }, 5000);
+        
+      } else {
+        throw new Error('Network response was not ok');
+      }
+    }).catch(error => {
+      // Show error message
+      submitBtn.innerHTML = '<span>Error! Please try again ❌</span>';
+      submitBtn.style.background = 'linear-gradient(45deg, #f44336, #d32f2f)';
+      
+      const errorMessage = document.createElement('div');
+      errorMessage.className = 'error-message';
+      errorMessage.innerHTML = `
+        <div style="background: linear-gradient(45deg, #f8d7da, #f1b0b7); color: #721c24; padding: 25px; border-radius: 15px; margin-top: 25px; border-left: 5px solid #dc3545; box-shadow: 0 4px 15px rgba(220, 53, 69, 0.2);">
+          <h3 style="margin: 0 0 15px 0; color: #721c24; font-size: 1.3em;">❌ Message Failed to Send</h3>
+          <p style="margin: 0; line-height: 1.8; font-size: 1.05em;">
+            There was an error sending your message. Please try:<br>
+            🔄 Refreshing the page and trying again<br>
+            📧 Sending an email directly to: <strong>aliasiri.dev@gmail.com</strong><br>
+            💬 Contacting me through social media links above<br>
+            🆘 The issue might be temporary, please try again in a few minutes
+          </p>
+        </div>
+      `;
+      
+      form.parentNode.insertBefore(errorMessage, form.nextSibling);
+      
+      // Reset button after 3 seconds
+      setTimeout(() => {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        submitBtn.style.background = '';
+      }, 3000);
+    });
   });
 });
 </script>
