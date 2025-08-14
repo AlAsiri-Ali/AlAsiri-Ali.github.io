@@ -68,7 +68,10 @@ author_profile: true
 
 .timeline-date {
   font-weight: bold;
-  color: #667eea;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-size: 0.9em;
   margin-bottom: 10px;
 }
@@ -98,6 +101,55 @@ author_profile: true
   .right {
     left: 0%;
   }
+}
+
+/* Additional styles for better text appearance */
+.timeline-content h3 {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 15px;
+}
+
+.timeline-content p {
+  background: linear-gradient(45deg, #4a5568, #667eea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Dark theme support */
+[data-theme="dark"] .timeline-content {
+  background: #2d3748;
+  border-left-color: #90cdf4;
+}
+
+[data-theme="dark"] .timeline-item::after {
+  border-color: #2d3748;
+}
+
+[data-theme="dark"] .timeline-content h3 {
+  background: linear-gradient(45deg, #90cdf4, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="dark"] .timeline-content p {
+  background: linear-gradient(45deg, #cbd5e0, #90cdf4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="dark"] .timeline-date {
+  background: linear-gradient(45deg, #90cdf4, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 </style>
 

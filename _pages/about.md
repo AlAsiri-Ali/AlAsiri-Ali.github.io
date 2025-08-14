@@ -72,12 +72,18 @@ author_profile: true
 .card-title {
   font-size: 1.4em;
   font-weight: 600;
-  color: #333;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin: 0;
 }
 
 .card-description {
-  color: #666;
+  background: linear-gradient(45deg, #4a5568, #667eea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -141,11 +147,17 @@ author_profile: true
 }
 
 [data-theme="dark"] .card-title {
-  color: #e2e8f0;
+  background: linear-gradient(45deg, #90cdf4, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 [data-theme="dark"] .card-description {
-  color: #a0aec0;
+  background: linear-gradient(45deg, #cbd5e0, #90cdf4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 [data-theme="dark"] .quick-facts {

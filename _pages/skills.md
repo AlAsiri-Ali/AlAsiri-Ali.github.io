@@ -14,6 +14,10 @@ author_profile: true
   justify-content: space-between;
   margin-bottom: 5px;
   font-weight: 600;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .progress-bar {
   background-color: #e0e0e0;
@@ -37,6 +41,38 @@ author_profile: true
   background: #f8f9fa;
   border-radius: 10px;
   border-left: 4px solid #667eea;
+}
+
+.skill-category h3 {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 20px;
+}
+
+/* Dark theme support */
+[data-theme="dark"] .skill-category {
+  background: #2d3748;
+  border-left-color: #90cdf4;
+}
+
+[data-theme="dark"] .skill-category h3 {
+  background: linear-gradient(45deg, #90cdf4, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="dark"] .skill-name {
+  background: linear-gradient(45deg, #90cdf4, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="dark"] .progress-bar {
+  background-color: #4a5568;
 }
 </style>
 

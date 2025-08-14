@@ -34,13 +34,44 @@ excerpt: "Master's student in AI, passionate about data and building real-world 
   .card-content {
     padding: 1.5rem;
   }
+  .card-content h2 {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  .card-content p {
+    background: linear-gradient(45deg, #4a5568, #667eea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+  }
+  /* Dark theme support */
+  [data-theme="dark"] .feature-card-link {
+    background-color: #2d3748;
+  }
+  [data-theme="dark"] .card-content h2 {
+    background: linear-gradient(45deg, #90cdf4, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  [data-theme="dark"] .card-content p {
+    background: linear-gradient(45deg, #cbd5e0, #90cdf4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 </style>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 2rem 1rem; max-width: 1200px; margin: auto;">
   
   <a href="/about/" class="feature-card-link">
     <img src="/assets/images/feature-about.jpg.png" alt="About Me" class="card-image" />
     <div class="card-content" style="text-align: center;">
-      <h2 style="font-size: 1.5em;">About Me</h2>
+      <h2>About Me</h2>
       <p>Learn more about my background, skills, and academic journey in AI.</p>
     </div>
   </a>
@@ -48,7 +79,7 @@ excerpt: "Master's student in AI, passionate about data and building real-world 
   <a href="/projects/" class="feature-card-link">
     <img src="/assets/images/feature-projects.jp.png" alt="Projects" class="card-image" />
     <div class="card-content" style="text-align: center;">
-      <h2 style="font-size: 1.5em;">Projects</h2>
+      <h2>Projects</h2>
       <p>Discover my hands-on projects in Machine Learning and Data Engineering.</p>
     </div>
   </a>
@@ -56,7 +87,7 @@ excerpt: "Master's student in AI, passionate about data and building real-world 
   <a href="/blog/" class="feature-card-link">
     <img src="/assets/images/feature-blog.jpg.png" alt="Blog" class="card-image" />
     <div class="card-content" style="text-align: center;">
-      <h2 style="font-size: 1.5em;">Blog & Articles</h2>
+      <h2>Blog & Articles</h2>
       <p>Read my thoughts, tutorials, and insights on AI and technology.</p>
     </div>
   </a>
