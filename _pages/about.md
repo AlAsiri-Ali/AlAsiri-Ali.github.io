@@ -1,6 +1,7 @@
 ---
 permalink: /about/
 title: "About Me"
+author_profile: true
 ---
 
 My name is Ali AlAsiri, a Master's student in Artificial Intelligence with a passion for everything related to data, algorithms, and how they interact to solve real-world problems. I believe that the most complex challenges have elegant, data-driven solutions, and this website is my journey in exploring and building them.
