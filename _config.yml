@@ -17,11 +17,11 @@ minimal_mistakes_skin    : "air" # "default" "air", "aqua", "contrast", "dark", 
 # Site Settings
 locale                   : "en-US" # "ar-SA"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "Ali AlAsiri's Digital Space"
+title                    : "Ali AlAsiri | AI & Data Science Portfolio"
 title_separator          : "|"
-subtitle                 : # site tagline that appears below site title in masthead
+subtitle                 : "Master's Student • AI Researcher • Data Enthusiast"
 name                     : "Ali AlAsiri"
-description              : "Master's student specializing in Artificial Intelligence. Explore my portfolio, Machine Learning and Data Engineering projects, and tech posts about the future of technology."
+description              : "Portfolio of Ali AlAsiri - Master's student specializing in Artificial Intelligence and Machine Learning. Explore my projects, technical skills, academic journey, and insights into the world of AI and data science."
 url                      : "https://AlAsiri-Ali.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "AlAsiri-Ali/AlAsiri-Ali.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"

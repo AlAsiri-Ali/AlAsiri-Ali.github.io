@@ -15,3 +15,24 @@ During my academic journey, I transitioned from a solid foundation in informatio
 > * **The Blog:** A space where I share my ideas, simplified technical tutorials, and my reflections on the latest developments in AI and its impact on our lives.
 
 My goal with this site is to document my learning journey and build a bridge to connect with innovative minds. Whether you are here to explore a project, read a post, or just out of curiosity, I'm glad you're here.
+
+---
+
+## 📊 GitHub Activity
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=AlAsiri-Ali&show_icons=true&theme=radical" alt="GitHub Stats" />
+</div>
+
+<div align="center" style="margin-top: 20px;">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AlAsiri-Ali&layout=compact&theme=radical" alt="Top Languages" />
+</div>
+
+---
+
+## 🎯 Current Focus
+
+- 🔬 **Research:** Working on my Master's thesis in AI
+- 💻 **Projects:** Building real-world ML applications
+- 📚 **Learning:** Advanced Deep Learning techniques
+- 🌟 **Goal:** Contributing to open-source AI tools

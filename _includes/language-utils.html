@@ -1,0 +1,29 @@
+<!-- Language switching utilities -->
+
+<!-- Get current page in other language -->
+{% assign current_lang = page.lang | default: site.locale | slice: 0, 2 %}
+{% if current_lang == "ar" %}
+  {% assign other_lang = "en" %}
+  {% assign other_lang_url = page.url | replace: "/ar/", "/" %}
+{% else %}
+  {% assign other_lang = "ar" %}
+  {% assign other_lang_url = "/ar" | append: page.url %}
+{% endif %}
+
+<!-- Language toggle button -->
+{% if current_lang == "ar" %}
+  <a href="{{ other_lang_url }}" class="lang-toggle" title="Switch to English">
+    🇺🇸 English
+  </a>
+{% else %}
+  <a href="{{ other_lang_url }}" class="lang-toggle" title="تبديل إلى العربية">
+    🇸🇦 العربية
+  </a>
+{% endif %}
+
+<!-- Auto navigation based on language -->
+{% if current_lang == "ar" %}
+  {% assign navigation_items = site.data.navigation.main_ar %}
+{% else %}
+  {% assign navigation_items = site.data.navigation.main %}
+{% endif %}
