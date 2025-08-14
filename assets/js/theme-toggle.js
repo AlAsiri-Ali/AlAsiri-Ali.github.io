@@ -1,10 +1,13 @@
 (function() {
-  const htmlElement = document.documentElement;
+  const bodyElement = document.body;
   
   // Check if saved theme
-  const savedTheme = localStorage.getItem('theme') || 'light';
+  const savedTheme = localStorage.getItem('theme') || 'air';
   console.log('Saved theme:', savedTheme);
-  htmlElement.setAttribute('data-theme', savedTheme);
+  
+  // Apply saved theme
+  bodyElement.className = bodyElement.className.replace(/skin--\w+/, '');
+  bodyElement.classList.add('skin--' + savedTheme);
   
   // Wait for the page to load completely
   document.addEventListener('DOMContentLoaded', function() {
@@ -16,7 +19,7 @@
       // Update the icon when the page loads
       const icon = themeToggle.querySelector('i');
       if (icon) {
-        icon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        icon.className = savedTheme === 'dirt' ? 'fas fa-sun' : 'fas fa-moon';
         console.log('Icon updated on load:', icon.className);
       }
       
@@ -25,18 +28,23 @@
         e.preventDefault();
         e.stopPropagation();
         
-        const currentTheme = htmlElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        // Get current theme
+        const currentTheme = bodyElement.classList.contains('skin--dirt') ? 'dirt' : 'air';
+        const newTheme = currentTheme === 'dirt' ? 'air' : 'dirt';
         
         console.log('Switching from', currentTheme, 'to', newTheme);
         
-        htmlElement.setAttribute('data-theme', newTheme);
+        // Remove old theme and add new theme
+        bodyElement.className = bodyElement.className.replace(/skin--\w+/, '');
+        bodyElement.classList.add('skin--' + newTheme);
+        
+        // Save theme preference
         localStorage.setItem('theme', newTheme);
         
         // Update button icon
         const icon = this.querySelector('i');
         if (icon) {
-          icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+          icon.className = newTheme === 'dirt' ? 'fas fa-sun' : 'fas fa-moon';
           console.log('Icon updated:', icon.className);
         }
         
