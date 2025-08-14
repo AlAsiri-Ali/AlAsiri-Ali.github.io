@@ -141,6 +141,12 @@ author:
       icon: "fab fa-fw fa-linkedin"
       url: "https://linkedin.com/in/ali-asiri-b85038206"
 
+    - label: "Theme Toggle"
+      icon: "fas fa-fw fa-adjust"
+      url: "#"
+      title: "Toggle theme"
+      theme_switch: true
+
 # Site Footer
 footer:
   links:
