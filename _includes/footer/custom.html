@@ -5,140 +5,79 @@
 
 <!-- Theme toggle button styles -->
 <style>
-  .theme-toggle-nav-btn {
+  /* زر التبديل - موقع آمن تماماً */
+  .theme-toggle-btn {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
     background: #007acc;
     color: white;
     border: none;
-    border-radius: 20px;
-    padding: 6px 10px;
-    font-size: 14px;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    font-size: 22px;
     cursor: pointer;
-    margin-left: 20px;
-    margin-right: auto;
+    z-index: 999;
     transition: all 0.3s ease;
-    display: inline-flex;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 36px;
-    height: 28px;
-    flex-shrink: 0; /* منع انكماش الزر */
-    order: 1; /* ترتيب العنصر */
-    vertical-align: middle;
   }
   
-  .theme-toggle-nav-btn:hover {
+  .theme-toggle-btn:hover {
     background: #005a9e;
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
 
-  .theme-toggle-nav-btn:focus {
-    outline: 2px solid #ffffff;
-    outline-offset: 2px;
-  }
-
-  body.theme-dark .theme-toggle-nav-btn {
+  body.theme-dark .theme-toggle-btn {
     background: #00adb5;
   }
 
-  body.theme-dark .theme-toggle-nav-btn:hover {
+  body.theme-dark .theme-toggle-btn:hover {
     background: #4db6ac;
   }
   
-  /* التأكد من عدم التداخل مع العناصر الأخرى */
-  .greedy-nav {
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-  }
-  
-  .site-title {
-    margin-right: 0;
-  }
-  
-  .visible-links {
-    order: 2;
-    margin-left: auto;
-  }
-  
-  /* للشاشات المتوسطة */
-  @media (max-width: 1024px) {
-    .theme-toggle-nav-btn {
-      font-size: 13px;
-      min-width: 32px;
-      height: 26px;
-      padding: 4px 8px;
-      margin-left: 15px;
-    }
-  }
-  
-  /* للشاشات الصغيرة - نخفي الزر لتوفير المساحة */
+  /* للشاشات الصغيرة */
   @media (max-width: 768px) {
-    .theme-toggle-nav-btn {
-      display: none;
-    }
-    
-    /* إضافة الزر كعنصر منفصل في الشاشات الصغيرة */
-    .mobile-theme-toggle {
-      position: fixed;
-      top: 10px;
-      left: 10px;
-      background: #007acc;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      font-size: 16px;
-      cursor: pointer;
-      z-index: 1000;
-      transition: all 0.3s ease;
-      display: block;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
-    
-    .mobile-theme-toggle:hover {
-      background: #005a9e;
-      transform: scale(1.1);
-    }
-    
-    body.theme-dark .mobile-theme-toggle {
-      background: #00adb5;
-    }
-    
-    body.theme-dark .mobile-theme-toggle:hover {
-      background: #4db6ac;
+    .theme-toggle-btn {
+      bottom: 100px;
+      right: 15px;
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
     }
   }
   
-  /* للشاشات الكبيرة جداً - نتأكد من عدم التمدد */
-  @media (min-width: 1200px) {
-    .greedy-nav {
-      max-width: 1200px;
-      margin: 0 auto;
+  @media (max-width: 480px) {
+    .theme-toggle-btn {
+      bottom: 90px;
+      right: 10px;
+      width: 45px;
+      height: 45px;
+      font-size: 18px;
     }
   }
 </style>
 
-<!-- Mobile theme toggle button -->
-<button class="mobile-theme-toggle" id="mobile-theme-toggle" title="Toggle Theme" style="display: none;">
+<!-- Theme toggle button - موقع آمن -->
+<button class="theme-toggle-btn" id="theme-toggle-btn" title="Toggle Theme">
   🌙
 </button>
 
 <script>
 function toggleTheme() {
   const body = document.body;
-  const navButton = document.getElementById('theme-toggle-nav-btn');
-  const mobileButton = document.getElementById('mobile-theme-toggle');
+  const button = document.getElementById('theme-toggle-btn');
   
   if (body.classList.contains('theme-dark')) {
     body.classList.remove('theme-dark');
-    if (navButton) navButton.innerHTML = '🌙';
-    if (mobileButton) mobileButton.innerHTML = '🌙';
+    button.innerHTML = '🌙';
     localStorage.setItem('website-theme', 'light');
   } else {
     body.classList.add('theme-dark');
-    if (navButton) navButton.innerHTML = '☀️';
-    if (mobileButton) mobileButton.innerHTML = '☀️';
+    button.innerHTML = '☀️';
     localStorage.setItem('website-theme', 'dark');
   }
 }
@@ -151,51 +90,22 @@ function toggleTheme() {
   }
 })();
 
-// Update buttons when ready
-function updateButtons() {
+// Update button when ready
+function updateButton() {
   const savedTheme = localStorage.getItem('website-theme');
-  const navButton = document.getElementById('theme-toggle-nav-btn');
-  const mobileButton = document.getElementById('mobile-theme-toggle');
+  const button = document.getElementById('theme-toggle-btn');
   
-  // Update navigation button
-  if (navButton) {
-    navButton.innerHTML = savedTheme === 'dark' ? '☀️' : '🌙';
-    navButton.addEventListener('click', toggleTheme);
+  if (button) {
+    button.innerHTML = savedTheme === 'dark' ? '☀️' : '🌙';
+    button.addEventListener('click', toggleTheme);
   }
-  
-  // Update mobile button
-  if (mobileButton) {
-    mobileButton.innerHTML = savedTheme === 'dark' ? '☀️' : '🌙';
-    mobileButton.addEventListener('click', toggleTheme);
-  }
-  
-  // Show/hide mobile button based on screen size
-  function handleResize() {
-    if (mobileButton) {
-      if (window.innerWidth <= 768) {
-        mobileButton.style.display = 'block';
-      } else {
-        mobileButton.style.display = 'none';
-      }
-    }
-  }
-  
-  // Initial check
-  handleResize();
-  
-  // Listen for resize events
-  window.addEventListener('resize', handleResize);
 }
 
-// Initialize when DOM is ready
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', updateButtons);
+  document.addEventListener('DOMContentLoaded', updateButton);
 } else {
-  updateButtons();
+  updateButton();
 }
-
-// Additional safety check - run again after a short delay
-setTimeout(updateButtons, 500);
 </script>
 
 <!-- end custom footer snippets -->
