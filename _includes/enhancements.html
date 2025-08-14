@@ -1,0 +1,353 @@
+<!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<!-- Loading Overlay -->
+<div id="loadingOverlay" class="loading-overlay">
+  <div class="loading-spinner">
+    <div class="spinner"></div>
+    <p>Loading...</p>
+  </div>
+</div>
+
+<style>
+/* === SMOOTH TRANSITIONS === */
+* {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Page Loading Animation */
+body {
+  opacity: 0;
+  animation: pageLoad 0.8s ease-out forwards;
+}
+
+@keyframes pageLoad {
+  to {
+    opacity: 1;
+  }
+}
+
+/* === LOADING OVERLAY === */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.loading-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.loading-spinner {
+  text-align: center;
+  color: #667eea;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #667eea;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* === BACK TO TOP BUTTON === */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2em;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.back-to-top:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(45deg, #764ba2, #667eea);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* === ENHANCED LINK TRANSITIONS === */
+a {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+a:not(.btn):not(.back-to-top):not(.feature-card-link):not(.about-card):not(.project-card):not(.post-card)::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  transition: width 0.3s ease;
+}
+
+a:not(.btn):not(.back-to-top):not(.feature-card-link):not(.about-card):not(.project-card):not(.post-card):hover::after {
+  width: 100%;
+}
+
+/* === ENHANCED CARD HOVER EFFECTS === */
+.feature-card-link,
+.about-card,
+.project-card,
+.post-card {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.feature-card-link:hover,
+.about-card:hover,
+.project-card:hover,
+.post-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* === BUTTON ENHANCEMENTS === */
+.btn,
+.filter-btn,
+.category-btn,
+.featured-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn::before,
+.filter-btn::before,
+.category-btn::before,
+.featured-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn:hover::before,
+.filter-btn:hover::before,
+.category-btn:hover::before,
+.featured-btn:hover::before {
+  left: 100%;
+}
+
+/* === SCROLL ANIMATIONS === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === DARK THEME SUPPORT === */
+[data-theme="dark"] .loading-overlay {
+  background: rgba(45, 55, 72, 0.95);
+}
+
+[data-theme="dark"] .loading-spinner {
+  color: #a0aec0;
+}
+
+[data-theme="dark"] .spinner {
+  border-color: #4a5568;
+  border-top-color: #667eea;
+}
+
+/* === MOBILE RESPONSIVENESS === */
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 1.1em;
+  }
+}
+
+/* === SCROLL BAR STYLING === */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #764ba2, #667eea);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: #2d3748;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // === BACK TO TOP FUNCTIONALITY ===
+  const backToTopButton = document.getElementById('backToTop');
+  const loadingOverlay = document.getElementById('loadingOverlay');
+
+  // Show/Hide back to top button
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 300) {
+      backToTopButton.classList.add('visible');
+    } else {
+      backToTopButton.classList.remove('visible');
+    }
+  });
+
+  // Smooth scroll to top
+  backToTopButton.addEventListener('click', function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+  // === LOADING OVERLAY FOR NAVIGATION ===
+  const links = document.querySelectorAll('a[href^="/"], a[href^="../"]');
+  
+  links.forEach(link => {
+    // Skip anchor links and external links
+    if (link.getAttribute('href').startsWith('#') || 
+        link.getAttribute('href').startsWith('http') ||
+        link.classList.contains('no-loading')) {
+      return;
+    }
+    
+    link.addEventListener('click', function(e) {
+      // Only show loading for internal navigation
+      if (!e.ctrlKey && !e.metaKey && !e.shiftKey) {
+        showLoading();
+        
+        // Hide loading if page doesn't change (same page)
+        setTimeout(function() {
+          hideLoading();
+        }, 2000);
+      }
+    });
+  });
+
+  function showLoading() {
+    loadingOverlay.classList.add('active');
+  }
+
+  function hideLoading() {
+    loadingOverlay.classList.remove('active');
+  }
+
+  // Hide loading when page loads
+  window.addEventListener('load', function() {
+    hideLoading();
+  });
+
+  // === SCROLL ANIMATIONS ===
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, observerOptions);
+
+  // Observe elements for scroll animations
+  const fadeElements = document.querySelectorAll('.fade-in');
+  fadeElements.forEach(el => observer.observe(el));
+
+  // === ENHANCED NAVIGATION HOVER ===
+  const navLinks = document.querySelectorAll('.main-navigation a');
+  navLinks.forEach(link => {
+    link.addEventListener('mouseenter', function() {
+      this.style.transform = 'translateY(-2px)';
+    });
+    
+    link.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateY(0)';
+    });
+  });
+
+  // === PAGE TRANSITION EFFECT ===
+  let isNavigating = false;
+  
+  document.addEventListener('click', function(e) {
+    const link = e.target.closest('a[href^="/"], a[href^="../"]');
+    
+    if (link && !isNavigating && !e.ctrlKey && !e.metaKey) {
+      const href = link.getAttribute('href');
+      
+      // Skip anchor links and external links
+      if (href.startsWith('#') || href.startsWith('http')) {
+        return;
+      }
+      
+      e.preventDefault();
+      isNavigating = true;
+      
+      // Add fade out effect
+      document.body.style.opacity = '0.7';
+      document.body.style.transform = 'scale(0.98)';
+      
+      setTimeout(function() {
+        window.location.href = href;
+      }, 200);
+    }
+  });
+});
+</script>
