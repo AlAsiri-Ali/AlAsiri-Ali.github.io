@@ -1,8 +1,9 @@
 ---
 layout: splash
 header:
-  overlay_image: /assets/images/background-hero.jpg
-  overlay_filter: 0.3
+  overlay_image: /assets/images/homephoto.jpg
+  overlay_filter: 0.2
+  overlay_color: "#000"
   actions:
     - label: "<i class='fas fa-code'></i> Explore Tech Hub"
       url: "/projects/"
@@ -12,10 +13,12 @@ excerpt: ""
 ---
 
 <style>
-/* Full Screen Background Image */
+/* Full Screen Background Image - Enhanced */
 .page__hero--overlay {
+  background-image: url('/assets/images/homephoto.jpg') !important;
   background-size: cover !important;
   background-position: center center !important;
+  background-repeat: no-repeat !important;
   background-attachment: fixed !important;
   min-height: 100vh !important;
   width: 100% !important;
@@ -24,10 +27,21 @@ excerpt: ""
 }
 
 .page__hero-wrap {
+  background-image: url('/assets/images/homephoto.jpg') !important;
   background-size: cover !important;
   background-position: center center !important;
+  background-repeat: no-repeat !important;
   background-attachment: fixed !important;
   min-height: 100vh !important;
+}
+
+/* Fallback for different selectors */
+.page__hero,
+.page__hero--overlay .page__hero-wrap {
+  background-image: url('/assets/images/homephoto.jpg') !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
 }
 
 /* Ensure overlay covers full screen */
