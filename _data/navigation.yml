@@ -9,7 +9,7 @@ main:
   - title: "About"
     url: /about/
   - title: '<i class="fas fa-moon"></i>'
-    url: "#"
+    url: "javascript:void(0)"
     class: "theme-toggle"
     
   # - title: "Quick-Start Guide"

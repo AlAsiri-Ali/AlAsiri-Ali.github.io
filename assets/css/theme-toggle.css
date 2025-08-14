@@ -25,6 +25,20 @@ html[data-theme="dark"] .page__content {
   background-color: var(--bg-color);
 }
 
+/* Improve theme toggle button style in navigation bar */
+.greedy-nav .theme-toggle {
+  display: inline-block;
+  margin-left: 1rem;
+  padding: 0.5rem;
+  text-decoration: none;
+}
+
+.greedy-nav .theme-toggle:hover {
+  text-decoration: none;
+  color: #357edd;
+}
+
+/* Prevent button from behaving like a regular link */
 .theme-toggle {
   background: none;
   border: none;
@@ -33,16 +47,10 @@ html[data-theme="dark"] .page__content {
   font-size: 1.2em;
   padding: 0.5em;
   transition: color 0.3s ease;
+  text-decoration: none !important;
 }
 
 .theme-toggle:hover {
   color: #357edd;
-}
-
-/* تحسين شكل الزر في شريط التنقل */
-.greedy-nav .theme-toggle {
-  display: inline-block;
-  margin-left: 1rem;
-  padding: 0.5rem;
-  text-decoration: none;
+  text-decoration: none !important;
 }
