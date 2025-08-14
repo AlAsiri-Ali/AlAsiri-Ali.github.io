@@ -2,7 +2,7 @@
 layout: splash
 permalink: /
 header:
-  overlay_image: /assets/images/hero-image.jpg # <-- سنحتاج صورة كبيرة هنا
+  overlay_image: /assets/images/home.jpg # <-- سنحتاج صورة كبيرة هنا
   overlay_filter: 0.5 # to darken the image and make text readable
   actions:
     - label: "Explore My Projects"
