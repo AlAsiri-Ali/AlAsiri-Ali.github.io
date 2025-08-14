@@ -152,6 +152,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
+      url: "https://github.com/AlAsiri-Ali"
       # url:
     - # label: "GitLab"
       # icon: "fab fa-fw fa-gitlab"
@@ -164,6 +165,7 @@ footer:
       # url:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/ali-asiri-b85038206" 
       
   since: "2025"
 
