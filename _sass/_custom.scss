@@ -57,46 +57,6 @@ body.layout--splash {
   width: 100vw !important;
 }
 
-/* Dark theme specific adjustments */
-body.theme-dark .page__hero--overlay::before {
-  background-color: transparent !important;
-}
-
-body.theme-dark .page__hero-caption h1,
-body.theme-dark .page__hero-caption h2,
-body.theme-dark .page__hero-caption p {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
-  color: #ffffff !important;
-}
-
-body.theme-dark .stats-container {
-  background: rgba(37, 42, 52, 0.4) !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
-}
-
-body.theme-dark .stat-item {
-  background: rgba(37, 42, 52, 0.3) !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
-}
-
-body.theme-dark .tech-stack {
-  background: rgba(37, 42, 52, 0.4) !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
-}
-
-body.theme-dark .tech-item {
-  background: rgba(37, 42, 52, 0.3) !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
-}
-
-/* Ensure overlay is visible but not too dark */
-.page__hero--overlay::before {
-  background-color: rgba(0, 0, 0, 0.3) !important;
-  min-height: 100vh !important;
-  height: 100vh !important;
-  width: 100vw !important;
-}
-
 /* Center the content */
 .page__hero-caption {
   position: absolute !important;
@@ -169,75 +129,15 @@ body.theme-dark .tech-item {
   text-shadow: none !important;
 }
 
-/* Transparent Navigation Bar - Buttons Only */
-.masthead {
-  background: transparent !important;
-  backdrop-filter: none !important;
+/* (Removed global masthead overrides to return to theme defaults) */
+
+/* Restore default masthead on light mode (override any transparent rules) */
+body:not(.theme-dark) .masthead {
+  background: #eee !important; /* theme background */
   -webkit-backdrop-filter: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
+  backdrop-filter: none !important;
+  border-bottom: 1px solid #cecfd1 !important; /* theme border */
 }
 
-.site-title {
-  font-weight: 600 !important;
-  color: #2c3e50 !important;
-  text-decoration: none !important;
-}
-
-.site-title:hover {
-  color: #3498db !important;
-}
-
-.greedy-nav {
-  background: transparent !important;
-}
-
-.greedy-nav a {
-  color: #34495e !important;
-  font-weight: 500 !important;
-  text-decoration: none !important;
-  padding: 0.6em 1em !important;
-  border-radius: 6px !important;
-  transition: all 0.2s ease !important;
-}
-
-.greedy-nav a:hover {
-  color: #3498db !important;
-  background: rgba(52, 152, 219, 0.08) !important;
-}
-
-/* Dark theme navigation - transparent with better visibility */
-body.theme-dark .masthead {
-  background: transparent !important;
-  box-shadow: none !important;
-}
-
-body.theme-dark .site-title {
-  color: #ffffff !important;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
-}
-
-body.theme-dark .site-title:hover {
-  color: #64ffda !important;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9) !important;
-}
-
-body.theme-dark .greedy-nav a {
-  color: #f8fafc !important;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7) !important;
-  font-weight: 600 !important;
-}
-
-body.theme-dark .greedy-nav a:hover {
-  color: #64ffda !important;
-  background: rgba(100, 255, 218, 0.2) !important;
-  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8) !important;
-  border-radius: 6px !important;
-}
-
-/* Hide search button */
-.search__toggle {
-  display: none !important;
-}
+body:not(.theme-dark) .greedy-nav { background: #eee !important; }
+body:not(.theme-dark) .greedy-nav a { color: #222831 !important; }
