@@ -148,13 +148,37 @@ body {
   animation: fadeInUp 1s ease-out 2s forwards;
 }
 
+/* Welcome Message */
+.welcome-message {
+  margin: 20px 0 30px 0;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out 2.5s forwards;
+}
+
+.welcome-message p {
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-size: 1.1em;
+  line-height: 1.6;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.welcome-message strong {
+  color: #667eea !important;
+  font-weight: 600;
+}
+
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 /* Stats Counter */
-.stats-container {
+.stats-container,
+.current-activities {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 30px;
@@ -164,7 +188,8 @@ body {
   animation: fadeInUp 1s ease-out 3s forwards;
 }
 
-.stat-item {
+.stat-item,
+.activity-item {
   text-align: center;
   padding: 20px;
   background: rgba(0, 0, 0, 0.6);
@@ -173,10 +198,31 @@ body {
   transition: transform 0.3s ease;
 }
 
-.stat-item:hover {
+.stat-item:hover,
+.activity-item:hover {
   transform: translateY(-5px);
   background: rgba(0, 0, 0, 0.8);
   border-color: rgba(255, 255, 255, 0.3);
+}
+
+.activity-item i {
+  font-size: 2.5em;
+  color: #667eea !important;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.activity-item h3 {
+  font-size: 1.4em;
+  font-weight: 600;
+  color: #ffffff !important;
+  margin-bottom: 10px;
+}
+
+.activity-item p {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 1em;
+  font-weight: 400;
 }
 
 .stat-number {
@@ -493,7 +539,8 @@ body {
   
   .tech-grid,
   .insights-grid,
-  .feature-cards {
+  .feature-cards,
+  .current-activities {
     grid-template-columns: 1fr;
     gap: 20px;
   }
@@ -520,6 +567,15 @@ body {
   .typing-text {
     font-size: 2em;
   }
+  
+  .welcome-message {
+    margin: 15px 0 25px 0;
+  }
+  
+  .welcome-message p {
+    font-size: 1em;
+    padding: 15px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -530,31 +586,58 @@ body {
   .hero-subtitle {
     font-size: 1em;
   }
+  
+  .welcome-message p {
+    font-size: 0.9em;
+    padding: 12px;
+  }
+  
+  .activity-item {
+    padding: 15px;
+  }
+  
+  .activity-item i {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .activity-item h3 {
+    font-size: 1.2em;
+  }
 }
 </style>
 
 <!-- Hero Section with Dynamic Content -->
 <div class="hero-content">
   <h1 class="typing-text" id="typingText"></h1>
-  <p class="hero-subtitle">Dive into the world of AI, data science, and cutting-edge technology</p>
+  <p class="hero-subtitle">Join me on an exciting journey through AI, Data Science, and cutting-edge technology. Let's build the future together!</p>
   
-  <!-- Live Stats -->
-  <div class="stats-container">
-    <div class="stat-item">
-      <span class="stat-number" data-target="150">0</span>
-      <span class="stat-label">Tech Articles</span>
+  <!-- Welcome Message -->
+  <div class="welcome-message">
+    <p>Hi there! I'm <strong>Ali AlAsiri</strong> - your guide through the fascinating world of artificial intelligence and data science.</p>
+  </div>
+  
+  <!-- What I'm Doing Now -->
+  <div class="current-activities">
+    <div class="activity-item">
+      <i class="fas fa-brain"></i>
+      <h3>Deep Learning</h3>
+      <p>Advanced Neural Networks & CNNs</p>
     </div>
-    <div class="stat-item">
-      <span class="stat-number" data-target="25">0</span>
-      <span class="stat-label">Projects</span>
+    <div class="activity-item">
+      <i class="fas fa-robot"></i>
+      <h3>Advanced AI</h3>
+      <p>Reinforcement Learning & AI Algorithms</p>
     </div>
-    <div class="stat-item">
-      <span class="stat-number" data-target="1000">0</span>
-      <span class="stat-label">Community Members</span>
+    <div class="activity-item">
+      <i class="fas fa-language"></i>
+      <h3>Advanced NLP</h3>
+      <p>Transformers & Language Models</p>
     </div>
-    <div class="stat-item">
-      <span class="stat-number" data-target="50">0</span>
-      <span class="stat-label">Tech Resources</span>
+    <div class="activity-item">
+      <i class="fas fa-tools"></i>
+      <h3>Applied Projects</h3>
+      <p>Real-world AI Solutions</p>
     </div>
   </div>
 </div>
@@ -686,10 +769,10 @@ body {
 document.addEventListener('DOMContentLoaded', function() {
   // Typing Animation
   const typingTexts = [
-    "Welcome to Tech Hub 🚀",
-    "Explore AI & Data Science 🤖", 
-    "Build the Future Together 💡",
-    "Join Our Tech Community 🌟"
+    "Welcome to Innovation Hub! ",
+    "Transforming Ideas into Intelligence ", 
+    "Building Tomorrow's Solutions Today ",
+    "Where Data Meets Creativity "
   ];
   
   let textIndex = 0;
@@ -724,38 +807,6 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Start typing animation
   typeText();
-  
-  // Animated Counters
-  const counters = document.querySelectorAll('.stat-number');
-  const animateCounters = () => {
-    counters.forEach(counter => {
-      const target = +counter.getAttribute('data-target');
-      const count = +counter.innerText;
-      const increment = target / 200;
-      
-      if (count < target) {
-        counter.innerText = Math.ceil(count + increment);
-        setTimeout(() => animateCounters(), 20);
-      } else {
-        counter.innerText = target;
-      }
-    });
-  };
-  
-  // Intersection Observer for counters
-  const statsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        animateCounters();
-        statsObserver.unobserve(entry.target);
-      }
-    });
-  });
-  
-  const statsContainer = document.querySelector('.stats-container');
-  if (statsContainer) {
-    statsObserver.observe(statsContainer);
-  }
   
   // Tech Stack Progress Bars
   const techObserver = new IntersectionObserver((entries) => {
