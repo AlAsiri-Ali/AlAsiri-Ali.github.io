@@ -69,19 +69,17 @@ body.layout--splash {
   z-index: 2 !important;
 }
 
-/* Transparent sections over the background image */
+/* Clear background sections with smooth black overlay */
 .stats-container {
-  background: rgba(255, 255, 255, 0.1) !important;
-  backdrop-filter: blur(10px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  background: rgba(0, 0, 0, 0.7) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
   border-radius: 15px !important;
   padding: 30px !important;
   margin: 20px 0 !important;
 }
 
 .stat-item {
-  background: rgba(255, 255, 255, 0.05) !important;
-  backdrop-filter: blur(5px) !important;
+  background: rgba(0, 0, 0, 0.5) !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   border-radius: 10px !important;
   padding: 20px !important;
@@ -89,22 +87,21 @@ body.layout--splash {
 }
 
 .stat-item:hover {
-  background: rgba(255, 255, 255, 0.15) !important;
+  background: rgba(0, 0, 0, 0.8) !important;
   transform: translateY(-5px) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
 }
 
 .tech-stack {
-  background: rgba(255, 255, 255, 0.1) !important;
-  backdrop-filter: blur(10px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  background: rgba(0, 0, 0, 0.7) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
   border-radius: 15px !important;
   padding: 40px !important;
   margin: 40px 0 !important;
 }
 
 .tech-item {
-  background: rgba(255, 255, 255, 0.05) !important;
-  backdrop-filter: blur(5px) !important;
+  background: rgba(0, 0, 0, 0.5) !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   border-radius: 10px !important;
   padding: 25px !important;
@@ -112,21 +109,22 @@ body.layout--splash {
 }
 
 .tech-item:hover {
-  background: rgba(255, 255, 255, 0.15) !important;
+  background: rgba(0, 0, 0, 0.8) !important;
   transform: translateY(-10px) !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
 }
 
-/* Improve text visibility on transparent backgrounds */
+/* Clear and bright text without shadows */
 .tech-header h2,
 .tech-item h3,
 .stat-label,
 .stat-number {
-  color: white !important;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+  color: #ffffff !important;
+  text-shadow: none !important;
 }
 
 .tech-subtitle {
   color: rgba(255, 255, 255, 0.9) !important;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7) !important;
+  text-shadow: none !important;
 }
