@@ -168,3 +168,76 @@ body.theme-dark .tech-item {
   color: rgba(255, 255, 255, 0.9) !important;
   text-shadow: none !important;
 }
+
+/* Transparent Navigation Bar - Buttons Only */
+.masthead {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.site-title {
+  font-weight: 600 !important;
+  color: #2c3e50 !important;
+  text-decoration: none !important;
+}
+
+.site-title:hover {
+  color: #3498db !important;
+}
+
+.greedy-nav {
+  background: transparent !important;
+}
+
+.greedy-nav a {
+  color: #34495e !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  padding: 0.6em 1em !important;
+  border-radius: 6px !important;
+  transition: all 0.2s ease !important;
+}
+
+.greedy-nav a:hover {
+  color: #3498db !important;
+  background: rgba(52, 152, 219, 0.08) !important;
+}
+
+/* Dark theme navigation - transparent with better visibility */
+body.theme-dark .masthead {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.theme-dark .site-title {
+  color: #ffffff !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+}
+
+body.theme-dark .site-title:hover {
+  color: #64ffda !important;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9) !important;
+}
+
+body.theme-dark .greedy-nav a {
+  color: #f8fafc !important;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7) !important;
+  font-weight: 600 !important;
+}
+
+body.theme-dark .greedy-nav a:hover {
+  color: #64ffda !important;
+  background: rgba(100, 255, 218, 0.2) !important;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8) !important;
+  border-radius: 6px !important;
+}
+
+/* Hide search button */
+.search__toggle {
+  display: none !important;
+}
