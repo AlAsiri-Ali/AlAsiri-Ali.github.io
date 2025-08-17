@@ -26,8 +26,9 @@ body.theme-dark .page__hero-wrap::after {
   background-color: transparent !important;
 }
 
+/* Use a solid dark background for the masthead in dark theme to match light theme layout */
 body.theme-dark .masthead {
-  background-color: transparent !important;
+  background-color: rgba(37, 42, 52, 0.9) !important;
 }
 
 body.theme-dark .page__content,
@@ -60,6 +61,10 @@ body.theme-dark a {
 body.theme-dark a:hover {
   color: #6ec6c0;
 }
+
+/* Unify nav link look in dark theme */
+body.theme-dark .greedy-nav a { text-shadow: none !important; }
+body.theme-dark .greedy-nav a:hover { color: #ffffff !important; }
 
 body.theme-dark .greedy-nav {
   background-color: rgba(37, 42, 52, 0.9) !important;
