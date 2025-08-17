@@ -14,8 +14,24 @@ author_profile: true
 
 .intro-section {
   text-align: center;
-  margin-bottom: 50px;
-  padding: 30px;
+  margin-bottom:   <div class="quick-facts">
+    <div class="fact-item">
+      <span class="fact-number">1+</span>
+      <span class="fact-label">Years in AI</span>
+    </div>
+    <div class="fact-item">
+      <span class="fact-number">5+</span>
+      <span class="fact-label">Projects Built</span>
+    </div>
+    <div class="fact-item">
+      <span class="fact-number">∞</span>
+      <span class="fact-label">Curiosity Level</span>
+    </div>
+    <div class="fact-item">
+      <span class="fact-number">24/7</span>
+      <span class="fact-label">Learning Mode</span>
+    </div>
+  </div>30px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: 15px;
   color: white;
@@ -190,7 +206,7 @@ author_profile: true
         <h3 class="card-title">Academic Journey</h3>
       </div>
       <p class="card-description">
-        From Information Systems to AI specialization. Explore my educational path, milestones, and the evolution of my interests in artificial intelligence.
+        Currently pursuing Executive Master's in AI. Explore my educational path, milestones, and the evolution of my interests in artificial intelligence.
       </p>
       <span class="card-link">
         View My Journey <i class="fas fa-arrow-right"></i>
@@ -240,7 +256,7 @@ author_profile: true
 
   <div class="quick-facts">
     <div class="fact-item">
-      <span class="fact-number">2+</span>
+      <span class="fact-number">1+</span>
       <span class="fact-label">Years in AI</span>
     </div>
     <div class="fact-item">
@@ -261,9 +277,16 @@ author_profile: true
 
 ---
 
-## 🎯 What Drives Me
+## 🚀 My Mission
 
-I believe that the most complex challenges have elegant, data-driven solutions. My goal is to bridge the gap between cutting-edge AI research and practical applications that solve real-world problems.
+I'm passionate about using AI to solve meaningful problems. My goal is to bridge the gap between academic research and real-world applications that make people's lives better. I believe that the most complex challenges have elegant, data-driven solutions.
+
+## 🎯 Current Focus  
+
+- **Deep Learning**: Advanced neural networks and architectures
+- **Natural Language Processing**: Transformers and language models  
+- **Applied ML Projects**: Real-world problem solving with data
+- **Research & Innovation**: Exploring cutting-edge AI applications
 
 Whether you're here to explore a project, read an article, or just out of curiosity - I'm glad you're here! Let's build the future, one algorithm at a time.
 

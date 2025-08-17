@@ -396,7 +396,7 @@ author_profile: true
 <div class="blog-container">
   
   <div class="blog-header">
-    <h1>📝 Blog & Articles</h1>
+    <h1> Blog & Articles</h1>
     <p class="blog-subtitle">
       Welcome to my digital thoughts! Here I share insights, tutorials, and reflections on AI, technology, and my learning journey.
     </p>

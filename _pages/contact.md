@@ -347,7 +347,7 @@ author_profile: true
 <div class="contact-container">
   
   <div class="contact-header">
-    <h1>📧 Get In Touch</h1>
+    <h1>Get In Touch</h1>
     <p class="contact-subtitle">
       Have a question, want to collaborate, or just want to say hello? I'd love to hear from you! 
       Drop me a message and I'll get back to you as soon as possible.

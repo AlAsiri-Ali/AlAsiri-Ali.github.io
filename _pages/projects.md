@@ -285,7 +285,7 @@ author_profile: true
 <div class="projects-container">
   
   <div class="projects-header">
-    <h1>🚀 My Projects</h1>
+    <h1>My Projects</h1>
     <p class="projects-subtitle">
       Here are some of the projects I've worked on throughout my academic and personal journey. Each project represents a step forward in my learning and a solution to real-world challenges.
     </p>

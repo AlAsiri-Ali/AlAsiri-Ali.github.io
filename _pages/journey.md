@@ -156,28 +156,39 @@ author_profile: true
 <div class="timeline">
   <div class="timeline-item left">
     <div class="timeline-content">
-      <div class="timeline-date">2019 - 2023</div>
+      <div class="timeline-date">2015-2020</div>
       <h3>🎓 Bachelor's in Information Systems</h3>
-      <p>Built a solid foundation in programming, databases, and system analysis. This is where my journey with data began, and I discovered my passion for turning information into insights.</p>
-      <p><strong>Key Skills:</strong> SQL, Java, System Design, Database Management</p>
+      <p>King Khaled University - Built a solid foundation in programming, databases, and system analysis. This is where my journey with data began, and I discovered my passion for turning information into insights.</p>
+      <p><strong>Key Skills:</strong> SQL, Database Management, System Design, Programming Fundamentals</p>
     </div>
   </div>
   
   <div class="timeline-item right">
     <div class="timeline-content">
-      <div class="timeline-date">2023 - Present</div>
-      <h3>🤖 Master's in Artificial Intelligence</h3>
-      <p>Diving deep into the world of AI and Machine Learning. Focusing on practical applications and real-world problem solving through data science and intelligent systems.</p>
-      <p><strong>Current Focus:</strong> Deep Learning, NLP, Computer Vision, MLOps</p>
+      <div class="timeline-date">2024 - Present</div>
+      <h3>🤖 Executive Master's in Artificial Intelligence</h3>
+      <p>King Abdulaziz University - Diving deep into the world of AI and Machine Learning with focus on practical applications. Specializing in Machine Learning, Natural Language Processing, Deep Neural Networks, and AI Algorithms.</p>
+      <p><strong>Current Focus:</strong> Deep Learning, NLP, Neural Networks, AI Algorithms</p>
+      <p><strong>Expected Graduation:</strong> 2026</p>
     </div>
   </div>
   
   <div class="timeline-item left">
     <div class="timeline-content">
+      <div class="timeline-date">2021-2023</div>
+      <h3>💼 Cashier & Customer Service</h3>
+      <p>Part-time position that developed strong communication skills and attention to detail. Gained experience in handling payment processing, financial transactions, and maintaining organized work environments.</p>
+      <p><strong>Skills Developed:</strong> Customer Communication, Financial Accuracy, Problem Solving</p>
+    </div>
+  </div>
+  
+  <div class="timeline-item right">
+    <div class="timeline-content">
       <div class="timeline-date">2024</div>
       <h3>🚀 First ML Projects</h3>
-      <p>Started building my first serious machine learning projects, including recommendation systems and data analysis tools. Learning by doing became my motto.</p>
-      <p><strong>Technologies:</strong> Python, Scikit-learn, Pandas, Jupyter</p>
+      <p>Started building serious machine learning projects focusing on practical applications and real-world problem solving. Developed multiple projects covering various ML domains including classification, prediction, and game AI. Learning by doing became my motto.</p>
+      <p><strong>Technologies:</strong> Python, Pandas, Scikit-learn, NumPy, TensorFlow</p>
+      <p><strong>All projects available on GitHub</strong></p>
     </div>
   </div>
   
@@ -186,7 +197,7 @@ author_profile: true
       <div class="timeline-date">2024 - Present</div>
       <h3>💻 Building This Portfolio</h3>
       <p>Created this digital space to document my learning journey and share my projects with the world. Every project teaches me something new about the intersection of technology and real-world impact.</p>
-      <p><strong>Next Goals:</strong> Open-source contributions, Research publications, Industry collaboration</p>
+      <p><strong>Skills Used:</strong> Jekyll, GitHub Pages, Web Development, UI/UX Design</p>
     </div>
   </div>
 </div>
@@ -195,9 +206,10 @@ author_profile: true
 
 ## 🎯 What's Next?
 
-- **🔬 Research Focus:** Completing my Master's thesis on [Your Research Topic]
-- **🏢 Industry Goal:** Applying AI solutions to real business problems
-- **🌍 Community:** Contributing to open-source AI projects
-- **📚 Continuous Learning:** Staying updated with the latest in AI and ML
+- **🎓 Academic Goals:** Completing my Executive Master's in AI (Expected 2026)
+- **🚀 Advanced Projects:** Building more complex AI applications and solutions
+- **🏢 Industry Experience:** Seeking opportunities to apply AI in real business scenarios
+- **🌍 Community:** Contributing to open-source AI projects and knowledge sharing
+- **📚 Continuous Learning:** Staying updated with cutting-edge AI research and technologies
 
 The journey continues, and each step brings new challenges and discoveries. I'm excited about what lies ahead!
