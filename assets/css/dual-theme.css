@@ -3,24 +3,46 @@
 /* Air theme is default from _config.yml */
 /* Dark theme override using exact colors from minimal-mistakes dark skin */
 
-/* Dark theme override */
+/* Dark theme override with site-wide background */
 body.theme-dark {
+  background-image: url('/assets/images/homephoto.jpg') !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
   background-color: #252a34;
   color: #eaeaea;
 }
 
+/* REMOVE ALL OVERLAYS IN DARK MODE */
+body.theme-dark .page__hero--overlay::before,
+body.theme-dark .page__hero--overlay::after,
+body.theme-dark .page__hero-wrap::before,
+body.theme-dark .page__hero-wrap::after {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
 body.theme-dark .masthead {
-  background-color: #252a34;
+  background-color: transparent !important;
 }
 
 body.theme-dark .page__content,
 body.theme-dark .page__inner-wrap {
-  background-color: #252a34;
+  background-color: rgba(37, 42, 52, 0.9) !important;
   color: #eaeaea;
+  border-radius: 10px !important;
+  margin: 20px !important;
+  padding: 30px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
 }
 
 body.theme-dark .sidebar {
-  background-color: #252a34;
+  background-color: rgba(37, 42, 52, 0.9) !important;
+  border-radius: 10px !important;
 }
 
 body.theme-dark .author__content h3,
@@ -40,7 +62,7 @@ body.theme-dark a:hover {
 }
 
 body.theme-dark .greedy-nav {
-  background-color: #252a34;
+  background-color: rgba(37, 42, 52, 0.9) !important;
 }
 
 body.theme-dark .greedy-nav a {
@@ -53,4 +75,30 @@ body.theme-dark .author__bio {
 
 body.theme-dark .sidebar .author__name {
   color: #eaeaea;
+}
+
+/* Dark theme mobile responsiveness */
+@media (max-width: 768px) {
+  body.theme-dark {
+    background-attachment: scroll !important;
+  }
+}
+
+/* Dark theme archive and post content */
+body.theme-dark .archive,
+body.theme-dark .layout--single .page__content,
+body.theme-dark .layout--archive .page__content {
+  background: rgba(37, 42, 52, 0.9) !important;
+  border-radius: 10px !important;
+  padding: 30px !important;
+  margin: 20px !important;
+}
+
+/* Remove any remaining solid backgrounds */
+body.theme-dark .page,
+body.theme-dark .layout--single,
+body.theme-dark .layout--archive,
+body.theme-dark .layout--home {
+  background-color: transparent !important;
+  background-image: none !important;
 }

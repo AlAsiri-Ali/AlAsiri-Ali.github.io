@@ -57,6 +57,46 @@ body.layout--splash {
   width: 100vw !important;
 }
 
+/* Dark theme specific adjustments */
+body.theme-dark .page__hero--overlay::before {
+  background-color: transparent !important;
+}
+
+body.theme-dark .page__hero-caption h1,
+body.theme-dark .page__hero-caption h2,
+body.theme-dark .page__hero-caption p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+  color: #ffffff !important;
+}
+
+body.theme-dark .stats-container {
+  background: rgba(37, 42, 52, 0.4) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+body.theme-dark .stat-item {
+  background: rgba(37, 42, 52, 0.3) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+body.theme-dark .tech-stack {
+  background: rgba(37, 42, 52, 0.4) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+body.theme-dark .tech-item {
+  background: rgba(37, 42, 52, 0.3) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Ensure overlay is visible but not too dark */
+.page__hero--overlay::before {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  min-height: 100vh !important;
+  height: 100vh !important;
+  width: 100vw !important;
+}
+
 /* Center the content */
 .page__hero-caption {
   position: absolute !important;
