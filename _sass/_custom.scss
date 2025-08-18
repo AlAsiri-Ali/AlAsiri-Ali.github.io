@@ -155,3 +155,23 @@ body:not(.theme-dark) .greedy-nav a { color: #222831 !important; }
 .greedy-nav .hidden-links {
   z-index: 10000 !important;
 }
+
+/* Dark mode: make hamburger dropdown dark with light text */
+body.theme-dark .greedy-nav .hidden-links {
+  background: #1f2227 !important; /* dark surface */
+  border-color: #3a3d42 !important;
+}
+body.theme-dark .greedy-nav .hidden-links a {
+  color: #f2f4f8 !important;
+}
+body.theme-dark .greedy-nav .hidden-links a:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+}
+/* Adjust caret triangle colors in dark mode */
+body.theme-dark .greedy-nav .hidden-links::before {
+  border-color: #3a3d42 transparent !important; /* border */
+}
+body.theme-dark .greedy-nav .hidden-links::after {
+  border-color: #1f2227 transparent !important; /* fill */
+}
