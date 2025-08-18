@@ -141,3 +141,17 @@ body:not(.theme-dark) .masthead {
 
 body:not(.theme-dark) .greedy-nav { background: #eee !important; }
 body:not(.theme-dark) .greedy-nav a { color: #222831 !important; }
+
+/* Fix: Hamburger click makes full white overlay (disable the toggle overlay) */
+.greedy-nav__toggle::before,
+.greedy-nav__toggle.close::before {
+  /* Remove the full-screen pseudo-element overlay injected by the theme */
+  display: none !important;
+  content: none !important;
+  pointer-events: none !important;
+}
+
+/* Ensure the dropdown menu stays above anything else and remains clickable */
+.greedy-nav .hidden-links {
+  z-index: 10000 !important;
+}
