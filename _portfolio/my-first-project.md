@@ -2,7 +2,6 @@
 title: "Recommendation System"
 excerpt: "A Python-based movie recommendation system using collaborative filtering to suggest personalized content based on user preferences and ratings."
 header:
-  image: /assets/images/homephoto.jpg
   teaser: /assets/images/homephoto.jpg
 tags: [python, ml, data, recommendation]
 ---

@@ -2,7 +2,6 @@
 title: "Data Analysis Dashboard"
 excerpt: "Interactive web dashboard for data visualization and analysis using Python, Streamlit, and Plotly."
 header:
-  image: /assets/images/homephoto.jpg
   teaser: /assets/images/homephoto.jpg
 tags: [python, web, data, api]
 gallery:

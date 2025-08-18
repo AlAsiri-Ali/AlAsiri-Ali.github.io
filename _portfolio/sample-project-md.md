@@ -2,7 +2,6 @@
 title: "Sample Markdown Project"
 excerpt: "Example project created as .md to compare with the HTML version."
 header:
-  image: /assets/images/homephoto.jpg
   teaser: /assets/images/homephoto.jpg
 tags: [markdown, demo, portfolio]
 toc: true
