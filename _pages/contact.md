@@ -247,76 +247,95 @@ author_profile: true
   color: #721c24;
 }
 
-/* Dark theme support */
+/* Alert cards used by dynamic success/error messages */
+.alert-card {
+  padding: 25px;
+  border-radius: 15px;
+  margin-top: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-left: 5px solid transparent;
+}
+.alert-card h3 { margin: 0 0 12px 0; font-size: 1.15em; }
+.alert-card.success { background: #d4edda; color: #155724; border-left-color: #28a745; }
+.alert-card.error { background: #f8d7da; color: #721c24; border-left-color: #dc3545; }
+
+/* Dark variants for alerts and simple messages */
+[data-theme="dark"] .alert-card { box-shadow: 0 4px 15px rgba(0,0,0,0.25); }
+[data-theme="dark"] .alert-card.success { background: #12351d; color: #d1f2dc; border-left-color: #2ea043; }
+[data-theme="dark"] .alert-card.error { background: #3a1417; color: #f5c2c7; border-left-color: #f85149; }
+[data-theme="dark"] .message.success { background: #12351d; border-color: #2ea043; color: #d1f2dc; }
+[data-theme="dark"] .message.error { background: #3a1417; border-color: #f85149; color: #f5c2c7; }
+
+/* Dark theme support (colors only, same layout) */
 [data-theme="dark"] .contact-method {
-  background: #2d3748;
-  border-color: #4a5568;
+  background: #1c2128;
+  border-color: #30363d;
+  color: #c9d1d9;
 }
 
-[data-theme="dark"] .contact-method h3 {
-  background: linear-gradient(45deg, #90cdf4, #a78bfa);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+[data-theme="dark"] .contact-method h3 { color: #e6e8eb; background: none; -webkit-text-fill-color: currentColor; }
+[data-theme="dark"] .contact-method p { color: #9fb3c8; background: none; -webkit-text-fill-color: currentColor; }
+
+[data-theme="dark"] .contact-form,
+html[data-theme="dark"] .contact-form,
+body.theme-dark .contact-form {
+  background: #161b22 !important;
+  border-color: #30363d !important;
+  color: #c9d1d9;
+}
+[data-theme="dark"] .contact-form form,
+html[data-theme="dark"] .contact-form form,
+body.theme-dark .contact-form form {
+  background: #161b22 !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
-[data-theme="dark"] .contact-method p {
-  background: linear-gradient(45deg, #cbd5e0, #90cdf4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
+[data-theme="dark"] .form-header h2 { color: #e6e8eb; background: none; -webkit-text-fill-color: currentColor; }
+[data-theme="dark"] .form-header p { color: #9fb3c8; background: none; -webkit-text-fill-color: currentColor; }
 
-[data-theme="dark"] .contact-form {
-  background: #2d3748;
-  border-color: #4a5568;
-}
-
-[data-theme="dark"] .form-header h2 {
-  background: linear-gradient(45deg, #90cdf4, #a78bfa);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-[data-theme="dark"] .form-header p {
-  background: linear-gradient(45deg, #cbd5e0, #90cdf4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-[data-theme="dark"] .form-group label {
-  background: linear-gradient(45deg, #90cdf4, #a78bfa);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
+[data-theme="dark"] .form-group label { color: #c9d1d9; background: none; -webkit-text-fill-color: currentColor; }
 
 [data-theme="dark"] .form-group input,
 [data-theme="dark"] .form-group textarea {
-  background: #4a5568;
-  border-color: #718096;
-  color: #e2e8f0;
+  background: #0f1419;
+  border-color: #30363d;
+  color: #e6e8eb;
+}
+
+/* Ensure any inner white panels do not persist in dark */
+[data-theme="dark"] .contact-form * {
+  background-clip: padding-box;
+}
+[data-theme="dark"] .contact-form .form-row,
+[data-theme="dark"] .contact-form .form-group {
+  background: transparent !important;
 }
 
 [data-theme="dark"] .form-group input::placeholder,
 [data-theme="dark"] .form-group textarea::placeholder {
-  color: #a0aec0;
+  color: #8b949e;
 }
 
-[data-theme="dark"] .contact-subtitle {
-  background: linear-gradient(45deg, #cbd5e0, #90cdf4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+/* Softer focus ring in dark */
+[data-theme="dark"] .form-group input:focus,
+[data-theme="dark"] .form-group textarea:focus {
+  border-color: #58a6ff;
+  box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.15);
 }
 
-[data-theme="dark"] .form-note {
-  background: linear-gradient(45deg, #cbd5e0, #90cdf4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+[data-theme="dark"] .contact-subtitle { color: #9fb3c8; background: none; -webkit-text-fill-color: currentColor; }
+[data-theme="dark"] .form-note { color: #9fb3c8; background: none; -webkit-text-fill-color: currentColor; }
+
+/* Dark theme button tone */
+[data-theme="dark"] .submit-btn {
+  background: linear-gradient(45deg, #4f63d9, #7a5ad1);
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(88, 166, 255, 0.18);
+}
+[data-theme="dark"] .submit-btn:hover {
+  background: linear-gradient(45deg, #5a6ff0, #8a6df0);
+  box-shadow: 0 8px 22px rgba(88, 166, 255, 0.22);
 }
 
 /* Mobile responsiveness */
@@ -364,7 +383,7 @@ author_profile: true
     <div class="contact-method">
       <i class="fab fa-linkedin"></i>
       <h3>LinkedIn</h3>
-      <p><a href="https://linkedin.com/in/aliasiri" target="_blank">Connect with me</a></p>
+      <p><a href="https://www.linkedin.com/in/ali-asiri-b85038206/" target="_blank">Connect with me</a></p>
     </div>
     
     <div class="contact-method">
@@ -429,10 +448,10 @@ document.addEventListener('DOMContentLoaded', function() {
   const urlParams = new URLSearchParams(window.location.search);
   if (urlParams.get('sent') === 'true') {
     const form = document.getElementById('contactForm');
-    const successMessage = document.createElement('div');
-    successMessage.className = 'message success';
-    successMessage.innerHTML = '🎉 Message sent successfully! Thank you for reaching out.<br>📧 I\'ll get back to you within 24 hours!';
-    form.parentNode.insertBefore(successMessage, form);
+  const successBanner = document.createElement('div');
+  successBanner.className = 'message success';
+  successBanner.innerHTML = '🎉 Message sent successfully! Thank you for reaching out.<br>📧 I\'ll get back to you within 24 hours!';
+  form.parentNode.insertBefore(successBanner, form);
     
     // Clear the URL parameter
     window.history.replaceState({}, document.title, window.location.pathname);
@@ -452,7 +471,7 @@ document.addEventListener('DOMContentLoaded', function() {
     submitBtn.disabled = true;
     
     // Remove any existing messages
-    const existingMessages = form.parentNode.querySelectorAll('.success-message, .error-message');
+  const existingMessages = form.parentNode.querySelectorAll('.success-message, .error-message, .alert-card');
     existingMessages.forEach(msg => msg.remove());
     
     // Submit form data
@@ -469,22 +488,19 @@ document.addEventListener('DOMContentLoaded', function() {
         submitBtn.style.background = 'linear-gradient(45deg, #4CAF50, #45a049)';
         
         // Show detailed success message
-        const successMessage = document.createElement('div');
-        successMessage.className = 'success-message';
-        successMessage.innerHTML = `
-          <div style="background: linear-gradient(45deg, #d4edda, #c3e6cb); color: #155724; padding: 25px; border-radius: 15px; margin-top: 25px; border-left: 5px solid #28a745; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2);">
-            <h3 style="margin: 0 0 15px 0; color: #155724; font-size: 1.3em;">✅ Message Sent Successfully!</h3>
-            <p style="margin: 0; line-height: 1.8; font-size: 1.05em;">
-              🎯 Your message has been delivered to <strong>aliasiri.dev@gmail.com</strong><br>
-              📧 You should receive a confirmation email shortly<br>
-              ⏰ I'll respond within 24 hours during business days<br>
-              📂 If you don't see a response, please check your spam folder<br>
-              🔄 The page will refresh in 5 seconds...
-            </p>
-          </div>
+        const successCard = document.createElement('div');
+        successCard.className = 'alert-card success';
+        successCard.innerHTML = `
+          <h3>✅ Message Sent Successfully!</h3>
+          <p style="margin:0; line-height:1.8; font-size:1.05em;">
+            🎯 Your message has been delivered to <strong>aliasiri.dev@gmail.com</strong><br>
+            📧 You should receive a confirmation email shortly<br>
+            ⏰ I'll respond within 24 hours during business days<br>
+            📂 If you don't see a response, please check your spam folder<br>
+            🔄 The page will refresh in 5 seconds...
+          </p>
         `;
-        
-        form.parentNode.insertBefore(successMessage, form.nextSibling);
+        form.parentNode.insertBefore(successCard, form.nextSibling);
         form.reset();
         
         // Redirect after 5 seconds
@@ -500,22 +516,19 @@ document.addEventListener('DOMContentLoaded', function() {
       submitBtn.innerHTML = '<span>Error! Please try again ❌</span>';
       submitBtn.style.background = 'linear-gradient(45deg, #f44336, #d32f2f)';
       
-      const errorMessage = document.createElement('div');
-      errorMessage.className = 'error-message';
-      errorMessage.innerHTML = `
-        <div style="background: linear-gradient(45deg, #f8d7da, #f1b0b7); color: #721c24; padding: 25px; border-radius: 15px; margin-top: 25px; border-left: 5px solid #dc3545; box-shadow: 0 4px 15px rgba(220, 53, 69, 0.2);">
-          <h3 style="margin: 0 0 15px 0; color: #721c24; font-size: 1.3em;">❌ Message Failed to Send</h3>
-          <p style="margin: 0; line-height: 1.8; font-size: 1.05em;">
-            There was an error sending your message. Please try:<br>
-            🔄 Refreshing the page and trying again<br>
-            📧 Sending an email directly to: <strong>aliasiri.dev@gmail.com</strong><br>
-            💬 Contacting me through social media links above<br>
-            🆘 The issue might be temporary, please try again in a few minutes
-          </p>
-        </div>
+      const errorCard = document.createElement('div');
+      errorCard.className = 'alert-card error';
+      errorCard.innerHTML = `
+        <h3>❌ Message Failed to Send</h3>
+        <p style="margin:0; line-height:1.8; font-size:1.05em;">
+          There was an error sending your message. Please try:<br>
+          🔄 Refreshing the page and trying again<br>
+          📧 Sending an email directly to: <strong>aliasiri.dev@gmail.com</strong><br>
+          💬 Contacting me through social media links above<br>
+          🆘 The issue might be temporary, please try again in a few minutes
+        </p>
       `;
-      
-      form.parentNode.insertBefore(errorMessage, form.nextSibling);
+      form.parentNode.insertBefore(errorCard, form.nextSibling);
       
       // Reset button after 3 seconds
       setTimeout(() => {
