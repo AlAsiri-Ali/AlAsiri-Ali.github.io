@@ -17,14 +17,13 @@ body.layout--splash {
 
 /* Full screen hero section */
 .page__hero--overlay {
-  background-image: url('/assets/images/homephoto.jpg') !important;
+  /* the theme sets background-image via front matter; avoid duplicating it */
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
-  background-attachment: fixed !important;
   min-height: 100vh !important;
   height: 100vh !important;
-  width: 100vw !important;
+  width: 100% !important;
   position: relative !important;
   margin: 0 !important;
   padding: 0 !important;
@@ -43,7 +42,6 @@ body.layout--splash {
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .page__hero--overlay {
-    background-attachment: scroll !important;
     min-height: 100vh !important;
     height: 100vh !important;
   }

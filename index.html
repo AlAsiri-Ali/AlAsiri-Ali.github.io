@@ -1,7 +1,7 @@
 ---
 layout: splash
 header:
-  overlay_image: /assets/images/homephoto.jpg
+  overlay_color: transparent
   overlay_filter: 0
   actions:
     - label: "<i class='fas fa-code'></i> Explore Tech Hub"
@@ -23,22 +23,35 @@ body.theme-dark .page__hero-wrap::after {
   background: transparent !important;
 }
 
-/* Full Screen Background Image - Enhanced */
-body {
+/* خلفية تمتد طوال الموقع (صورة واحدة فقط على html) */
+html {
   background-image: url('/assets/images/homephoto.jpg') !important;
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
   background-attachment: fixed !important;
-  min-height: 100vh !important;
+  min-height: 100%;
 }
+/* اجعل جسم الصفحة شفافاً لترك الصورة تظهر خلاله */
+body { background: transparent !important; }
+
+/* اجعل الحاويات الرئيسية شفافة حتى لا تغطي الخلفية عند التمرير */
+.initial-content,
+.search-content,
+#main,
+.page,
+.page__inner-wrap,
+.page__content { background: transparent !important; }
+
+/* يمكن تفعيل هذا لاحقاً للجوال إذا احتجت تحسين الأداء
+@media (max-width: 768px) {
+  html { background-attachment: scroll !important; }
+}
+*/
+
+/* NOTE: لا نستخدم صورة للهيرو هنا؛ الصورة على body فقط */
 
 .page__hero--overlay {
-  background-image: url('/assets/images/homephoto.jpg') !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  background-attachment: fixed !important;
   min-height: 100vh !important;
   width: 100% !important;
   margin: 0 !important;
@@ -46,21 +59,7 @@ body {
 }
 
 .page__hero-wrap {
-  background-image: url('/assets/images/homephoto.jpg') !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  background-attachment: fixed !important;
   min-height: 100vh !important;
-}
-
-/* Fallback for different selectors */
-.page__hero,
-.page__hero--overlay .page__hero-wrap {
-  background-image: url('/assets/images/homephoto.jpg') !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
 }
 
 /* Ensure overlay covers full screen */
