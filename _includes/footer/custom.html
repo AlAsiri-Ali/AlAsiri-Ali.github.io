@@ -60,14 +60,19 @@ body.theme-dark .footer-theme-btn:hover {
 <script>
 function toggleTheme() {
   const body = document.body;
+  const root = document.documentElement; // <html>
   const icon = document.getElementById('theme-icon');
   
   if (body.classList.contains('theme-dark')) {
     body.classList.remove('theme-dark');
+    // reflect in [data-theme]
+    root.setAttribute('data-theme', 'light');
     icon.innerHTML = '🌙';
     localStorage.setItem('website-theme', 'light');
   } else {
     body.classList.add('theme-dark');
+    // reflect in [data-theme]
+    root.setAttribute('data-theme', 'dark');
     icon.innerHTML = '☀️';
     localStorage.setItem('website-theme', 'dark');
   }
@@ -78,6 +83,9 @@ function toggleTheme() {
   const savedTheme = localStorage.getItem('website-theme');
   if (savedTheme === 'dark') {
     document.body.classList.add('theme-dark');
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else if (savedTheme === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
   }
 })();
 

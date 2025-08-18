@@ -1,109 +1,89 @@
-/* Dual Theme Support - Air & Dark */
+/* Dual Theme Support - keep layout identical, change only palette */
 
-/* Air theme is default from _config.yml */
-/* Dark theme override using exact colors from minimal-mistakes dark skin */
-
-/* Dark theme override with site-wide background */
-body.theme-dark {
-  background-image: url('/assets/images/homephoto.jpg') !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  background-attachment: fixed !important;
-  background-color: #252a34;
-  color: #eaeaea;
+/* Base surface and text colors when dark */
+body.theme-dark,
+html[data-theme="dark"] body {
+  background-color: #0f1419; /* neutral dark */
+  color: #e6e8eb; /* high-contrast text */
 }
 
-/* REMOVE ALL OVERLAYS IN DARK MODE */
-body.theme-dark .page__hero--overlay::before,
-body.theme-dark .page__hero--overlay::after,
-body.theme-dark .page__hero-wrap::before,
-body.theme-dark .page__hero-wrap::after {
-  display: none !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  background: transparent !important;
-  background-color: transparent !important;
-}
-
-/* Use a solid dark background for the masthead in dark theme to match light theme layout */
-body.theme-dark .masthead {
-  background-color: rgba(37, 42, 52, 0.9) !important;
-}
-
-body.theme-dark .page__content,
-body.theme-dark .page__inner-wrap {
-  background-color: rgba(37, 42, 52, 0.9) !important;
-  color: #eaeaea;
-  border-radius: 10px !important;
-  margin: 20px !important;
-  padding: 30px !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
-}
-
-body.theme-dark .sidebar {
-  background-color: rgba(37, 42, 52, 0.9) !important;
-  border-radius: 10px !important;
-}
-
-body.theme-dark .author__content h3,
-body.theme-dark .page__title,
-body.theme-dark .archive__item-title,
-body.theme-dark h1, body.theme-dark h2, body.theme-dark h3, 
-body.theme-dark h4, body.theme-dark h5, body.theme-dark h6 {
-  color: #eaeaea;
-}
-
-body.theme-dark a {
-  color: #4db6ac;
-}
-
-body.theme-dark a:hover {
-  color: #6ec6c0;
-}
-
-/* Unify nav link look in dark theme */
-body.theme-dark .greedy-nav a { text-shadow: none !important; }
-body.theme-dark .greedy-nav a:hover { color: #ffffff !important; }
-
-body.theme-dark .greedy-nav {
-  background-color: rgba(37, 42, 52, 0.9) !important;
-}
-
-body.theme-dark .greedy-nav a {
-  color: #eaeaea;
-}
-
-body.theme-dark .author__bio {
-  color: #eaeaea;
-}
-
-body.theme-dark .sidebar .author__name {
-  color: #eaeaea;
-}
-
-/* Dark theme mobile responsiveness */
-@media (max-width: 768px) {
-  body.theme-dark {
-    background-attachment: scroll !important;
-  }
-}
-
-/* Dark theme archive and post content */
-body.theme-dark .archive,
-body.theme-dark .layout--single .page__content,
-body.theme-dark .layout--archive .page__content {
-  background: rgba(37, 42, 52, 0.9) !important;
-  border-radius: 10px !important;
-  padding: 30px !important;
-  margin: 20px !important;
-}
-
-/* Remove any remaining solid backgrounds */
+/* Page surfaces: use same paddings/margins as light; only recolor */
 body.theme-dark .page,
-body.theme-dark .layout--single,
-body.theme-dark .layout--archive,
-body.theme-dark .layout--home {
-  background-color: transparent !important;
-  background-image: none !important;
+body.theme-dark .page__content,
+body.theme-dark .page__inner-wrap,
+html[data-theme="dark"] .page,
+html[data-theme="dark"] .page__content,
+html[data-theme="dark"] .page__inner-wrap {
+  background-color: #161b22;
+  color: #e6e8eb;
+}
+
+/* Masthead/nav */
+body.theme-dark .masthead,
+html[data-theme="dark"] .masthead {
+  background-color: #161b22;
+  border-bottom-color: #30363d;
+}
+
+body.theme-dark .greedy-nav,
+html[data-theme="dark"] .greedy-nav {
+  background: transparent;
+}
+
+body.theme-dark .greedy-nav a,
+html[data-theme="dark"] .greedy-nav a {
+  color: #e6e8eb;
+  text-shadow: none;
+}
+body.theme-dark .greedy-nav a:hover,
+html[data-theme="dark"] .greedy-nav a:hover { color: #fff; }
+
+/* Links */
+body.theme-dark a,
+html[data-theme="dark"] a { color: #58a6ff; }
+body.theme-dark a:hover,
+html[data-theme="dark"] a:hover { color: #79c0ff; }
+
+/* Widgets/sidebars */
+body.theme-dark .sidebar,
+html[data-theme="dark"] .sidebar { background-color: #161b22; }
+
+/* Headings */
+body.theme-dark h1,
+body.theme-dark h2,
+body.theme-dark h3,
+body.theme-dark h4,
+body.theme-dark h5,
+body.theme-dark h6,
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
+html[data-theme="dark"] h6 { color: #e6e8eb; }
+
+/* Tables and borders */
+html[data-theme="dark"] table,
+body.theme-dark table { color: #e6e8eb; }
+html[data-theme="dark"] hr,
+body.theme-dark hr { border-color: #30363d; }
+
+/* Code blocks */
+html[data-theme="dark"] pre,
+body.theme-dark pre,
+html[data-theme="dark"] code,
+body.theme-dark code { background: #0b1021; color: #e6e8eb; }
+
+/* Hero overlays: keep behavior but slightly darken for readability */
+body.theme-dark .page__hero--overlay::before,
+html[data-theme="dark"] .page__hero--overlay::before {
+  background-color: rgba(0,0,0,0.35);
+}
+
+/* Footer */
+html[data-theme="dark"] .page__footer,
+body.theme-dark .page__footer {
+  background: #0f1419;
+  border-top-color: #30363d;
+  color: #c9d1d9;
 }
