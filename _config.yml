@@ -236,6 +236,16 @@ defaults:
       comments: true
       share: true
       related: true
+  # _portfolio collection (project pages)
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      related: true
+      show_date: false
 
 collections:
   portfolio:

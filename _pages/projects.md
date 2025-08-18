@@ -15,7 +15,10 @@ author_profile: true
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 10px;
-}ax-width: 1200px;
+}
+/* Fix: missing rule delimiter led to broken CSS; restore container width */
+.projects-container {
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
