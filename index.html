@@ -9,10 +9,11 @@ header:
     - label: "<i class='fas fa-book-open'></i> Read Articles"
       url: "/blog/"
 excerpt: ""
+image:
+  path: /assets/images/OGImage.jpg
+  alt: "Ali AlAsiri AI & Data Science Portfolio"
 ---
-
 <style>
-/* خلفية تمتد طوال الموقع (صورة واحدة فقط على html) */
 html {
   background-image: url('/assets/images/homephoto.jpg') !important;
   background-size: cover !important;
@@ -21,32 +22,19 @@ html {
   background-attachment: fixed !important;
   min-height: 100%;
 }
-/* اجعل جسم الصفحة شفافاً لترك الصورة تظهر خلاله */
-body { background: transparent !important; }
-
-/* اجعل الحاويات الرئيسية شفافة حتى لا تغطي الخلفية عند التمرير */
+body { background: transparent !important;}
 .initial-content,
 .search-content,
 #main,
 .page,
 .page__inner-wrap,
 .page__content { background: transparent !important; }
-
-/* يمكن تفعيل هذا لاحقاً للجوال إذا احتجت تحسين الأداء
-@media (max-width: 768px) {
-  html { background-attachment: scroll !important; }
-}
-*/
-
-/* NOTE: لا نستخدم صورة للهيرو هنا؛ الصورة على body فقط */
-
 .page__hero--overlay {
   min-height: 100vh !important;
-  width: 100% !important;
+  width: 100%;
   margin: 0 !important;
   padding: 0 !important;
 }
-
 .page__hero-wrap {
   min-height: 100vh !important;
 }
