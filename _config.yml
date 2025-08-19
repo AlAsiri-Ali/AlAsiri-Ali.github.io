@@ -10,47 +10,47 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-# theme                  : "minimal-mistakes-jekyll"
-remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "air" # "default" "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+# theme                      : "minimal-mistakes-jekyll"
+remote_theme                 : "mmistakes/minimal-mistakes"
+minimal_mistakes_skin        : "air" # "default" "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US" # "ar-SA"
-rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "Ali AlAsiri | AI & Data Science Portfolio"
-title_separator          : "|"
-subtitle                 : "Master's Student • AI Researcher • Data Enthusiast"
-name                     : "Ali AlAsiri"
-description              : "Ali AlAsiri's portfolio. A journey of building intelligent systems that solve real-world problems through AI, Machine Learning, and Data Science projects."
-url                      : "https://AlAsiri-Ali.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "AlAsiri-Ali/AlAsiri-Ali.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-breadcrumbs              : true # true, false (default)
-words_per_minute         : 200
-enable_copy_code_button  : # true, false (default)
-copyright                : # "copyright" name, defaults to site.title
-copyright_url            : # "copyright" URL, defaults to site.url
+locale                       : "en-US" # "ar-SA"
+rtl                          : # true, false (default) # turns direction of the page into right to left for RTL languages
+title                        : "Artificial intelligence & Data Science Portfolio"
+title_separator              : "|"
+subtitle                     : "Master's Student • AI Researcher • Data Enthusiast"
+name                         : "Ali AlAsiri"
+description                  : "Ali AlAsiri's portfolio. A journey of building intelligent systems that solve real-world problems through AI, Machine Learning, and Data Science projects."
+url                          : "https://AlAsiri-Ali.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                      : # the subpath of your site, e.g. "/blog"
+repository                   : "AlAsiri-Ali/AlAsiri-Ali.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+teaser                       : /assets/images/OGImage.jpg # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+logo                         : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+masthead_title               : "Ali AlAsiri" # overrides the website title displayed in the masthead, use " " for no title
+breadcrumbs                  : true # true, false (default)
+words_per_minute             : 200
+enable_copy_code_button      : true # true, false (default)
+copyright                    : "Copyright © 2025 Ali AlAsiri. All Rights Reserved." # "copyright" name, defaults to site.title
+copyright_url                : # "copyright" URL, defaults to site.url
 
 # Search
-search                   : false
-search_full_content      : false
-search_provider          : lunr
+search                       : false
+search_full_content          : false
+search_provider              : lunr
 
 # Analytics
 analytics:
   provider: "google"
   google:
-    tracking_id: "G-PD18B3Z8DJ"
+    tracking_id: "G-PD18B3Z8DJ" # Make sure this is your correct tracking ID
 
 # Site Author
 author:
-  name             : "Ali AlAsiri"
+  name                       : "Ali AlAsiri"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "M.S. student in Artificial Intelligence, passionate about data, algorithms, and solving real-world problems. This site documents my journey."
-  location         : "abha, Saudi Arabia"
+  bio                        : "M.S. student in Artificial Intelligence, passionate about data, algorithms, and solving real-world problems. This site documents my journey."
+  location                   : "Abha, Saudi Arabia"
   email            :
   links:
     - label: "Email"
@@ -72,6 +72,9 @@ footer:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://linkedin.com/in/ali-asiri-b85038206"
+    - label: "Privacy Policy"
+      icon: "fas fa-fw fa-user-secret"
+      url: "/privacy-policy/"
   since: "2025"
 
 
