@@ -197,25 +197,6 @@ author_profile: true
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-.tag.python { background: #3776ab; }
-.tag.ml { background: #ff6b6b; }
-.tag.data { background: #4ecdc4; }
-.tag.web { background: #45b7d1; }
-.tag.api { background: #96ceb4; }
-.tag.cloud { background: #ffeaa7; color: #333; }
-.tag.javascript { background: #f7df1e; color: #333; }
-.tag.react { background: #61dafb; color: #333; }
-
-/* Dark theme - Enhanced contrast for better visibility */
-[data-theme="dark"] .tag.python { background: #2563eb; color: #ffffff; font-weight: 600; }
-[data-theme="dark"] .tag.ml { background: #dc2626; color: #ffffff; font-weight: 600; }
-[data-theme="dark"] .tag.data { background: #059669; color: #ffffff; font-weight: 600; }
-[data-theme="dark"] .tag.web { background: #0284c7; color: #ffffff; font-weight: 600; }
-[data-theme="dark"] .tag.api { background: #16a34a; color: #ffffff; font-weight: 600; }
-[data-theme="dark"] .tag.cloud { background: #ca8a04; color: #ffffff; font-weight: 600; }
-[data-theme="dark"] .tag.javascript { background: #eab308; color: #000000; font-weight: 600; }
-[data-theme="dark"] .tag.react { background: #06b6d4; color: #000000; font-weight: 600; }
-
 .project-link {
   display: inline-flex;
   align-items: center;
@@ -338,7 +319,6 @@ author_profile: true
     </a>
     {% endfor %}
     
-    <!-- Coming Soon Project -->
     <div class="project-card" data-category="ml">
       <div class="project-image">
         <div class="project-image-placeholder">🔮</div>
@@ -350,7 +330,7 @@ author_profile: true
         </p>
         <div class="project-tags">
           <span class="tag python">Python</span>
-          <span class="tag ml">NLP</span>
+          <span class="tag nlp">NLP</span>
           <span class="tag api">API</span>
         </div>
         <span class="project-link">
@@ -365,16 +345,14 @@ author_profile: true
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  // --- Filter Buttons Logic ---
   const filterButtons = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card');
   
   filterButtons.forEach(button => {
     button.addEventListener('click', function() {
-      // Remove active class from all buttons
       filterButtons.forEach(btn => btn.classList.remove('active'));
-      // Add active class to clicked button
       this.classList.add('active');
-      
       const filter = this.getAttribute('data-filter');
       
       projectCards.forEach(card => {
@@ -391,5 +369,46 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   });
+
+  // --- Dynamic Tag Coloring Logic ---
+  /**
+   * Simple hash function to convert a string to a number.
+   * @param {string} str The string to hash.
+   * @returns {number} A numeric hash of the string.
+   */
+  function stringToHash(str) {
+    let hash = 0;
+    if (str.length === 0) return hash;
+    for (let i = 0; i < str.length; i++) {
+      const char = str.charCodeAt(i);
+      hash = ((hash << 5) - hash) + char;
+      hash = hash & hash; // Convert to 32bit integer
+    }
+    return hash;
+  }
+
+  /**
+   * Generates a consistent HSL color based on a string.
+   * @param {string} str The input string (tag name).
+   * @returns {string} An HSL color string.
+   */
+  function generateHslColor(str) {
+    const hash = stringToHash(str);
+    const h = Math.abs(hash % 360); // Hue
+    const s = 75; // Saturation
+    const l = 40; // Lightness
+    return `hsl(${h}, ${s}%, ${l}%)`;
+  }
+
+  // Select all tag elements within the project-tags container
+  const tags = document.querySelectorAll('.project-tags .tag');
+
+  tags.forEach(tag => {
+    const tagName = tag.textContent.trim();
+    const color = generateHslColor(tagName);
+    tag.style.backgroundColor = color;
+    tag.style.color = '#ffffff'; // Set a consistent text color
+  });
+
 });
 </script>
