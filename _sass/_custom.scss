@@ -95,7 +95,8 @@ body.layout--splash {
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   border-radius: 15px !important;
   padding: 40px !important;
-  margin: 40px 0 !important;
+  margin: 40px auto !important;
+  max-width: 1000px !important;
 }
 
 .tech-item {
