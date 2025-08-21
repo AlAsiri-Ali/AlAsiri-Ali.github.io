@@ -79,10 +79,7 @@ author_profile: true
 }
 
 .contact-method p {
-  background: linear-gradient(45deg, #4a5568, #667eea);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #5a687d;
   margin: 0;
   font-size: 0.95em;
 }
