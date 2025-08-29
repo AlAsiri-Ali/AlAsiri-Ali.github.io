@@ -54,15 +54,18 @@ author:
   location                   : "Abha, Saudi Arabia"
   email            :
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:aliasiri.dev@gmail.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/AlAsiri-Ali"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://linkedin.com/in/ali-asiri-b85038206"
+    - label: "X"
+      icon: "fab fa-fw fa-x-twitter"
+      url: "https://x.com/Ali_M_Asiri"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:aliasiri.dev@gmail.com"
 
 # Site Footer
 footer:
@@ -73,6 +76,9 @@ footer:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://linkedin.com/in/ali-asiri-b85038206"
+    - label: "X"
+      icon: "fab fa-fw fa-x-twitter"
+      url: "https://x.com/Ali_M_Asiri"
     - label: "Privacy Policy"
       icon: "fas fa-fw fa-user-secret"
       url: "/privacy-policy/"

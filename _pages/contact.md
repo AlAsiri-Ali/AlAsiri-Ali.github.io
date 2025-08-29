@@ -354,6 +354,12 @@ body.theme-dark .contact-form form {
     </div>
     
     <div class="contact-method">
+      <i class="fab fa-x-twitter"></i>
+      <h3>X</h3>
+      <p><a href="https://x.com/Ali_M_Asiri" target="_blank">Follow me on X</a></p>
+    </div>
+    
+    <div class="contact-method">
       <i class="fab fa-github"></i>
       <h3>GitHub</h3>
       <p><a href="https://github.com/AlAsiri-Ali" target="_blank">Check out my code</a></p>
