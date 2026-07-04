@@ -38,8 +38,10 @@ $(document).ready(function() {
           }
         })
       });
+    var isArabic = document.documentElement.lang && document.documentElement.lang.indexOf('ar') === 0;
+    var resultsLabel = isArabic ? 'نتيجة' : 'result(s) found';
     resultdiv.empty();
-    resultdiv.prepend('<p class="results__found">'+result.length+' {{ site.data.ui-text[site.locale].results_found | default: "Result(s) found" }}</p>');
+    resultdiv.prepend('<p class="results__found">'+result.length+' '+resultsLabel+'</p>');
     for (var item in result) {
       var ref = result[item].ref;
       if(store[ref].teaser){

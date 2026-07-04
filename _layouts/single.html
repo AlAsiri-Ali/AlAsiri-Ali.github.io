@@ -2,6 +2,9 @@
 layout: default
 ---
 
+{% assign aa_lang = page.lang | default: 'en' %}
+{% assign aa_ui = site.data.ui-text[aa_lang] | default: site.data.ui-text[site.locale] %}
+
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
   {% include page__hero.html %}
 {% elsif page.header.video.id and page.header.video.provider %}
@@ -18,7 +21,7 @@ layout: default
   {% endunless %}
 {% endif %}
 
-<div id="main" role="main">
+<div id="main" role="main" class="{% if page.author_profile or layout.author_profile or page.sidebar %}aa-has-sidebar{% else %}aa-no-sidebar{% endif %}">
   {% include sidebar.html %}
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>
@@ -28,7 +31,7 @@ layout: default
     {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
 
     <div class="page__inner-wrap">
-      {% unless page.header.overlay_color or page.header.overlay_image %}
+      {% unless page.header.overlay_color or page.header.overlay_image or page.hide_title %}
         <header>
           {% if page.title -%}
           <h1 id="page-title" class="page__title" itemprop="headline">
@@ -39,30 +42,39 @@ layout: default
         </header>
       {% endunless %}
 
+      {% if page.header.teaser %}
+        <figure class="aa-post-cover">
+          <img src="{{ page.header.teaser | relative_url }}" alt="" loading="eager">
+        </figure>
+      {% endif %}
+
       <section class="page__content" itemprop="text">
         {% if page.toc %}
           <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-{{ page.toc_icon | default: 'file-alt' }}"></i> {{ page.toc_label | default: site.data.ui-text[site.locale].toc_label | default: "On this page" }}</h4></header>
-              {% include toc.html sanitize=true html=content h_min=1 h_max=6 class="toc__menu" skip_no_ids=true %}
+              <header><h4 class="nav__title"><i class="fas fa-{{ page.toc_icon | default: 'file-alt' }}"></i> {{ page.toc_label | default: aa_ui.toc_label | default: "On this page" }}</h4></header>
+              {% assign aa_toc_h_min = page.toc_h_min | default: 1 %}
+              {% include toc.html sanitize=true html=content h_min=aa_toc_h_min h_max=6 class="toc__menu" skip_no_ids=true %}
             </nav>
           </aside>
         {% endif %}
         {{ content }}
-        {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
+        {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ aa_ui.ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 
+      {% unless page.hide_meta_footer %}
       <footer class="page__meta">
-        {% if site.data.ui-text[site.locale].meta_label %}
-          <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
+        {% if aa_ui.meta_label %}
+          <h4 class="page__meta-title">{{ aa_ui.meta_label }}</h4>
         {% endif %}
         {% include page__taxonomy.html %}
         {% include page__date.html %}
       </footer>
+      {% endunless %}
 
       {% if page.share %}{% include social-share.html %}{% endif %}
 
-      {% include post_pagination.html %}
+      {% unless page.hide_pagination %}{% include post_pagination.html %}{% endunless %}
     </div>
 
     {% if site.comments.provider and page.comments %}

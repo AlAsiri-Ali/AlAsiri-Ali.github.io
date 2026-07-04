@@ -1,0 +1,971 @@
+- title: Frequency-Aware Deepfake Detection
+  slug: deepfake-detection-compression
+  image: /assets/images/projects/deepfake-detection-compression.png
+  status: مشروع منشور
+  year: '2026'
+  category: الرؤية الحاسوبية وسلامة الذكاء الاصطناعي
+  featured: true
+  priority: 1
+  domain: كشف التزييف العميق · التحليل الجنائي الرقمي · المتانة
+  impact: تنفيذ بحثي يقارن نماذج مكانية ونماذج واعية بالترددات تعتمد على DCT لكشف التزييف العميق تحت ضغط H.264 والتقييم عبر مجموعات بيانات مختلفة.
+  stack:
+  - Python
+  - PyTorch
+  - XceptionNet
+  - DCT
+  - FaceForensics++
+  - Celeb-DF
+  metrics:
+  - 'FF++ c40 accuracy: 71.82% للنموذج الهجين'
+  - 'Celeb-DF AUC: 86.67% للنموذج الهجين'
+  - تقييم عبر 5 بذور عشوائية
+  links:
+    project: /ar/projects/deepfake-detection-compression/
+    repo: https://github.com/AlAsiri-Ali/frequency-aware-deepfake-detection
+  public_category: تقييم الذكاء الاصطناعي والمتانة
+  public_summary: مشروع تقييم بحثي يركز على المتانة، تغير البيانات، وأداء النماذج عند تدهور المدخلات.
+  public_tags:
+  - تقييم الذكاء الاصطناعي
+  - المتانة
+  - مقارنة النماذج
+  - تنفيذ بحثي
+  sort_date: '2026-06-05'
+  date_label: 5 يونيو 2026
+- title: GovRAG Copilot
+  slug: govrag-copilot
+  image: /assets/images/projects/govrag-copilot.png
+  status: مشروع منشور
+  year: '2026'
+  category: الذكاء التوليدي وRAG
+  featured: true
+  priority: 2
+  domain: RAG · معالجة لغة عربية/إنجليزية · ذكاء تنظيمي
+  impact: نظام RAG ثنائي اللغة لنظام حماية البيانات الشخصية وإرشادات SDAIA، يجمع بين الاسترجاع الهجين، الاستشهادات على مستوى المادة، إنشاء المسودات، كشف الفجوات، والمخرجات البصرية.
+  stack:
+  - Python
+  - RAG
+  - BM25
+  - TF-IDF
+  - Qwen2.5
+  - Gradio
+  - Matplotlib
+  metrics:
+  - 238 مقطعًا على مستوى المواد
+  - 190 اختبارًا ناجحًا
+  - 5 تبويبات عمل في Gradio
+  links:
+    project: /ar/projects/govrag-copilot/
+    repo: https://github.com/AlAsiri-Ali/govrag-copilot
+  public_category: الأنظمة الذكية ودعم القرار
+  public_summary: نظام ذكاء اصطناعي لسير عمل دعم القرار عندما تحتاج المخرجات إلى بنية واضحة وقابلية للتتبع وتقييم دقيق.
+  public_tags:
+  - أنظمة ذكية
+  - دعم القرار
+  - تقييم
+  - تصميم سير العمل
+  sort_date: '2026-05-09'
+  date_label: 9 مايو 2026
+- title: Cashew Leaf Disease Classification
+  slug: cashew-leaf-disease-classification
+  image: /assets/images/projects/cashew-leaf-disease-classification.png
+  status: مشروع منشور
+  year: '2026'
+  category: الذكاء البصري والتعلم العميق
+  featured: false
+  priority: 3
+  domain: رؤية زراعية · تصنيف أمراض · تعلم نقلي
+  impact: مسار تصنيف صور بالتعلم العميق للتعرف على أمراض أوراق الكاجو، مع مقارنة EfficientNet-B0 وResNet-18 وVGG-16 وDenseNet-121 تحت عدم توازن الفئات.
+  stack:
+  - Python
+  - PyTorch
+  - timm
+  - EfficientNet-B0
+  - ResNet-18
+  - VGG-16
+  - DenseNet-121
+  metrics:
+  - 6,549 صورة ورقة
+  - 5 فئات مرضية/صحية
+  - دقة EfficientNet-B0 = 98.58%
+  links:
+    project: /ar/projects/cashew-leaf-disease-classification/
+    repo: https://github.com/AlAsiri-Ali/cashew-leaf-disease-classification
+  public_category: الذكاء البصري والتعلم العميق
+  public_summary: مشروع ذكاء بصري يركز على تصنيف الصور، عدم توازن الفئات، مقارنة النماذج، وسياقات دعم القرار.
+  public_tags:
+  - ذكاء بصري
+  - تصنيف صور
+  - مقارنة نماذج
+  - تقييم
+  sort_date: '2025-12-05'
+  date_label: 5 ديسمبر 2025
+- title: PPE Safety Detection
+  slug: ppe-safety-detection
+  image: /assets/images/projects/ppe-safety-detection.png
+  status: مشروع منشور
+  year: '2026'
+  category: أنظمة السلامة والذكاء البصري
+  featured: false
+  priority: 4
+  domain: كشف السلامة · رؤية فورية · ذكاء يراعي الخصوصية
+  impact: نظام رؤية حاسوبية لمراقبة سلامة مواقع البناء عبر كشف معدات الوقاية، واجهة تفاعلية، تقارير، وطمس الوجوه تلقائيًا لحماية الخصوصية.
+  stack:
+  - Python
+  - YOLOv8
+  - Streamlit
+  - OpenCV
+  - Pandas
+  - طمس الوجوه
+  - تحليلات كشف
+  metrics:
+  - 10 فئات كائنات
+  - 6,630 صورة بعد augmentation
+  - mAP@50 = 80.2% · precision = 89.3%
+  links:
+    project: /ar/projects/ppe-safety-detection/
+    repo: https://github.com/AlAsiri-Ali/PPE-Safety-Detection
+  public_category: الذكاء البصري والتعلم العميق
+  public_summary: نظام ذكاء بصري يركز على سلامة العمل، الكشف الفوري، الخصوصية، وسير عمل المراقبة العملية.
+  public_tags:
+  - ذكاء بصري
+  - أنظمة سلامة
+  - مراقبة
+  - ذكاء متمحور حول الإنسان
+  sort_date: '2025-12-20'
+  date_label: 20 ديسمبر 2025
+- title: Malicious URL Detection with ML
+  slug: malicious-url-detection-ml
+  image: /assets/images/projects/malicious-url-detection-ml.png
+  status: مشروع منشور
+  year: '2026'
+  category: تحليلات أمنية وكشف المخاطر
+  featured: false
+  priority: 5
+  domain: تحليلات أمنية · تصنيف روابط · تقييم نماذج
+  impact: سير عمل تعلم آلة لكشف الروابط الخبيثة من خصائص الرابط النصية، مع مقارنة Logistic Regression وRandom Forest وXGBoost وتحليل ROC وprecision-recall.
+  stack:
+  - Python
+  - Scikit-learn
+  - XGBoost
+  - Random Forest
+  - Logistic Regression
+  - هندسة خصائص
+  - تحليل ROC/PR
+  metrics:
+  - 651,191 رابطًا
+  - 'أفضل نموذج: Random Forest'
+  - دقة 0.876 · ROC AUC 0.934
+  links:
+    project: /ar/projects/malicious-url-detection-ml/
+    repo: https://github.com/AlAsiri-Ali/malicious-url-detection-ml
+  public_category: تقييم الذكاء الاصطناعي والمتانة
+  public_summary: مشروع تصنيف أمني يركز على تقييم سلوك النماذج، مفاضلات الأخطاء، وموثوقية دعم القرار.
+  public_tags:
+  - تحليلات أمنية
+  - كشف مخاطر
+  - تقييم نماذج
+  - دعم القرار
+  sort_date: '2025-12-05'
+  date_label: 5 ديسمبر 2025
+- title: Android Galaxy Sentiment Analysis
+  slug: android-galaxy-sentiment-analysis-nlp
+  status: مشروع منشور
+  year: '2026'
+  category: ذكاء العملاء وتحليل النصوص
+  featured: false
+  priority: 6
+  domain: تحليل مشاعر · آراء المنتجات · تصنيف نصوص
+  impact: سير عمل شامل لتحليل مشاعر نقاشات Android Galaxy، مع مقارنة تمثيلات نصية ونماذج تصنيف على مهمة مشاعر ثنائية بعد الموازنة.
+  stack:
+  - Python
+  - Scikit-learn
+  - NLTK
+  - TF-IDF
+  - Word2Vec
+  - BiLSTM
+  metrics:
+  - 1,000 تعليق Reddit خام
+  - 752 إيجابي / 752 سلبي بعد الموازنة
+  - F1-score = 97.07% لنموذج SVC + TF-IDF
+  links:
+    project: /ar/projects/android-galaxy-sentiment-analysis-nlp/
+    repo: https://github.com/AlAsiri-Ali/android-galaxy-sentiment-analysis-nlp
+  public_category: ذكاء العملاء والتحليلات
+  public_summary: مشروع ذكاء عملاء يركز على استخراج إشارات المشاعر، مقارنة اختيارات النمذجة، وتقييم سلوك تصنيف النصوص.
+  image: /assets/images/projects/android-galaxy-sentiment-analysis-nlp.png
+  public_tags:
+  - ذكاء عملاء
+  - تحليل نصوص
+  - تصنيف
+  - تقييم
+  sort_date: '2025-05-25'
+  date_label: 25 مايو 2025
+- title: Titanic Survival Prediction
+  slug: titanic-survival-prediction-ml
+  status: مشروع منشور
+  year: '2026'
+  category: علوم البيانات ونمذجة القرار
+  featured: false
+  priority: 7
+  domain: نمذجة تنبؤية · هندسة خصائص · مقارنة نماذج
+  impact: سير عمل تعلم آلة على بيانات منظمة للتنبؤ بالبقاء في Titanic، مع تحليل استكشافي، هندسة خصائص، معالجة مسبقة، مراجعة عدم توازن الفئات، ومقارنة نماذج مضبوطة.
+  stack:
+  - Python
+  - Pandas
+  - Scikit-learn
+  - SMOTE
+  - GridSearchCV
+  - Logistic Regression
+  - SVC
+  metrics:
+  - 891 سجل ركاب
+  - 21 خاصية نهائية
+  - دقة اختبار مضبوطة = 0.83799
+  links:
+    project: /ar/projects/titanic-survival-prediction-ml/
+    repo: https://github.com/AlAsiri-Ali/titanic-survival-prediction-ml
+  public_category: علوم البيانات ونمذجة القرار
+  public_summary: سير عمل نمذجة تنبؤية يركز على إعداد البيانات المنظمة، هندسة الخصائص، مقارنة النماذج، وتفسير مفاضلات القرار.
+  image: /assets/images/projects/titanic-survival-prediction-ml.png
+  public_tags:
+  - تحليلات تنبؤية
+  - إعداد بيانات
+  - مقارنة نماذج
+  - نمذجة قرار
+  sort_date: '2025-05-08'
+  date_label: 8 مايو 2025
+- title: Gomoku Master
+  slug: gomoku-master
+  status: مشروع منشور
+  year: '2026'
+  category: أنظمة الذكاء التفاعلية والخوارزميات
+  featured: false
+  priority: 8
+  domain: ذكاء الألعاب · خوارزميات البحث · أنظمة تفاعلية
+  impact: تطبيق تفاعلي للعبة Gomoku بلغة Python مع أحجام لوحات قابلة للتخصيص، مستويات صعوبة متعددة، وخصم ذكي يعتمد على خوارزميات بحث وتقليم alpha-beta وجداول transposition.
+  stack:
+  - Python
+  - easyAI
+  - Negamax
+  - Alpha-beta pruning
+  - SSS*
+  - NumPy
+  - Matplotlib
+  metrics:
+  - 4 أحجام لوحات قابلة للتخصيص
+  - 5 مستويات صعوبة
+  - خوارزميتا بحث للذكاء الاصطناعي
+  links:
+    project: /ar/projects/gomoku-master/
+    repo: https://github.com/AlAsiri-Ali/GomokuMaster
+  public_category: أنظمة الذكاء التفاعلية والخوارزميات
+  public_summary: مشروع ذكاء تفاعلي يركز على البحث الاستراتيجي، تقييم حالات اللوحة، التحكم بالصعوبة، ومنطق اتخاذ القرار داخل اللعبة.
+  image: /assets/images/projects/gomoku-master.png
+  public_tags:
+  - ذكاء تفاعلي
+  - خوارزميات بحث
+  - أنظمة ألعاب
+  - منطق قرار
+  sort_date: '2025-05-25'
+  date_label: 25 مايو 2025
+- title: تحليل المشاعر العربية باستخدام AraVec وLSTM
+  slug: arabic-sentiment-aravec-lstm
+  image: /assets/images/projects/arabic-sentiment-aravec-lstm.png
+  status: مشروع منشور
+  year: '2026'
+  category: ذكاء العملاء وتحليل النصوص
+  featured: false
+  priority: 9
+  domain: NLP عربي · تحليل مشاعر · نمذجة تسلسلية
+  impact: سير عمل لتحليل المشاعر العربية يقارن تمثيلات AraVec المتوسطة مع نموذج LSTM يأخذ تسلسل الكلمات في الاعتبار على بيانات تغريدات عربية متوازنة.
+  stack:
+  - Python
+  - NLP عربي
+  - AraVec
+  - ANN
+  - LSTM
+  - Embeddings
+  - PCA
+  metrics:
+  - 5,000 تغريدة عربية
+  - 2,500 إيجابية / 2,500 سلبية
+  - دقة LSTM = 83%
+  - نموذج ANN مرجعي ≈ 68%
+  links:
+    project: /ar/projects/arabic-sentiment-aravec-lstm/
+    repo: https://github.com/AlAsiri-Ali/arabic-sentiment-aravec-lstm
+  public_category: ذكاء العملاء والتحليلات
+  public_summary: سير عمل لتحليل النصوص العربية يركز على إشارات المشاعر، تمثيل اللغة، النمذجة التسلسلية، والتقييم.
+  public_tags:
+  - NLP عربي
+  - تحليل نصوص
+  - تحليل مشاعر
+  - تقييم نماذج
+  sort_date: '2025-05-04'
+  date_label: 4 مايو 2025
+- title: تصنيف رسائل SMS المزعجة بنماذج NLP تقليدية
+  slug: sms-spam-traditional-nlp-classification
+  image: /assets/images/projects/sms-spam-traditional-nlp-classification.png
+  status: مشروع منشور
+  year: '2026'
+  category: تقييم الذكاء الاصطناعي والمتانة
+  featured: false
+  priority: 10
+  domain: تصنيف نصوص · كشف الرسائل المزعجة · مقارنة نماذج
+  impact: سير عمل تقليدي لكشف رسائل SMS المزعجة يقارن Bag of Words وTF-IDF مع Naive Bayes وLogistic Regression وSVM باستخدام مصفوفات الالتباس وتحليل ROC-AUC.
+  stack:
+  - Python
+  - Scikit-learn
+  - Bag of Words
+  - TF-IDF
+  - Naive Bayes
+  - Logistic Regression
+  - SVM
+  metrics:
+  - 5,574 رسالة SMS
+  - 6 تركيبات نموذج/تمثيل
+  - دقة SVM + TF-IDF = 97.67%
+  - Spam F1-score = 0.90
+  links:
+    project: /ar/projects/sms-spam-traditional-nlp-classification/
+    repo: https://github.com/AlAsiri-Ali/sms-spam-traditional-nlp-classification
+  public_category: تقييم الذكاء الاصطناعي والمتانة
+  public_summary: سير عمل لتصنيف النصوص يركز على اختيارات التمثيل، مقارنة النماذج، عدم توازن الفئات، ومفاضلات التقييم.
+  public_tags:
+  - تصنيف نصوص
+  - مقارنة نماذج
+  - تقييم
+  - تحليلات أمنية
+  sort_date: '2025-03-24'
+  date_label: 24 مارس 2025
+- title: Retail Segmentation & Market Basket Analysis
+  slug: retail-segmentation-market-basket
+  image: /assets/images/projects/retail-segmentation-market-basket.png
+  status: مشروع منشور
+  year: '2026'
+  category: تحليلات العملاء والتجزئة
+  featured: true
+  priority: 11
+  domain: تعلم غير مراقب · RFM · قواعد ارتباط
+  impact: سير عمل لتحليلات العملاء يجمع بين تقسيم RFM، التجميع، قواعد Apriori، والتفسير التجاري على بيانات Online Retail.
+  stack:
+  - Python
+  - Pandas
+  - Scikit-learn
+  - K-Means
+  - Apriori
+  - Association Rules
+  metrics:
+  - 541,909 صفًا خامًا
+  - 3 شرائح عملاء
+  - 23 قاعدة ارتباط نهائية
+  links:
+    project: /ar/projects/retail-segmentation-market-basket/
+    repo: https://github.com/AlAsiri-Ali/retail-segmentation-market-basket
+  public_category: ذكاء العملاء والتحليلات
+  public_summary: سير عمل لتحليلات العملاء يركز على التجزئة، أنماط السلوك، والرؤى التجارية القابلة للتفسير.
+  public_tags:
+  - تحليلات العملاء
+  - تجزئة
+  - استخراج الأنماط
+  - رؤى تجارية
+  sort_date: '2026-05-04'
+  date_label: 4 مايو 2026
+- title: Long-Tailed Object Classification with VGG16
+  slug: long-tailed-object-classification-vgg16
+  image: /assets/images/projects/long-tailed-object-classification-vgg16.png
+  status: مشروع منشور
+  year: '2026'
+  category: الذكاء البصري والتعلم العميق
+  featured: false
+  priority: 12
+  domain: تصنيف طويل الذيل · تعلم نقلي · تعرف بصري
+  impact: سير عمل تصنيف بصري يقارن بين نموذج HOG+SVM مرجعي وVGG16 بالتعلم النقلي، augmentation، الضبط، وfine-tuning على صور واقعية غير متوازنة.
+  stack:
+  - Python
+  - TensorFlow
+  - Keras
+  - VGG16
+  - HOG
+  - SVM
+  - Open Images
+  metrics:
+  - 2,402 صورة تدريب / 598 صورة تحقق
+  - دقة HOG+SVM = 67.00%
+  - دقة VGG16 المضبوط = 92.00%
+  links:
+    project: /ar/projects/long-tailed-object-classification-vgg16/
+    repo: https://github.com/AlAsiri-Ali/long-tailed-object-classification-vgg16
+  public_category: الذكاء البصري والتعلم العميق
+  public_summary: سير عمل تصنيف بصري يركز على عدم توازن الفئات، مقارنة النماذج المرجعية، التعلم النقلي، وتفسير الأداء.
+  public_tags:
+  - ذكاء بصري
+  - تعلم نقلي
+  - تصنيف
+  - مقارنة نماذج
+  sort_date: '2025-12-10'
+  date_label: 10 ديسمبر 2025
+- title: UCF50 CNN-LSTM Action Recognition
+  slug: ucf50-cnn-lstm-action-recognition
+  image: /assets/images/projects/ucf50-cnn-lstm-action-recognition.png
+  status: مشروع منشور
+  year: '2026'
+  category: الذكاء البصري والتعلم العميق
+  featured: false
+  priority: 13
+  domain: تصنيف الفيديو · خصائص CNN · نمذجة تسلسلية
+  impact: سير عمل للتعرف على الأفعال في الفيديو يجمع بين استخراج الخصائص البصرية عبر CNN والنمذجة الزمنية عبر RNN/LSTM مع مقارنة الأداء.
+  stack:
+  - Python
+  - TensorFlow
+  - Keras
+  - CNN
+  - RNN
+  - LSTM
+  metrics:
+  - 6,681 مقطع فيديو
+  - 50 فئة أفعال
+  - CNN+LSTM validation F1 = 0.4548
+  links:
+    project: /ar/projects/ucf50-cnn-lstm-action-recognition/
+    repo: https://github.com/AlAsiri-Ali/ucf50-cnn-lstm-action-recognition
+  public_category: الذكاء البصري والتعلم العميق
+  public_summary: سير عمل لفهم الفيديو يركز على الخصائص البصرية، النمذجة الزمنية، ومقارنة النماذج.
+  public_tags:
+  - ذكاء بصري
+  - نمذجة فيديو
+  - نمذجة تسلسلية
+  - مقارنة
+  sort_date: '2025-11-06'
+  date_label: 6 نوفمبر 2025
+- title: Phishing Email Detection with ML
+  slug: phishing-email-detection-ml
+  image: /assets/images/projects/phishing-email-detection-ml.png
+  status: مشروع منشور
+  year: '2026'
+  category: تقييم الذكاء الاصطناعي والمتانة
+  featured: false
+  priority: 14
+  domain: تحليلات أمنية · تصنيف نصوص · مقارنة نماذج
+  impact: سير عمل أمني لتصنيف النصوص يستخدم خصائص TF-IDF ونماذج تعلم آلة كلاسيكية لمقارنة أداء كشف رسائل التصيد، الاسترجاع، الإيجابيات الخاطئة، وإشارات الخصائص.
+  stack:
+  - Python
+  - Scikit-learn
+  - TF-IDF
+  - Random Forest
+  - SVM
+  - Logistic Regression
+  metrics:
+  - 17,538 صف بريد بعد التنظيف
+  - 5,000 خاصية TF-IDF
+  - دقة SVM الخطي المختار = 0.9763
+  links:
+    project: /ar/projects/phishing-email-detection-ml/
+    repo: https://github.com/AlAsiri-Ali/phishing-email-detection-ml
+  public_category: تقييم الذكاء الاصطناعي والمتانة
+  public_summary: سير عمل تصنيف أمني يركز على مقارنة النماذج، الاسترجاع، الإيجابيات الخاطئة، وإشارات النص القابلة للتفسير.
+  public_tags:
+  - تحليلات أمنية
+  - تصنيف
+  - مقارنة نماذج
+  - تقييم
+  sort_date: '2025-10-02'
+  date_label: 2 أكتوبر 2025
+- title: Moving Average Backtest with PyFolio
+  slug: moving-average-backtest-pyfolio
+  image: /assets/images/projects/moving-average-backtest-pyfolio.png
+  status: مشروع منشور
+  year: '2026'
+  category: تعلم الآلة المالي وتحليل السوق
+  featured: false
+  priority: 15
+  domain: اختبار استراتيجيات · مقاييس مخاطر · تقييم أداء
+  impact: سير عمل لاختبار استراتيجية تقاطع متوسطات 50/200 على سهم AAPL باستخدام Backtrader وتحليل مخاطر بأسلوب PyFolio.
+  stack:
+  - Python
+  - Backtrader
+  - PyFolio
+  - Empyrical
+  - yfinance
+  - Pandas
+  metrics:
+  - رأس مال ابتدائي $100,000
+  - عائد كلي 16.23%
+  - أقصى تراجع 15.73%
+  links:
+    project: /ar/projects/moving-average-backtest-pyfolio/
+    repo: https://github.com/AlAsiri-Ali/moving-average-backtest-pyfolio
+  public_category: علوم البيانات ونمذجة القرار
+  public_summary: سير عمل لتقييم الاستراتيجيات يركز على قياس الأداء، تفسير المخاطر، وإعادة إنتاج التحليل.
+  public_tags:
+  - علوم البيانات
+  - اختبار استراتيجيات
+  - تحليل المخاطر
+  - تقييم
+  sort_date: '2026-05-13'
+  date_label: 13 مايو 2026
+- title: SMS Spam Transformer Classification
+  slug: sms-spam-transformer-classification
+  image: /assets/images/projects/sms-spam-transformer-classification.png
+  status: مشروع منشور
+  year: '2026'
+  category: أنظمة لغة وتقييم نماذج
+  featured: false
+  priority: 16
+  domain: تصنيف نصوص · Transformers · مقارنة prompting
+  impact: سير عمل لتصنيف رسائل SMS غير المرغوبة يقارن zero-shot، fine-tuned BERT، few-shot BERT، وFlan-T5 prompting.
+  stack:
+  - Python
+  - Transformers
+  - BERT
+  - Flan-T5
+  - Zero-shot
+  - Few-shot
+  metrics:
+  - 5,572 رسالة SMS
+  - دقة BERT المضبوط 0.9952
+  - دقة Few-shot BERT 0.9294
+  links:
+    project: /ar/projects/sms-spam-transformer-classification/
+    repo: https://github.com/AlAsiri-Ali/sms-spam-transformer-classification
+  public_category: تقييم الذكاء الاصطناعي والمتانة
+  public_summary: سير عمل لتصنيف اللغة يقارن استراتيجيات التدريب، صياغة المهام، وسلوك التقييم.
+  public_tags:
+  - أنظمة لغة
+  - تصنيف
+  - مقارنة نماذج
+  - تقييم
+  sort_date: '2025-12-08'
+  date_label: 8 ديسمبر 2025
+- title: Heart Disease DNN Classification
+  slug: heart-disease-dnn-classification
+  image: /assets/images/projects/heart-disease-dnn-classification.png
+  status: مشروع منشور
+  year: '2026'
+  category: ذكاء صحي وتقييم النماذج
+  featured: false
+  priority: 17
+  domain: نمذجة جدولية سريرية · شبكات عصبية · تقييم تشخيصي
+  impact: سير عمل لشبكة عصبية عميقة لتصنيف خطر أمراض القلب باستخدام معالجة بيانات جدولية، ضبط النموذج، تقييم ROC/AUC، وتحليل الأخطاء.
+  stack:
+  - Python
+  - TensorFlow
+  - Keras
+  - DNN
+  - StandardScaler
+  - ROC-AUC
+  metrics:
+  - 1,025 سجلًا بنمط سريري
+  - دقة اختبار 0.9659
+  - AUC 0.9813
+  links:
+    project: /ar/projects/heart-disease-dnn-classification/
+    repo: https://github.com/AlAsiri-Ali/heart-disease-dnn-classification
+  public_category: تقييم الذكاء الاصطناعي والمتانة
+  public_summary: سير عمل تعلم مراقب يركز على المعالجة المسبقة، ضبط النموذج، المقاييس التشخيصية، وتفسير الأخطاء بحذر.
+  public_tags:
+  - تقييم النماذج
+  - نمذجة جدولية
+  - تحليل الأخطاء
+  - دعم القرار
+  sort_date: '2025-10-11'
+  date_label: 11 أكتوبر 2025
+- title: CelebA DCGAN Face Generation
+  slug: celeba-dcgan-face-generation
+  image: /assets/images/projects/celeba-dcgan-face-generation.png
+  status: مشروع منشور
+  year: '2026'
+  category: سير عمل الذكاء التوليدي
+  featured: false
+  priority: 18
+  domain: تعلم تنافسي · توليد صور · تحليل التدريب
+  impact: سير عمل DCGAN لتوليد صور وجوه اصطناعية عبر تدريب مولد ومميز، حفظ عينات، checkpoints، وتحليل سلوك التدريب.
+  stack:
+  - Python
+  - TensorFlow
+  - Keras
+  - DCGAN
+  - Generator
+  - Discriminator
+  metrics:
+  - 202,599 صورة مصدرية
+  - مخرجات 64×64
+  - 15 حقبة تدريب
+  links:
+    project: /ar/projects/celeba-dcgan-face-generation/
+    repo: https://github.com/AlAsiri-Ali/celeba-dcgan-face-generation
+  public_category: سير عمل الذكاء التوليدي
+  public_summary: سير عمل توليدي يركز على ديناميكيات التدريب التنافسي، فحص العينات، وتطور المخرجات.
+  public_tags:
+  - ذكاء توليدي
+  - ديناميكيات التدريب
+  - توليد صور
+  - تجريب
+  sort_date: '2025-11-06'
+  date_label: 6 نوفمبر 2025
+- title: Animal Faces CNN Classification
+  slug: animal-faces-cnn-classification
+  image: /assets/images/projects/animal-faces-cnn-classification.png
+  status: مشروع منشور
+  year: '2026'
+  category: الذكاء البصري والتعلم العميق
+  featured: false
+  priority: 19
+  domain: تصنيف الصور · تدريب CNN · تقييم
+  impact: سير عمل لتصنيف صور وجوه الحيوانات إلى Cat وDog وWild باستخدام augmentation، callbacks، وتقييم بصري للنتائج.
+  stack:
+  - Python
+  - TensorFlow
+  - Keras
+  - CNN
+  - Data Augmentation
+  - Callbacks
+  metrics:
+  - 11,706 صورة تدريب
+  - 2,924 صورة اختبار/تحقق
+  - دقة كلية 0.9593
+  links:
+    project: /ar/projects/animal-faces-cnn-classification/
+    repo: https://github.com/AlAsiri-Ali/animal-faces-cnn-classification
+  public_category: الذكاء البصري والتعلم العميق
+  public_summary: سير عمل للتصنيف البصري يركز على تجهيز الصور، تدريب النموذج، callbacks، والتقييم المتوازن بين الفئات.
+  public_tags:
+  - ذكاء بصري
+  - تصنيف
+  - تدريب النماذج
+  - تقييم
+  sort_date: '2025-10-11'
+  date_label: 11 أكتوبر 2025
+- title: MNIST ViT vs CNN Comparison
+  slug: mnist-vit-cnn-comparison
+  image: /assets/images/projects/mnist-vit-cnn-comparison.png
+  status: مشروع منشور
+  year: '2026'
+  category: الذكاء البصري والتعلم العميق
+  featured: false
+  priority: 20
+  domain: Vision Transformers · نموذج CNN مرجعي · مفاضلة الدقة والكفاءة
+  impact: مقارنة تصنيف صور بين Vision Transformer مضبوط ونموذج CNN خفيف مع تحليل الدقة، زمن التدريب، ومصفوفات الالتباس.
+  stack:
+  - Python
+  - PyTorch
+  - TensorFlow
+  - ViT
+  - CNN
+  - MNIST
+  metrics:
+  - 4,000 صورة تدريب
+  - دقة ViT = 98.10%
+  - CNN أسرع بنحو 117× في التدريب
+  links:
+    project: /ar/projects/mnist-vit-cnn-comparison/
+    repo: https://github.com/AlAsiri-Ali/mnist-vit-cnn-comparison
+  public_category: الذكاء البصري والتعلم العميق
+  public_summary: سير عمل لمقارنة النماذج يركز على الدقة، زمن التدريب، والمفاضلات العملية في التصنيف البصري.
+  public_tags:
+  - ذكاء بصري
+  - مقارنة نماذج
+  - كفاءة
+  - تقييم
+  sort_date: '2025-12-08'
+  date_label: 8 ديسمبر 2025
+- title: SDXL ControlNet Image Workflow
+  slug: sdxl-controlnet-image-workflow
+  image: /assets/images/projects/sdxl-controlnet-image-workflow.png
+  status: مشروع منشور
+  year: '2026'
+  category: الوسائط التوليدية
+  featured: true
+  priority: 21
+  domain: نماذج الانتشار · ControlNet · تقييم الصور
+  impact: سير عمل لتوليد الصور يقارن بين SDXL، التحرير الدلالي عبر Img2Img، توجيه ControlNet Canny، وتقييم LPIPS/PSNR.
+  stack:
+  - Python
+  - Diffusers
+  - SDXL
+  - ControlNet
+  - Img2Img
+  - LPIPS
+  - PSNR
+  metrics:
+  - 40 خطوة استدلال في SDXL
+  - توجيه ControlNet Canny
+  - LPIPS 0.4527 / PSNR 12.71 dB
+  links:
+    project: /ar/projects/sdxl-controlnet-image-workflow/
+    repo: https://github.com/AlAsiri-Ali/sdxl-controlnet-image-workflow
+  public_category: سير عمل الذكاء التوليدي
+  public_summary: سير عمل توليدي مضبوط لمقارنة المخرجات البصرية، حفظ البنية، وقياس التغيرات في النتائج.
+  public_tags:
+  - ذكاء توليدي
+  - مقارنة المخرجات
+  - سير عمل بصري
+  - تقييم
+  sort_date: '2026-03-31'
+  date_label: 31 مارس 2026
+- title: Asthma RAG Diagnostic Assistant
+  slug: asthma-rag-diagnostic-assistant
+  image: /assets/images/projects/asthma-rag-diagnostic-assistant.png
+  status: مشروع منشور
+  year: '2026'
+  category: الذكاء التوليدي وRAG
+  featured: true
+  priority: 22
+  domain: RAG طبي · هندسة أوامر · تقييم
+  impact: تجربة RAG مضبوطة للتفكير المرتبط بالربو، تستخدم قاعدة معرفة مخصصة، استرجاع FAISS، أنماط أوامر مختلفة، ومقاييس لتقييم التوليد.
+  stack:
+  - Python
+  - LangChain
+  - FAISS
+  - HuggingFace
+  - Qwen2.5
+  - RAG
+  metrics:
+  - 10 حالات مرضية اصطناعية
+  - 3 أساليب للأوامر
+  - BLEU / ROUGE-L / METEOR / Self-BLEU
+  links:
+    project: /ar/projects/asthma-rag-diagnostic-assistant/
+    repo: https://github.com/AlAsiri-Ali/asthma-rag-diagnostic-assistant
+  public_category: الأنظمة الذكية ودعم القرار
+  public_summary: سير عمل تجريبي لمساعد ذكي يركز على التفكير المنظم، استخدام المعرفة، والتقييم في مجال حساس.
+  public_tags:
+  - أنظمة ذكية
+  - سير عمل استدلالي
+  - تقييم
+  - تصميم واعٍ بالسلامة
+  sort_date: '2026-03-09'
+  date_label: 9 مارس 2026
+- title: Speech & Music Generation with Transformers
+  slug: speech-music-generation-transformers
+  image: /assets/images/projects/speech-music-generation-transformers.png
+  status: مشروع منشور
+  year: '2026'
+  category: الوسائط التوليدية
+  featured: false
+  priority: 23
+  domain: تحويل النص إلى كلام · كلام تعبيري · توليد موسيقى
+  impact: سير عمل لتجارب صوتية توليدية يقارن السرد الصوتي، الكلام التعبيري، والموسيقى الموجهة بالنص.
+  stack:
+  - Python
+  - Transformers
+  - SpeechT5
+  - Bark
+  - MusicGen
+  - HiFi-GAN
+  metrics:
+  - 3 مهام صوتية توليدية
+  - SpeechT5 / Bark / MusicGen
+  - موجات صوتية ومخرجات طيفية
+  links:
+    project: /ar/projects/speech-music-generation-transformers/
+    repo: https://github.com/AlAsiri-Ali/speech-music-generation-transformers
+  public_category: سير عمل الذكاء التوليدي
+  public_summary: سير عمل صوتي توليدي يقارن أنماط مخرجات مختلفة ويراجع سلوك النماذج عبر مهام متعددة.
+  public_tags:
+  - ذكاء توليدي
+  - سير عمل صوتي
+  - مراجعة المخرجات
+  - تجريب
+  sort_date: '2026-05-02'
+  date_label: 2 مايو 2026
+- title: OpenCV Image Enhancement & Edge Detection
+  slug: opencv-image-enhancement-edge-detection
+  image: /assets/images/projects/opencv-image-enhancement-edge-detection.png
+  status: مشروع منشور
+  year: '2026'
+  category: الذكاء البصري والتعلم العميق
+  featured: false
+  priority: 24
+  domain: رؤية حاسوبية كلاسيكية · معالجة صور · كشف حواف
+  impact: سير عمل رؤية حاسوبية يستخدم تحسين التباين، thresholding، كشف الحواف Canny، تحليل contours، ومعالجة إطارات الفيديو لجعل حدود الكائنات أوضح وأسهل للتفسير.
+  stack:
+  - Python
+  - OpenCV
+  - CLAHE
+  - Thresholding
+  - Canny
+  - تحليل Contours
+  - معالجة فيديو
+  metrics:
+  - عينات بصرية من Open Images
+  - مسار CLAHE / Adaptive Threshold / Canny
+  - سير عمل لمعالجة الصور والفيديو
+  links:
+    project: /ar/projects/opencv-image-enhancement-edge-detection/
+    repo: https://github.com/AlAsiri-Ali/opencv-image-enhancement-edge-detection
+  public_category: الذكاء البصري والتعلم العميق
+  public_summary: سير عمل بصري يركز على تحسين بنية الصورة، استخراج الحدود، ومقارنة جودة المعالجة المسبقة.
+  public_tags:
+  - ذكاء بصري
+  - معالجة صور
+  - تهيئة البيانات
+  - تقييم
+  sort_date: '2025-11-07'
+  date_label: 7 نوفمبر 2025
+- title: AAPL Regression & Direction Models
+  slug: aapl-regression-trading-models
+  image: /assets/images/projects/aapl-regression-trading-models.png
+  status: مشروع منشور
+  year: '2026'
+  category: تعلم الآلة المالي وتحليل السوق
+  featured: false
+  priority: 25
+  domain: تعلم آلة مالي · انحدار · تصنيف اتجاهي
+  impact: سير عمل تعلم آلي على بيانات سهم Apple يقارن بين توقع سعر الإغلاق التالي وتصنيف اتجاه الحركة باستخدام خصائص فنية.
+  stack:
+  - Python
+  - yfinance
+  - Pandas
+  - Scikit-learn
+  - Linear Regression
+  - Logistic Regression
+  metrics:
+  - بيانات AAPL من 2014 إلى 2024
+  - RMSE 2.8188
+  - دقة الاتجاه 51.42%
+  links:
+    project: /ar/projects/aapl-regression-trading-models/
+    repo: https://github.com/AlAsiri-Ali/aapl-regression-trading-models
+  public_category: علوم البيانات ونمذجة القرار
+  public_summary: سير عمل للنمذجة التنبؤية يركز على البيانات الزمنية، بناء الخصائص، وتفسير إشارات النموذج بحذر.
+  public_tags:
+  - علوم البيانات
+  - تنبؤ
+  - بناء الخصائص
+  - نمذجة القرار
+  sort_date: '2026-03-31'
+  date_label: 31 مارس 2026
+- title: S&P 500 Market Regime Classification
+  slug: sp500-market-regime-classification
+  image: /assets/images/projects/sp500-market-regime-classification.png
+  status: مشروع منشور
+  year: '2026'
+  category: تعلم الآلة المالي وتحليل السوق
+  featured: false
+  priority: 26
+  domain: أنظمة السوق · مؤشرات فنية · تصنيف
+  impact: سير عمل لتصنيف أنظمة السوق قصيرة الأجل في S&P 500 باستخدام مؤشرات فنية ومقارنة نماذج تراعي الترتيب الزمني.
+  stack:
+  - Python
+  - yfinance
+  - Scikit-learn
+  - Logistic Regression
+  - Random Forest
+  - SVM
+  metrics:
+  - 956 مشاهدة للنمذجة
+  - 3 أنظمة سوق
+  - أفضل دقة 52.08%
+  links:
+    project: /ar/projects/sp500-market-regime-classification/
+    repo: https://github.com/AlAsiri-Ali/sp500-market-regime-classification
+  public_category: علوم البيانات ونمذجة القرار
+  public_summary: سير عمل تصنيفي لفهم تغير ظروف السوق باستخدام خصائص زمنية ومقارنة النماذج.
+  public_tags:
+  - علوم البيانات
+  - تصنيف
+  - تحليل زمني
+  - مقارنة النماذج
+  sort_date: '2026-03-31'
+  date_label: 31 مارس 2026
+- title: Stock Market EDA with yfinance
+  slug: stock-market-eda-yfinance
+  image: /assets/images/projects/stock-market-eda-yfinance.png
+  status: مشروع منشور
+  year: '2026'
+  category: تعلم الآلة المالي وتحليل السوق
+  featured: false
+  priority: 27
+  domain: استكشاف بيانات السوق · تحليل مخاطر · تصور إحصائي
+  impact: سير عمل لاستكشاف بيانات السوق يقارن سلوك الأسعار، العوائد، التقلب، الأداء التراكمي، والعلاقات بين عدة أصول.
+  stack:
+  - Python
+  - yfinance
+  - Pandas
+  - NumPy
+  - Matplotlib
+  - Seaborn
+  metrics:
+  - 7 أصول من الشركات الكبرى
+  - بيانات يومية من 2019 فصاعدًا
+  - ارتباط عوائد AAPL/MSFT يقارب 0.69
+  links:
+    project: /ar/projects/stock-market-eda-yfinance/
+    repo: https://github.com/AlAsiri-Ali/stock-market-eda-yfinance
+  public_category: علوم البيانات ونمذجة القرار
+  public_summary: سير عمل استكشافي لفهم الأنماط والتقلب والعلاقات وسلوك السوق.
+  public_tags:
+  - تحليل بيانات
+  - استكشاف
+  - تصور بياني
+  - تفسير
+  sort_date: '2026-03-31'
+  date_label: 31 مارس 2026
+- title: تصنيف سرطان الثدي باستخدام Naive Bayes
+  slug: breast-cancer-naive-bayes-classification
+  image: /assets/images/projects/breast-cancer-naive-bayes-classification.png
+  status: مشروع منشور
+  year: '2026'
+  category: تقييم الذكاء الاصطناعي والمتانة
+  featured: false
+  priority: 28
+  domain: بيانات صحية · تصنيف احتمالي · تقييم
+  impact: سير عمل لتصنيف بيانات صحية باستخدام خصائص تشخيصية رقمية، تحليل استكشافي، تحجيم خصائص، Gaussian Naive Bayes، وتقييم على مستوى الفئات في بيانات Breast Cancer Wisconsin.
+  stack:
+  - Python
+  - Scikit-learn
+  - Gaussian Naive Bayes
+  - Pandas
+  - تحليل استكشافي
+  - تحجيم خصائص
+  metrics:
+  - 569 عينة
+  - 30 خاصية تشخيصية
+  - دقة اختبار 96%
+  - استرجاع 0.99 للفئة الخبيثة
+  links:
+    project: /ar/projects/breast-cancer-naive-bayes-classification/
+    repo: https://github.com/AlAsiri-Ali/breast-cancer-naive-bayes-classification
+  public_category: تقييم الذكاء الاصطناعي والمتانة
+  public_summary: سير عمل لتصنيف بيانات صحية يركز على تحليل الخصائص التشخيصية، بناء نموذج مرجعي، وقراءة سلوك التقييم على مستوى الفئات.
+  public_tags:
+  - تحليلات صحية
+  - تصنيف
+  - تقييم نماذج
+  - علوم بيانات
+  sort_date: '2025-03-07'
+  date_label: 7 مارس 2025
+- title: معالجة النصوص باستخدام Regex وNLP
+  slug: regex-text-preprocessing-nlp
+  image: /assets/images/projects/regex-text-preprocessing-nlp.png
+  status: مشروع منشور
+  year: '2026'
+  category: ذكاء العملاء وتحليل النصوص
+  featured: false
+  priority: 29
+  domain: تحليل نصوص · معالجة مسبقة · تطبيع لغوي
+  impact: سير عمل عملي لمعالجة النصوص الإنجليزية غير النظيفة باستخدام regular expressions، tokenization، normalization، stemming، lemmatization، POS tagging، وفحص الالتباس اللغوي.
+  stack:
+  - Python
+  - Regex
+  - NLTK
+  - spaCy
+  - تطبيع نصوص
+  - POS tagging
+  metrics:
+  - معالجة البريد والروابط والتواريخ
+  - سير عمل للتجزئة والتطبيع
+  - stemming و lemmatization وتحليل POS
+  links:
+    project: /ar/projects/regex-text-preprocessing-nlp/
+    repo: https://github.com/AlAsiri-Ali/regex-text-preprocessing-nlp
+  public_category: ذكاء العملاء والتحليلات
+  public_summary: سير عمل لتحليل النصوص يركز على تنظيف اللغة غير المنظمة وتطبيعها وتجهيزها للتحليل أو النمذجة اللاحقة.
+  public_tags:
+  - تحليل نصوص
+  - معالجة مسبقة
+  - تحليل لغوي
+  - إعداد بيانات
+  sort_date: '2025-02-25'
+  date_label: 25 فبراير 2025

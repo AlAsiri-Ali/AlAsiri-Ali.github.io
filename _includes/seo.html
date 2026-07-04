@@ -1,5 +1,15 @@
 <!-- begin _includes/seo.html -->
 {%- assign title_separator = site.title_separator | default: '-' -%}
+{%- assign aa_lang = page.lang | default: 'en' -%}
+{%- if aa_lang == 'ar' -%}
+  {%- assign aa_locale = 'ar-SA' -%}
+  {%- assign aa_og_locale = 'ar_SA' -%}
+{%- else -%}
+  {%- assign aa_locale = site.locale | default: 'en-US' -%}
+  {%- assign aa_og_locale = aa_locale | replace: '-', '_' -%}
+{%- endif -%}
+{%- assign aa_profile = site.data.profile[aa_lang] | default: site.data.profile.en -%}
+{%- assign aa_ui = site.data.ui-text[aa_locale] | default: site.data.ui-text[aa_lang] | default: site.data.ui-text[site.locale] -%}
 
 {%- assign page_title = page.title | default: site.title | replace: '|', '&#124;' -%}
 {%- if page_title contains site.title -%}
@@ -18,8 +28,7 @@
   {%- assign seo_description = seo_description | markdownify | strip_html | newline_to_br | strip_newlines | replace: '<br />', ' ' | escape_once | strip -%}
 {%- endif -%}
 
-{%- assign author = page.author | default: page.authors[0] | default: site.author -%}
-{%- assign author = site.data.authors[author] | default: author -%}
+{%- assign author = aa_profile | default: site.author -%}
 
 {%- if author.twitter -%}
   {%- assign author_twitter = author.twitter | replace: "@", "" -%}
@@ -35,7 +44,7 @@
   {%- assign og_type = "website" -%}
 {%- endif -%}
 
-<title>{{ seo_title }}{% if paginator %}{% unless paginator.page == 1 %} {{ title_separator }} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}{% endif %}</title>
+<title>{{ seo_title }}{% if paginator %}{% unless paginator.page == 1 %} {{ title_separator }} {{ aa_ui.page | default: "Page" }} {{ paginator.page }}{% endunless %}{% endif %}</title>
 <meta name="description" content="{{ seo_description }}">
 
 {% if author.name %}
@@ -46,8 +55,8 @@
 {% endif %}
 
 <meta property="og:type" content="{{ og_type }}">
-<meta property="og:locale" content="{{ site.locale | replace: "-", "_" | default: "en_US" }}">
-<meta property="og:site_name" content="{{ site.title | escape_once | strip }}">
+<meta property="og:locale" content="{{ aa_og_locale | default: "en_US" }}">
+<meta property="og:site_name" content="{{ aa_profile.display_name | default: site.title | escape_once | strip }}">
 <meta property="og:title" content="{{ page_title }}">
 <meta property="og:url" content="{{ canonical_url }}">
 
@@ -109,7 +118,7 @@
   <link rel="next" href="{{ paginator.next_page_path | absolute_url }}">
 {% endif %}
 
-{% if page.url == '/' %}
+{% if page.url == '/' or page.url == '/ar/' %}
   {% include schema.html %}
 {% endif %}
 

@@ -1,16 +1,43 @@
+{% assign aa_lang = page.lang | default: 'en' %}
+{% assign aa_profile = site.data.profile[aa_lang] | default: site.data.profile.en %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  {% if site.social.type == "Organization" -%}
-    "@type": "Organization",
-    "url": {{ '/' | absolute_url | jsonify }}{% if site.og_image %},
-    "logo": {{ site_og_image | jsonify }}{% endif %}{% if site.social.links %},
-    "sameAs": {{ site.social.links | jsonify }}{% endif %}
-  {%- else -%}
+  "@type": "ProfilePage",
+  "inLanguage": {{ aa_lang | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "name": {{ page.title | default: aa_profile.display_name | jsonify }},
+  "about": {
     "@type": "Person",
-    "name": {{ site.social.name | default: site.name | jsonify }},
-    "url": {{ '/' | absolute_url | jsonify }}{% if site.social.links %},
-    "sameAs": {{ site.social.links | jsonify }}{% endif %}
-  {%- endif %}
+    "name": {{ aa_profile.display_name | jsonify }},
+    "jobTitle": {{ aa_profile.role | jsonify }},
+    "url": {{ aa_profile.home | absolute_url | jsonify }},
+    "image": {{ site.author.avatar | absolute_url | jsonify }},
+    "email": {{ aa_profile.email | jsonify }},
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "SA"
+    },
+    "sameAs": [
+      "https://github.com/AlAsiri-Ali",
+      "https://linkedin.com/in/ali-asiri-b85038206",
+      "https://x.com/Ali_M_Asiri"
+    ],
+    "knowsAbout": [
+      "Artificial Intelligence",
+      "Information Systems",
+      "Machine Learning",
+      "AI Systems Engineering",
+      "Model Evaluation",
+      "Data Science",
+      "Decision Support Systems"
+    ]
+  },
+  "mainEntity": {
+    "@type": "WebSite",
+    "name": {{ aa_profile.display_name | jsonify }},
+    "url": {{ '/' | absolute_url | jsonify }},
+    "inLanguage": ["en", "ar"]
+  }
 }
 </script>

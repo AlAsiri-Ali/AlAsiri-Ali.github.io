@@ -1,12 +1,53 @@
-# Main navigation links
 main:
   - title: "Home"
     url: /
-  - title: "About"
-    url: /about/
   - title: "Projects"
     url: /projects/
-  - title: "Blog"
+  - title: "Skills"
+    url: /skills/
+  - title: "Writing"
     url: /blog/
+  - title: "About"
+    url: /about/
+  - title: "Journey"
+    url: /journey/
+  - title: "CV"
+    url: /cv/
   - title: "Contact"
     url: /contact/
+
+en:
+  - title: "Home"
+    url: /
+  - title: "Projects"
+    url: /projects/
+  - title: "Skills"
+    url: /skills/
+  - title: "Writing"
+    url: /blog/
+  - title: "About"
+    url: /about/
+  - title: "Journey"
+    url: /journey/
+  - title: "CV"
+    url: /cv/
+  - title: "Contact"
+    url: /contact/
+
+ar:
+  - title: "الرئيسية"
+    url: /ar/
+  - title: "المشاريع"
+    url: /ar/projects/
+  - title: "المهارات"
+    url: /ar/skills/
+  - title: "الكتابة"
+    url: /ar/blog/
+  - title: "نبذة"
+    url: /ar/about/
+  - title: "الرحلة"
+    url: /ar/journey/
+  - title: "السيرة الذاتية"
+    url: /ar/cv/
+  - title: "تواصل"
+    url: /ar/contact/

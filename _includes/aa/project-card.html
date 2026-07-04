@@ -1,0 +1,26 @@
+{% assign project = include.project %}
+{% assign aa_lang = include.lang | default: page.lang | default: 'en' %}
+{% assign aa_labels = site.data.aa_labels[aa_lang] | default: site.data.aa_labels.en %}
+{% assign aa_card_category = project.public_category | default: project.category %}
+{% assign aa_card_summary = project.public_summary | default: project.impact %}
+{% assign aa_card_tags = project.public_tags | default: project.stack %}
+{% assign aa_card_date = project.date_label | default: project.year %}
+{% capture aa_default_image %}/assets/images/projects/{{ project.slug }}.svg{% endcapture %}
+{% assign aa_card_image = project.image | default: aa_default_image %}
+<a class="aa-card aa-project-card" href="{{ project.links.project | relative_url }}" aria-label="{{ aa_labels.view_case_study }}: {{ project.title }}" data-priority="{{ project.priority | default: 999 }}" data-date="{{ project.sort_date | default: project.year }}" data-title="{{ project.title | escape }}" data-category="{{ aa_card_category | escape }}">
+  <div class="aa-project-thumb">
+    <img src="{{ aa_card_image | relative_url }}" alt="" loading="lazy" width="960" height="540">
+  </div>
+  <div class="aa-project-body">
+    <div class="aa-meta"><span>{{ aa_card_category }}</span><span aria-hidden="true">·</span><span>{{ aa_card_date }}</span></div>
+    <h3>{{ project.title }}</h3>
+    <p>{{ aa_card_summary }}</p>
+    <div class="aa-chip-row" aria-label="{{ aa_labels.project_stack }}">
+      {% for item in aa_card_tags limit: 5 %}<span class="aa-chip">{{ item }}</span>{% endfor %}
+    </div>
+    <div class="aa-card-cta">
+      {% include aa/icon.html name="external" %}
+      <span>{% if aa_lang == 'ar' %}عرض المشروع{% else %}View project{% endif %}</span>
+    </div>
+  </div>
+</a>

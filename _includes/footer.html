@@ -1,26 +1,27 @@
+{% assign aa_lang = page.lang | default: "en" %}
+{% assign aa_profile = site.data.profile[aa_lang] | default: site.data.profile.en %}
+{% assign aa_labels = site.data.aa_labels[aa_lang] | default: site.data.aa_labels.en %}
+{% if aa_lang == "ar" %}
+  {% assign aa_privacy_url = "/ar/privacy-policy/" %}
+{% else %}
+  {% assign aa_privacy_url = "/privacy-policy/" %}
+{% endif %}
 {% unless site.atom_feed.hide %}
   {% assign show_atom = true %}
 {% endunless %}
-{% if site.footer.links or show_atom %}
-<div class="page__footer-follow">
-  <ul class="social-icons">
-    {% if site.data.ui-text[site.locale].follow_label %}
-      <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
-    {% endif %}
 
-    {% if site.footer.links %}
-      {% for link in site.footer.links %}
-        {% if link.label and link.url %}
-          <li><a href="{{ link.url }}" rel="nofollow noopener noreferrer"><i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i> {{ link.label | escape_once | strip }}</a></li>
-        {% endif %}
+<div class="aa-site-footer">
+  <div class="aa-site-footer__inner">
+    <p class="aa-site-footer__note">{{ aa_profile.footer_note }}</p>
+    <ul class="aa-site-footer__links social-icons">
+      {% for link in aa_profile.links %}
+      <li><a href="{{ link.url }}" {% unless link.url contains 'mailto:' %}rel="nofollow noopener noreferrer" target="_blank"{% endunless %}><i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i><span>{{ link.label | escape_once | strip }}</span></a></li>
       {% endfor %}
-    {% endif %}
-
-    {% unless site.atom_feed.hide %}
-      <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
-    {% endunless %}
-  </ul>
+      <li><a href="{{ aa_privacy_url | relative_url }}"><i class="fas fa-fw fa-user-shield" aria-hidden="true"></i><span>{{ aa_labels.privacy }}</span></a></li>
+      {% if show_atom %}
+      <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i><span>{{ aa_labels.feed }}</span></a></li>
+      {% endif %}
+    </ul>
+    <div class="aa-site-footer__bottom">&copy; {% assign site_time = site.time | date: '%Y' %}{% if site.footer.since and site_time != site.footer.since %}{{ site.footer.since }} - {% endif %}{{ site_time }} <a href="{{ aa_profile.home | relative_url }}">{{ aa_profile.display_name | escape_once | strip }}</a></div>
+  </div>
 </div>
-{% endif %}
-
-<div class="page__footer-copyright">&copy; {% assign site_time = site.time | date: '%Y' %}{% if site.footer.since and site_time != site.footer.since %}{{ site.footer.since }} - {% endif %}{{ site_time }} <a href="{{ site.copyright_url | default: site.url }}">{{ site.copyright | default: site.title | escape_once | strip }}</a>. {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>

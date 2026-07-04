@@ -1,0 +1,86 @@
+{% assign project = include.project %}
+{% assign aa_lang = include.lang | default: page.lang | default: 'en' %}
+{% assign aa_is_ar = false %}{% if aa_lang == 'ar' %}{% assign aa_is_ar = true %}{% endif %}
+{% if aa_is_ar %}
+  {% assign aa_back_url = '/ar/projects/' %}
+  {% assign aa_back_label = 'العودة للمشاريع' %}
+  {% assign aa_repo_label = 'عرض الكود' %}
+  {% assign aa_repo_type = 'مشروع منشور' %}
+{% else %}
+  {% assign aa_back_url = '/projects/' %}
+  {% assign aa_back_label = 'Back to Projects' %}
+  {% assign aa_repo_label = 'View source code' %}
+  {% assign aa_repo_type = 'Published project' %}
+{% endif %}
+{% if aa_is_ar %}
+  {% assign aa_share_label = 'شارك المشروع' %}
+  {% assign aa_share_x = 'مشاركة على X' %}
+  {% assign aa_share_linkedin = 'مشاركة على LinkedIn' %}
+  {% assign aa_share_mail = 'مشاركة عبر البريد' %}
+{% else %}
+  {% assign aa_share_label = 'Share project' %}
+  {% assign aa_share_x = 'Share on X' %}
+  {% assign aa_share_linkedin = 'Share on LinkedIn' %}
+  {% assign aa_share_mail = 'Share by email' %}
+{% endif %}
+{% capture aa_default_visual %}/assets/images/projects/{{ project.slug }}.svg{% endcapture %}
+{% assign aa_visual = project.image | default: aa_default_visual %}
+{% assign aa_share_url = page.url | absolute_url | url_encode %}
+{% assign aa_share_title = page.title | default: project.title | url_encode %}
+
+<section class="aa-project-hero aa-project-hero--{{ project.slug }}" aria-labelledby="aa-project-title-{{ project.slug }}">
+  <div class="aa-project-hero__inner">
+    <div class="aa-project-hero__copy">
+      <nav class="aa-project-crumb" aria-label="Project breadcrumb">
+        <a href="{{ aa_back_url | relative_url }}">{{ aa_back_label }}</a>
+        <span aria-hidden="true">›</span>
+        <span>{{ project.title }}</span>
+      </nav>
+
+      <div class="aa-project-meta-pill" aria-label="Project metadata">
+        <span>{{ project.category }}</span>
+        <span aria-hidden="true">•</span>
+        <span>{{ project.date_label | default: project.year }}</span>
+        <span aria-hidden="true">•</span>
+        <span>{{ project.status | default: aa_repo_type }}</span>
+      </div>
+
+      <div id="aa-project-title-{{ project.slug }}" class="aa-project-title" role="heading" aria-level="1">{{ project.title }}</div>
+      <p class="aa-project-subtitle">{{ include.subtitle }}</p>
+      <p class="aa-project-summary">{{ include.summary }}</p>
+
+      <div class="aa-project-actions">
+        <a class="aa-button aa-button-primary aa-project-primary" href="{{ project.links.repo }}" target="_blank" rel="noopener noreferrer">
+          {% include aa/icon.html name="github" %}<span>{{ aa_repo_label }}</span>
+        </a>
+        <a class="aa-button aa-project-secondary" href="{{ aa_back_url | relative_url }}">{{ aa_back_label }}</a>
+      </div>
+
+      <div class="aa-project-stack" aria-label="Project stack">
+        {% for item in project.stack %}<span class="aa-chip">{{ item }}</span>{% endfor %}
+      </div>
+    </div>
+
+    <figure class="aa-project-hero__visual" aria-label="{{ project.title }} visual system diagram">
+      <img src="{{ aa_visual | relative_url }}" alt="" loading="eager">
+    </figure>
+  </div>
+</section>
+
+
+<div class="aa-project-sharebar" aria-label="{{ aa_share_label }}">
+  <div class="aa-project-sharebar__inner">
+    <span class="aa-project-sharebar__label">{{ aa_share_label }}</span>
+    <a class="aa-share-chip aa-share-chip--x" href="https://twitter.com/intent/tweet?url={{ aa_share_url }}&text={{ aa_share_title }}" target="_blank" rel="noopener noreferrer" aria-label="{{ aa_share_x }}">
+      {% include aa/icon.html name="x" %}<span>X</span>
+    </a>
+    <a class="aa-share-chip aa-share-chip--linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url={{ aa_share_url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ aa_share_linkedin }}">
+      {% include aa/icon.html name="linkedin" %}<span>LinkedIn</span>
+    </a>
+    <a class="aa-share-chip aa-share-chip--mail" href="mailto:?subject={{ aa_share_title }}&body={{ aa_share_url }}" aria-label="{{ aa_share_mail }}">
+      {% include aa/icon.html name="mail" %}<span>Email</span>
+    </a>
+  </div>
+</div>
+
+{% include aa/project-anchor-nav.html lang=aa_lang %}

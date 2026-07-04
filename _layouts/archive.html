@@ -14,7 +14,7 @@ layout: default
   {% endunless %}
 {% endif %}
 
-<div id="main" role="main">
+<div id="main" role="main" class="{% if page.author_profile or layout.author_profile or page.sidebar %}aa-has-sidebar{% else %}aa-no-sidebar{% endif %}">
   {% include sidebar.html %}
 
   <div class="archive">

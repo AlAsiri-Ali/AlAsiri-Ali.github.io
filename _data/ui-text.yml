@@ -1391,7 +1391,7 @@ fa: &DEFAULT_FA
   skip_primary_nav           :
   skip_content               :
   skip_footer                :
-  page                       : "صفحه"
+  page                       : "صفحة"
   pagination_previous        : "قبلی"
   pagination_next            : "بعدی"
   breadcrumb_home_label      : "صفحه اصلی"
@@ -1912,20 +1912,20 @@ he-IL:
 # --------------
 ar: &DEFAULT_AR
   skip_links                 : "تخطي الروابط"
-  skip_primary_nav           : "تخطى الى شريط التنقل"
-  skip_content               : "الانتقال الى المحتوى"
-  skip_footer                : "الانتقال الى ذيل الصفحة"
-  page                       : "صفحه"
+  skip_primary_nav           : "تخطى إلى شريط التنقل"
+  skip_content               : "الانتقال إلى المحتوى"
+  skip_footer                : "الانتقال إلى تذييل الصفحة"
+  page                       : "صفحة"
   pagination_previous        : "قبل"
   pagination_next            : "بعد"
-  breadcrumb_home_label      : "الرئيس"
+  breadcrumb_home_label      : "الرئيسية"
   breadcrumb_separator       : "/"
   menu_label                 : "الخيارات"
   search_label               : "البحث"
   toc_label                  : "على هذه الصفحة"
   ext_link_label             : "رابط مباشر"
-  less_than                  : "اقل من"
-  minute_read                : "دقيقة قرائية"
+  less_than                  : "أقل من"
+  minute_read                : "دقيقة قراءة"
   share_on_label             : "مشاركة"
   meta_label                 :
   tags_label                 : "العلامات الوصفية:"
@@ -1939,7 +1939,7 @@ ar: &DEFAULT_AR
   feed_label                 : "الاخبار - RSS"
   powered_by                 : "تم تطوير بواسطة"
   website_label              : "موقع"
-  email_label                : "ايميل"
+  email_label                : "البريد الإلكتروني"
   recent_posts               : "المشاركات الأخيرة"
   undefined_wpm              : "معامل غير معرف في words_per_minute (كلمة في الدقيقة) في ملف _config.yml"
   comment_form_info          : "لن يتم نشر عنوان بريدك الإلكتروني. الحقول المطلوبة إلزامية"
@@ -1954,10 +1954,10 @@ ar: &DEFAULT_AR
   comment_error_msg          : "للأسف, هناك خطأ في المحاولة. الرجاء الحرص على تعبئة جميع الخانات و محاولة مجدداً."
   loading_label              : "جاري التحميل..."
   search_label_text          : "اكتب مصطلح للبحث..."
-  search_placeholder_text    : "اكتب مصطلح للبحث..."
+  search_placeholder_text    : "اكتب كلمة للبحث..."
   search_algolia_no_results  : "لا توجد نتائج"
   results_found              : "تم إيجاد نتيجة"
-  back_to_top                : "الانتقال الى الأعلى"
+  back_to_top                : "الانتقال إلى الأعلى"
 ar-SD:
   <<: *DEFAULT_AR
 ar-SA:

@@ -1,0 +1,16 @@
+{% assign aa_lang = include.lang | default: page.lang | default: 'en' %}
+{% if aa_lang == 'ar' %}
+  {% assign items = "التحدي|challenge,تصميم النظام|system-architecture,البيانات والمدخلات|data-and-inputs,المنهجية التقنية|technical-approach,التقييم والنتائج|evaluation-and-results,التنفيذ والكود|repository-details,حدود الاستخدام|operational-boundaries,التطوير القادم|future-development,القيمة التقنية|what-this-project-demonstrates" | split: "," %}
+  {% assign label = "أقسام المشروع" %}
+{% else %}
+  {% assign items = "Challenge|challenge,System architecture|system-architecture,Data and inputs|data-and-inputs,Technical approach|technical-approach,Evaluation and results|evaluation-and-results,Implementation and code|repository-details,Operational boundaries|operational-boundaries,Future development|future-development,Technical contribution|what-this-project-demonstrates" | split: "," %}
+  {% assign label = "Project sections" %}
+{% endif %}
+<nav class="aa-project-anchor-nav" aria-label="{{ label }}">
+  <div class="aa-project-anchor-nav__inner">
+    {% for item in items %}
+      {% assign parts = item | split: "|" %}
+      <a href="#{{ parts[1] }}">{{ parts[0] }}</a>
+    {% endfor %}
+  </div>
+</nav>

@@ -1,0 +1,13 @@
+{% assign aa_lang = page.lang | default: 'en' %}
+{% assign aa_labels = site.data.aa_labels[aa_lang] | default: site.data.aa_labels.en %}
+{% if aa_lang == 'ar' %}
+  {% assign aa_projects_url = '/ar/projects/' %}
+  {% assign aa_other_label = 'English' %}
+{% else %}
+  {% assign aa_projects_url = '/projects/' %}
+  {% assign aa_other_label = 'العربية' %}
+{% endif %}
+<p class="aa-actions">
+  <a class="aa-button aa-button-primary" href="{{ aa_projects_url | relative_url }}">{{ aa_labels.back_to_projects }}</a>
+  {% if page.alternate_url %}<a class="aa-button" href="{{ page.alternate_url | relative_url }}">{{ aa_other_label }}</a>{% endif %}
+</p>

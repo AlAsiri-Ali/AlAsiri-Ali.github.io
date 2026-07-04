@@ -1,826 +1,110 @@
 ---
 layout: splash
-header:
-  overlay_color: transparent
-  overlay_filter: 0
-  actions:
-    - label: "<i class='fas fa-code'></i> Explore Tech Hub"
-      url: "/projects/"
-    - label: "<i class='fas fa-book-open'></i> Read Articles"
-      url: "/blog/"
-excerpt: ""
+title: "Ali AlAsiri | AI & Information Systems"
+excerpt: "AI and Information Systems portfolio focused on intelligent systems, model evaluation, data workflows, and practical decision support."
+permalink: /
 image:
-  path: /assets/images/OGImage.jpg
-  alt: "Ali AlAsiri AI & Data Science Portfolio"
+  path: /assets/images/OGImage.png
+  alt: "Ali AlAsiri AI and Information Systems"
+lang: en
+dir: ltr
+alternate_url: "/ar/"
 ---
-<style>
-html {
-  background-image: url('/assets/images/homephoto.jpg') !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  background-attachment: fixed !important;
-  min-height: 100%;
-}
-body { background: transparent !important;}
-.initial-content,
-.search-content,
-#main,
-.page,
-.page__inner-wrap,
-.page__content { background: transparent !important; }
-.page__hero--overlay {
-  min-height: 100vh !important;
-  width: 100%;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-.page__hero-wrap {
-  min-height: 100vh !important;
-}
 
-/* Ensure overlay covers full screen */
-.page__hero--overlay .page__hero-wrap::before {
-  min-height: 100vh !important;
-}
-
-/* Hero Section with Typing Animation */
-.hero-content {
-  text-align: center;
-  padding: 60px 20px;
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 15px;
-  margin: 40px auto;
-  max-width: 1000px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Enhanced text visibility */
-.typing-text {
-  color: #ffffff !important;
-  text-shadow: none;
-}
-
-.hero-subtitle {
-  color: #f0f8ff !important;
-  text-shadow: none;
-}
-
-.hero-content::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-  animation: shimmer 3s infinite;
-}
-
-@keyframes shimmer {
-  0% { left: -100%; }
-  100% { left: 100%; }
-}
-
-.typing-text {
-  font-size: 2.5em;
-  font-weight: 700;
-  background: linear-gradient(45deg, #667eea, #764ba2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 20px;
-  min-height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.cursor {
-  display: inline-block;
-  width: 3px;
-  height: 1em;
-  background: #667eea;
-  animation: blink 1s infinite;
-  margin-left: 2px;
-}
-
-@keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
-}
-
-.hero-subtitle {
-  font-size: 1.2em;
-  background: linear-gradient(45deg, #4a5568, #667eea);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 30px;
-  opacity: 0;
-  animation: fadeInUp 1s ease-out 2s forwards;
-}
-
-/* Welcome Message */
-.welcome-message {
-  margin: 20px 0 30px 0;
-  opacity: 0;
-  animation: fadeInUp 1s ease-out 2.5s forwards;
-}
-
-.welcome-message p {
-  color: rgba(255, 255, 255, 0.95) !important;
-  font-size: 1.1em;
-  line-height: 1.6;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
-}
-
-.welcome-message strong {
-  color: #667eea !important;
-  font-weight: 600;
-}
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Stats Counter */
-.stats-container,
-.current-activities {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 30px;
-  margin: 40px auto;
-  max-width: 800px;
-  opacity: 0;
-  animation: fadeInUp 1s ease-out 3s forwards;
-}
-
-.stat-item,
-.activity-item {
-  text-align: center;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.stat-item:hover,
-.activity-item:hover {
-  transform: translateY(-5px);
-  background: rgba(0, 0, 0, 0.8);
-  border-color: rgba(255, 255, 255, 0.3);
-}
-
-.activity-item i {
-  font-size: 2.5em;
-  color: #667eea !important;
-  margin-bottom: 15px;
-  display: block;
-}
-
-.activity-item h3 {
-  font-size: 1.4em;
-  font-weight: 600;
-  color: #ffffff !important;
-  margin-bottom: 10px;
-}
-
-.activity-item p {
-  color: rgba(255, 255, 255, 0.9) !important;
-  font-size: 1em;
-  font-weight: 400;
-}
-
-.stat-number {
-  font-size: 2.5em;
-  font-weight: 700;
-  color: #ffffff !important;
-  display: block;
-  margin-bottom: 10px;
-}
-
-.stat-label {
-  font-size: 0.9em;
-  color: rgba(255, 255, 255, 0.9) !important;
-  font-weight: 500;
-}
-
-/* Tech Stack Section */
-.tech-stack {
-  background: rgba(0, 0, 0, 0.7) !important;
-  padding: 60px 20px;
-  border-radius: 15px;
-  max-width: 1000px;
-  margin: 60px auto;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.tech-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.tech-header h2 {
-  font-size: 2.2em;
-  color: #ffffff !important;
-  margin-bottom: 15px;
-}
-
-.tech-subtitle {
-  color: rgba(255, 255, 255, 0.9) !important;
-  font-size: 1.1em;
-}
-
-.tech-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-}
-
-.tech-item {
-  background: rgba(0, 0, 0, 0.5) !important;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  transition: all 0.3s ease;
-  cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.tech-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-  border-color: rgba(255, 255, 255, 0.3);
-  background: rgba(0, 0, 0, 0.8) !important;
-}
-
-.tech-icon {
-  font-size: 2.5em;
-  margin-bottom: 15px;
-  color: #667eea !important;
-}
-
-.tech-name {
-  font-size: 1.3em;
-  font-weight: 600;
-  color: #ffffff !important;
-  margin-bottom: 10px;
-}
-
-.tech-progress {
-  background: #e9ecef;
-  height: 8px;
-  border-radius: 4px;
-  overflow: hidden;
-  margin-bottom: 15px;
-}
-
-.tech-progress-bar {
-  height: 100%;
-  background: linear-gradient(45deg, #667eea, #764ba2);
-  border-radius: 4px;
-  width: 0;
-  transition: width 2s ease-out;
-}
-
-.tech-description {
-  color: rgba(255, 255, 255, 0.9) !important;
-  font-size: 0.9em;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: all 0.3s ease;
-}
-
-.tech-item:hover .tech-description {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Latest Insights Section */
-.insights-section {
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: 60px auto;
-}
-
-.insights-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.insights-header h2 {
-  font-size: 2.2em;
-  color: #ffffff !important;
-  margin-bottom: 15px;
-}
-
-.insights-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-}
-
-.insight-card {
-  background: rgba(0, 0, 0, 0.6) !important;
-  border-radius: 15px;
-  padding: 30px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
-  text-decoration: none;
-  color: inherit;
-}
-
-.insight-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
-  border-color: rgba(255, 255, 255, 0.3);
-  text-decoration: none;
-  color: inherit;
-  background: rgba(0, 0, 0, 0.8) !important;
-}
-
-.insight-icon {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  color: #667eea !important;
-}
-
-.insight-title {
-  font-size: 1.4em;
-  font-weight: 600;
-  color: #ffffff !important;
-  margin-bottom: 15px;
-}
-
-.insight-description {
-  color: rgba(255, 255, 255, 0.9) !important;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.insight-link {
-  display: inline-flex;
-  align-items: center;
-  color: #667eea;
-  font-weight: 500;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.insight-link:hover {
-  color: #764ba2;
-  text-decoration: none;
-}
-
-.insight-link i {
-  margin-left: 8px;
-  transition: transform 0.3s ease;
-}
-
-.insight-link:hover i {
-  transform: translateX(5px);
-}
-
-/* Feature Cards (Original) */
-.feature-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  padding: 2rem 1rem;
-  max-width: 1200px;
-  margin: 60px auto 0;
-}
-
-.feature-card-link {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.6) !important;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.feature-card-link:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
-  border-color: rgba(255, 255, 255, 0.3);
-  text-decoration: none;
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.8) !important;
-}
-
-.feature-card-link .card-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.feature-card-link:hover .card-image {
-  transform: scale(1.05);
-}
-
-.card-content {
-  padding: 25px;
-  text-align: center;
-}
-
-.card-content h2 {
-  color: #ffffff !important;
-  font-size: 1.5em;
-  margin-bottom: 15px;
-}
-
-.card-content p {
-  color: rgba(255, 255, 255, 0.9) !important;
-  margin: 0;
-  line-height: 1.6;
-}
-
-/* Dark theme support */
-[data-theme="dark"] .hero-content {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-[data-theme="dark"] .tech-stack {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-[data-theme="dark"] .tech-item {
-  background: rgba(0, 0, 0, 0.6);
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
-[data-theme="dark"] .tech-item:hover {
-  border-color: rgba(255, 255, 255, 0.3);
-  background: rgba(0, 0, 0, 0.9);
-}
-
-[data-theme="dark"] .insight-card {
-  background: rgba(0, 0, 0, 0.8);
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
-[data-theme="dark"] .insight-card:hover {
-  border-color: rgba(255, 255, 255, 0.3);
-  background: rgba(0, 0, 0, 0.9);
-}
-
-[data-theme="dark"] .feature-card-link {
-  background-color: rgba(0, 0, 0, 0.8);
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
-[data-theme="dark"] .feature-card-link:hover {
-  border-color: rgba(255, 255, 255, 0.3);
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-[data-theme="dark"] .stat-item {
-  background: rgba(0, 0, 0, 0.7);
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
-[data-theme="dark"] .stat-item:hover {
-  background: rgba(0, 0, 0, 0.9);
-  border-color: rgba(255, 255, 255, 0.3);
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  .typing-text {
-    font-size: 1.8em;
-  }
-  
-  .stats-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-  
-  .tech-grid,
-  .insights-grid,
-  .feature-cards,
-  .current-activities {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  
-  .hero-content,
-  .tech-stack,
-  .insights-section {
-    padding: 40px 15px;
-  }
-}
-
-/* Responsive Design for Full Screen Background */
-@media (max-width: 768px) {
-  .page__hero--overlay {
-    background-attachment: scroll !important;
-    min-height: 100vh !important;
-  }
-  
-  .hero-content {
-    margin: 20px;
-    padding: 40px 20px;
-  }
-  
-  .typing-text {
-    font-size: 2em;
-  }
-  
-  .welcome-message {
-    margin: 15px 0 25px 0;
-  }
-  
-  .welcome-message p {
-    font-size: 1em;
-    padding: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .typing-text {
-    font-size: 1.5em;
-  }
-  
-  .hero-subtitle {
-    font-size: 1em;
-  }
-  
-  .welcome-message p {
-    font-size: 0.9em;
-    padding: 12px;
-  }
-  
-  .activity-item {
-    padding: 15px;
-  }
-  
-  .activity-item i {
-    font-size: 2em;
-    margin-bottom: 10px;
-  }
-  
-  .activity-item h3 {
-    font-size: 1.2em;
-  }
-}
-</style>
-
-<div class="hero-content">
-  <h1 class="typing-text" id="typingText"></h1>
-  <p class="hero-subtitle">Join me on an exciting journey through AI, Data Science, and cutting-edge technology. Let's build the future together!</p>
-  
-  <div class="welcome-message">
-    <p>Hi there! I'm <strong>Ali AlAsiri</strong> - your guide through the fascinating world of artificial intelligence and data science.</p>
-  </div>
-  
-  <div class="current-activities">
-    <div class="activity-item">
-      <i class="fas fa-brain"></i>
-      <h3>Deep Learning</h3>
-      <p>Advanced Neural Networks & CNNs</p>
+{% assign aa_profile = site.data.profile.en %}
+{% assign aa_labels = site.data.aa_labels.en %}
+
+<section class="aa-hero" aria-labelledby="home-title">
+  <div class="aa-hero-inner">
+    <div class="aa-eyebrow">{{ aa_profile.hero_eyebrow }}</div>
+    <h1 id="home-title">{{ aa_profile.hero_title }}</h1>
+    <p>{{ aa_profile.hero_summary }}</p>
+    <div class="aa-actions">
+      <a class="aa-button aa-button-primary" href="/projects/">{{ aa_labels.explore_projects }}</a>
+      <a class="aa-button aa-button-secondary" href="/cv/">{{ aa_labels.view_profile }}</a>
+      <a class="aa-button aa-button-secondary" href="/skills/">{{ aa_labels.view_skills }}</a>
     </div>
-    <div class="activity-item">
-      <i class="fas fa-robot"></i>
-      <h3>Advanced AI</h3>
-      <p>Reinforcement Learning & AI Algorithms</p>
-    </div>
-    <div class="activity-item">
-      <i class="fas fa-language"></i>
-      <h3>Advanced NLP</h3>
-      <p>Transformers & Language Models</p>
-    </div>
-    <div class="activity-item">
-      <i class="fas fa-tools"></i>
-      <h3>Applied Projects</h3>
-      <p>Real-world AI Solutions</p>
-    </div>
-  </div>
-</div>
-
-<section class="tech-stack">
-  <div class="tech-header">
-    <h2><i class="fas fa-rocket"></i> Current Tech Focus</h2>
-    <p class="tech-subtitle">Technologies shaping the future of development</p>
-  </div>
-  
-  <div class="tech-grid">
-    <div class="tech-item" data-skill="90">
-      <div class="tech-icon"><i class="fab fa-python"></i></div>
-      <h3 class="tech-name">Python & AI</h3>
-      <div class="tech-progress">
-        <div class="tech-progress-bar"></div>
-      </div>
-      <p class="tech-description">Machine learning, data analysis, and AI model development</p>
-    </div>
-    
-    <div class="tech-item" data-skill="85">
-      <div class="tech-icon"><i class="fas fa-database"></i></div>
-      <h3 class="tech-name">Data Science</h3>
-      <div class="tech-progress">
-        <div class="tech-progress-bar"></div>
-      </div>
-      <p class="tech-description">Advanced analytics, visualization, and statistical modeling</p>
-    </div>
-    
-    <div class="tech-item" data-skill="80">
-      <div class="tech-icon"><i class="fas fa-brain"></i></div>
-      <h3 class="tech-name">Deep Learning</h3>
-      <div class="tech-progress">
-        <div class="tech-progress-bar"></div>
-      </div>
-      <p class="tech-description">Neural networks, computer vision, and NLP technologies</p>
-    </div>
-    
-    <div class="tech-item" data-skill="75">
-      <div class="tech-icon"><i class="fab fa-js-square"></i></div>
-      <h3 class="tech-name">Web Technologies</h3>
-      <div class="tech-progress">
-        <div class="tech-progress-bar"></div>
-      </div>
-      <p class="tech-description">Modern web development and interactive applications</p>
-    </div>
-    
-    <div class="tech-item" data-skill="88">
-      <div class="tech-icon"><i class="fas fa-chart-line"></i></div>
-      <h3 class="tech-name">Analytics</h3>
-      <div class="tech-progress">
-        <div class="tech-progress-bar"></div>
-      </div>
-      <p class="tech-description">Business intelligence and predictive analytics</p>
-    </div>
-    
-    <div class="tech-item" data-skill="82">
-      <div class="tech-icon"><i class="fas fa-cloud"></i></div>
-      <h3 class="tech-name">Cloud Computing</h3>
-      <div class="tech-progress">
-        <div class="tech-progress-bar"></div>
-      </div>
-      <p class="tech-description">AWS, Azure, and scalable cloud solutions</p>
+    <div class="aa-stats" aria-label="Highlights">
+      <div class="aa-stat"><strong>AI</strong><span>Professional master’s degree</span></div>
+      <div class="aa-stat"><strong>IS</strong><span>Information Systems foundation</span></div>
+      <div class="aa-stat"><strong>Systems</strong><span>Modeling, evaluation, data, and decisions</span></div>
     </div>
   </div>
 </section>
 
-<section class="insights-section">
-  <div class="insights-header">
-    <h2><i class="fas fa-lightbulb"></i> Latest Tech Insights</h2>
-    <p class="tech-subtitle">Trending topics and breakthrough discoveries</p>
-  </div>
-  
-  <div class="insights-grid">
-    <a href="/blog/" class="insight-card">
-      <div class="insight-icon"><i class="fas fa-robot"></i></div>
-      <h3 class="insight-title">AI Revolution 2025</h3>
-      <p class="insight-description">Exploring the latest breakthroughs in artificial intelligence and their impact on various industries.</p>
-      <span class="insight-link">Read More <i class="fas fa-arrow-right"></i></span>
-    </a>
-    
-    <a href="/projects/" class="insight-card">
-      <div class="insight-icon"><i class="fas fa-code-branch"></i></div>
-      <h3 class="insight-title">Open Source Projects</h3>
-      <p class="insight-description">Contributing to the developer community with innovative tools and libraries.</p>
-      <span class="insight-link">Explore Projects <i class="fas fa-arrow-right"></i></span>
-    </a>
-    
-    <a href="/skills/" class="insight-card">
-      <div class="insight-icon"><i class="fas fa-graduation-cap"></i></div>
-      <h3 class="insight-title">Learning Resources</h3>
-      <p class="insight-description">Curated collection of tutorials, courses, and guides for tech enthusiasts.</p>
-      <span class="insight-link">Start Learning <i class="fas fa-arrow-right"></i></span>
-    </a>
-  </div>
-</section>
+<div class="aa-container">
+  <section class="aa-section" aria-labelledby="proof-title">
+    <div class="aa-section-head">
+      <div>
+        <div class="aa-eyebrow">Professional profile</div>
+        <h2 id="proof-title">AI with information-systems depth.</h2>
+      </div>
+      <p class="aa-lede">My work combines AI methods with systems thinking: data flow, evaluation, interfaces, maintainability, and responsible interpretation.</p>
+    </div>
+    <div class="aa-proof-strip" aria-label="Professional strengths">
+      <div class="aa-proof-item"><strong>Intelligent workflows</strong><span>Designing systems that connect models, data, interfaces, and practical user needs.</span></div>
+      <div class="aa-proof-item"><strong>Robust evaluation</strong><span>Using baselines, comparisons, metrics, error analysis, and careful interpretation.</span></div>
+      <div class="aa-proof-item"><strong>Systems mindset</strong><span>Understanding processes, data pipelines, constraints, and maintainable implementation.</span></div>
+      <div class="aa-proof-item"><strong>Technical judgment</strong><span>Clear problem framing, transparent methods, careful tradeoffs, and measurable outcomes.</span></div>
+    </div>
+  </section>
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 2rem 1rem; max-width: 1200px; margin: auto;">
-  
-<a href="/about/" class="feature-card-link">
-  <img src="/assets/images/feature-about.png" alt="About Me" class="card-image" />
-  <div class="card-content" style="text-align: center;">
-    <h2>About Me</h2>
-    <p>Learn more about my background, skills, and academic journey in AI.</p>
-  </div>
-</a>
+  <section class="aa-section" aria-labelledby="systems-title">
+    <div class="aa-section-head">
+      <div>
+        <div class="aa-eyebrow">Selected work</div>
+        <h2 id="systems-title">AI systems and data workflows focused on evidence, reliability, and evaluation.</h2>
+      </div>
+      <p class="aa-lede">The project portfolio shows how I translate broad AI study into practical systems, experiments, and decision-support workflows.</p>
+    </div>
+    <div class="aa-grid aa-grid-4 aa-domain-grid">
+      <a class="aa-card aa-domain-card" href="/projects/#intelligent-systems"><span class="aa-icon" aria-hidden="true">{% include aa/icon.html name="system" %}</span><h3>Intelligent Systems</h3><p>Model-centered workflows connected to real data, users, and practical constraints.</p></a>
+      <a class="aa-card aa-domain-card" href="/projects/#evaluation-robustness"><span class="aa-icon" aria-hidden="true">{% include aa/icon.html name="flask" %}</span><h3>Evaluation & Robustness</h3><p>Measured work with baselines, comparisons, uncertainty, and responsible interpretation.</p></a>
+      <a class="aa-card aa-domain-card" href="/projects/#generative-workflows"><span class="aa-icon" aria-hidden="true">{% include aa/icon.html name="ai" %}</span><h3>Generative Workflows</h3><p>Controlled AI workflows for producing, comparing, and refining model outputs.</p></a>
+      <a class="aa-card aa-domain-card" href="/projects/#data-decision-modeling"><span class="aa-icon" aria-hidden="true">{% include aa/icon.html name="chart" %}</span><h3>Data & Decision Modeling</h3><p>Analytical workflows that turn data into interpretable signals and decisions.</p></a>
+    </div>
+  </section>
 
-<a href="/projects/" class="feature-card-link">
-  <img src="/assets/images/feature-projects.png" alt="Projects" class="card-image" />
-  <div class="card-content" style="text-align: center;">
-    <h2>Projects</h2>
-    <p>Discover my hands-on projects in Machine Learning and Data Engineering.</p>
-  </div>
-</a>
+  <section class="aa-section" aria-labelledby="foundation-title">
+    <div class="aa-eyebrow">Foundation</div>
+    <h2 id="foundation-title">A profile built on AI study, systems thinking, and measurable work.</h2>
+    <div class="aa-grid aa-grid-3">
+      <div class="aa-card"><div class="aa-icon" aria-hidden="true">{% include aa/icon.html name="graduation" %}</div><h3>Academic base</h3><p>Bachelor’s degree in Information Systems from King Khalid University and Professional Master in Artificial Intelligence from King Abdulaziz University.</p></div>
+      <div class="aa-card"><div class="aa-icon" aria-hidden="true">{% include aa/icon.html name="flask" %}</div><h3>Measured work</h3><p>My technical work emphasizes methods, metrics, comparisons, error analysis, and responsible use boundaries.</p></div>
+      <div class="aa-card"><div class="aa-icon" aria-hidden="true">{% include aa/icon.html name="system" %}</div><h3>System perspective</h3><p>The work connects models with data pipelines, interfaces, evaluation context, and decision support.</p></div>
+    </div>
+  </section>
 
-<a href="/blog/" class="feature-card-link">
-  <img src="/assets/images/feature-blog.png" alt="Blog" class="card-image" />
-  <div class="card-content" style="text-align: center;">
-    <h2>Blog & Articles</h2>
-    <p>Read my thoughts, tutorials, and insights on AI and technology.</p>
-  </div>
-</a>
+  <section class="aa-section" aria-labelledby="writing-title">
+    <div class="aa-section-head">
+      <div>
+        <div class="aa-eyebrow">Writing</div>
+        <h2 id="writing-title">Technical notes and reflections</h2>
+      </div>
+      <p class="aa-lede">Short essays on AI, learning, digital transformation, and the way technical systems are designed and evaluated.</p>
+    </div>
+    <div class="aa-grid aa-grid-2">
+      {% for post in site.posts limit:2 %}
+      <a class="aa-card aa-post-card" href="{{ post.url | relative_url }}">
+        {% assign post_teaser = post.header.teaser | default: post.image.path | default: site.teaser %}
+        <div class="aa-post-thumb"><img src="{{ post_teaser | relative_url }}" alt="" loading="lazy"></div>
+        <div class="aa-post-body">
+          <div class="aa-meta"><span>{{ post.date | date: "%b %-d, %Y" }}</span>{% if post.categories %}<span aria-hidden="true">·</span><span>{{ post.categories | join: ", " }}</span>{% endif %}</div>
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.excerpt | strip_html | truncate: 170 }}</p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
 
+  <section class="aa-section aa-card aa-center aa-cta-card" aria-labelledby="cta-title">
+    <div class="aa-eyebrow">Connect</div>
+    <h2 id="cta-title">Interested in AI, data, or intelligent systems?</h2>
+    <p class="aa-lede">Explore the project work or get in touch for collaboration, technical discussion, or professional opportunities.</p>
+    <div class="aa-actions">
+      <a class="aa-button aa-button-primary" href="/projects/">View projects</a>
+      <a class="aa-button" href="/contact/">Contact</a>
+    </div>
+  </section>
 </div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Typing Animation
-  const typingTexts = [
-    "Welcome to Innovation Hub! ",
-    "Transforming Ideas into Intelligence ", 
-    "Building Tomorrow's Solutions Today ",
-    "Where Data Meets Creativity "
-  ];
-  
-  let textIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-  const typingElement = document.getElementById('typingText');
-  
-  function typeText() {
-    const currentText = typingTexts[textIndex];
-    
-    if (isDeleting) {
-      typingElement.innerHTML = currentText.substring(0, charIndex - 1) + '<span class="cursor"></span>';
-      charIndex--;
-    } else {
-      typingElement.innerHTML = currentText.substring(0, charIndex + 1) + '<span class="cursor"></span>';
-      charIndex++;
-    }
-    
-    let typeSpeed = isDeleting ? 50 : 100;
-    
-    if (!isDeleting && charIndex === currentText.length) {
-      typeSpeed = 2000;
-      isDeleting = true;
-    } else if (isDeleting && charIndex === 0) {
-      isDeleting = false;
-      textIndex = (textIndex + 1) % typingTexts.length;
-      typeSpeed = 500;
-    }
-    
-    setTimeout(typeText, typeSpeed);
-  }
-  
-  // Start typing animation
-  typeText();
-  
-  // Tech Stack Progress Bars
-  const techObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const techItems = entry.target.querySelectorAll('.tech-item');
-        techItems.forEach((item, index) => {
-          setTimeout(() => {
-            const skill = item.getAttribute('data-skill');
-            const progressBar = item.querySelector('.tech-progress-bar');
-            progressBar.style.width = skill + '%';
-          }, index * 200);
-        });
-        techObserver.unobserve(entry.target);
-      }
-    });
-  });
-  
-  const techStack = document.querySelector('.tech-stack');
-  if (techStack) {
-    techObserver.observe(techStack);
-  }
-  
-  // Parallax Effect for Hero
-  window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const rate = scrolled * -0.5;
-    const heroContent = document.querySelector('.hero-content');
-    if (heroContent) {
-      heroContent.style.transform = `translateY(${rate}px)`;
-    }
-  });
-  
-  // Dynamic Tech Stack Updates
-  const techItems = document.querySelectorAll('.tech-item');
-  techItems.forEach(item => {
-    item.addEventListener('mouseenter', () => {
-      const progressBar = item.querySelector('.tech-progress-bar');
-      progressBar.style.background = 'linear-gradient(45deg, #ff6b6b, #4ecdc4)';
-    });
-    
-    item.addEventListener('mouseleave', () => {
-      const progressBar = item.querySelector('.tech-progress-bar');
-      progressBar.style.background = 'linear-gradient(45deg, #667eea, #764ba2)';
-    });
-  });
-});
-</script>

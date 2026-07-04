@@ -1,0 +1,77 @@
+{% assign name = include.name | default: 'circle' %}
+<svg class="aa-svg-icon aa-svg-icon--{{ name }}" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+{% case name %}
+{% when 'ai' %}
+  <path d="M9 4.5a3 3 0 0 1 6 0v1.1a4 4 0 0 1 3.5 3.95v4.9A4 4 0 0 1 14.5 18h-5A4 4 0 0 1 5.5 14.45v-4.9A4 4 0 0 1 9 5.6V4.5Z"/>
+  <path d="M8.5 11h.01M15.5 11h.01M9 15c1.8 1 4.2 1 6 0M12 2v2.5M5.5 10H3.7M20.3 10h-1.8"/>
+{% when 'vision' %}
+  <path d="M2.8 12s3.3-6 9.2-6 9.2 6 9.2 6-3.3 6-9.2 6-9.2-6-9.2-6Z"/>
+  <circle cx="12" cy="12" r="3"/>
+{% when 'leaf' %}
+  <path d="M20 4C10 4 5 9.5 5 18c7.5 0 13-5 15-14Z"/>
+  <path d="M5 18c3.2-5 7.5-8.2 13-10"/>
+{% when 'shield' %}
+  <path d="M12 3 20 6v5.5c0 4.4-3 7.8-8 9.5-5-1.7-8-5.1-8-9.5V6l8-3Z"/>
+  <path d="m9 12 2 2 4-4"/>
+{% when 'chart' %}
+  <path d="M4 19V5M4 19h16"/>
+  <path d="m7 15 3-4 3 2 5-7"/>
+{% when 'graduation' %}
+  <path d="M3 8.5 12 4l9 4.5-9 4.5-9-4.5Z"/>
+  <path d="M7 11v4.2c2.8 2 7.2 2 10 0V11"/>
+{% when 'flask' %}
+  <path d="M9 3h6M10 3v5l-5.2 9A2.5 2.5 0 0 0 7 21h10a2.5 2.5 0 0 0 2.2-4L14 8V3"/>
+  <path d="M8 16h8"/>
+{% when 'system' %}
+  <rect x="4" y="4" width="6" height="6" rx="1.5"/>
+  <rect x="14" y="4" width="6" height="6" rx="1.5"/>
+  <rect x="9" y="14" width="6" height="6" rx="1.5"/>
+  <path d="M10 7h4M12 10v4"/>
+{% when 'search' %}
+  <circle cx="11" cy="11" r="6.5"/>
+  <path d="m16 16 4 4"/>
+{% when 'sun' %}
+  <circle cx="12" cy="12" r="4"/>
+  <path d="M12 2.5v2M12 19.5v2M4.6 4.6 6 6M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/>
+{% when 'moon' %}
+  <path d="M20.5 14.2A8.2 8.2 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2Z"/>
+{% when 'arrow-up' %}
+  <path d="M12 19V5"/>
+  <path d="m6 11 6-6 6 6"/>
+{% when 'external' %}
+  <path d="M14 4h6v6"/>
+  <path d="m20 4-9 9"/>
+  <path d="M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"/>
+{% when 'github' %}
+  <path d="M9 19c-4 1.3-4-2-5.5-2.5"/>
+  <path d="M15 22v-3.5c0-1 .1-1.7-.5-2.3 2-.2 4.1-1 4.1-4.5 0-1-.35-1.85-.95-2.5.1-.25.4-1.25-.1-2.5 0 0-.8-.25-2.6 1a8.8 8.8 0 0 0-4.9 0c-1.8-1.25-2.6-1-2.6-1-.5 1.25-.2 2.25-.1 2.5a3.6 3.6 0 0 0-.95 2.5c0 3.5 2.1 4.3 4.1 4.5-.5.45-.75 1.15-.75 2.2V22"/>
+{% when 'linkedin' %}
+  <rect x="4" y="4" width="16" height="16" rx="2"/>
+  <path d="M8 11v5M8 8.5v.01M12 16v-5M12 13.2c0-1.4 1-2.2 2.1-2.2S16 11.8 16 13.4V16"/>
+{% when 'x' %}
+  <path d="M4.7 4h4.05l3.95 5.42L17.35 4H21l-6.56 7.62L22 20h-4.05l-4.7-6.46L7.72 20H4l7.1-8.27L4.7 4Zm2.25 1.65 11.78 12.7h.93L7.88 5.65h-.93Z" fill="currentColor" stroke="none"/>
+{% when 'location' %}
+  <path d="M12 21s7-5.15 7-11a7 7 0 0 0-14 0c0 5.85 7 11 7 11Z"/>
+  <circle cx="12" cy="10" r="2.35"/>
+{% when 'mail' %}
+  <rect x="3.5" y="5.5" width="17" height="13" rx="2"/>
+  <path d="m4 7 8 6 8-6"/>
+{% when 'calendar' %}
+  <rect x="4" y="5" width="16" height="15" rx="2"/>
+  <path d="M8 3v4M16 3v4M4 10h16"/>
+{% when 'clock' %}
+  <circle cx="12" cy="12" r="8"/>
+  <path d="M12 8v4l3 2"/>
+{% when 'code' %}
+  <path d="m8 9-4 3 4 3M16 9l4 3-4 3M14 5l-4 14"/>
+{% when 'database' %}
+  <ellipse cx="12" cy="5.5" rx="7" ry="3"/>
+  <path d="M5 5.5v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/>
+  <path d="M5 11.5v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/>
+{% when 'document' %}
+  <path d="M7 3h7l4 4v14H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"/>
+  <path d="M14 3v5h5M8 12h8M8 16h6"/>
+{% else %}
+  <circle cx="12" cy="12" r="8"/>
+{% endcase %}
+</svg>

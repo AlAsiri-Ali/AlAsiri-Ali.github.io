@@ -1,38 +1,55 @@
 {% capture logo_path %}{{ site.logo }}{% endcapture %}
+{% assign aa_lang = page.lang | default: 'en' %}
+{% assign aa_profile = site.data.profile[aa_lang] | default: site.data.profile.en %}
+{% assign aa_labels = site.data.aa_labels[aa_lang] | default: site.data.aa_labels.en %}
+{% if aa_lang == 'ar' %}
+  {% assign aa_nav = site.data.navigation.ar %}
+  {% assign aa_home = '/ar/' %}
+{% else %}
+  {% assign aa_nav = site.data.navigation.en %}
+  {% assign aa_home = '/' %}
+{% endif %}
+
+{% assign aa_alt = page.alternate_url %}
+{% if aa_alt == nil or aa_alt == empty %}
+  {% if aa_lang == 'ar' %}{% assign aa_alt = '/' %}{% else %}{% assign aa_alt = '/ar/' %}{% endif %}
+{% endif %}
 
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
+      <nav id="site-nav" class="greedy-nav aa-nav" aria-label="{{ aa_labels.main_navigation }}">
         {% unless logo_path == empty %}
-          <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
+          <a class="site-logo" href="{{ aa_home | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ aa_profile.display_name | escape_once | strip }}"></a>
         {% endunless %}
-        <a class="site-title" href="{{ '/' | relative_url }}">
-          {{ site.masthead_title | default: site.title | escape_once | strip }}
-          {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle | escape_once | strip }}</span>{% endif %}
+        <a class="site-title" href="{{ aa_home | relative_url }}">
+          {{ aa_profile.display_name | escape_once | strip }}
+          {% if aa_profile.subtitle %}<span class="site-subtitle">{{ aa_profile.subtitle | escape_once | strip }}</span>{% endif %}
         </a>
         <ul class="visible-links">
-          {%- for link in site.data.navigation.main -%}
+          {%- for link in aa_nav -%}
             <li class="masthead__menu-item">
               <a
                 href="{{ link.url | relative_url }}"
+                {% if page.url == link.url %} aria-current="page"{% endif %}
                 {% if link.description %} title="{{ link.description }}"{% endif %}
-                {% if link.target %} target="{{ link.target }}"{% endif %}
+                {% if link.target %} target="{{ link.target }}" rel="noopener noreferrer"{% endif %}
               >{{ link.title }}</a>
             </li>
           {%- endfor -%}
         </ul>
+        <a class="aa-language-switch" href="{{ aa_alt | relative_url }}" hreflang="{% if aa_lang == 'ar' %}en{% else %}ar{% endif %}" aria-label="{{ aa_labels.switch_language }}">{{ aa_labels.language_label }}</a>
         {% if site.search == true %}
-        <button class="search__toggle" type="button">
-          <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>
-          <i class="fas fa-search"></i>
+        <button class="search__toggle" type="button" aria-label="{{ aa_labels.open_search }}" aria-expanded="false" aria-controls="site-search">
+          <span class="visually-hidden">{{ aa_labels.open_search }}</span>
+          {% include aa/icon.html name="search" %}
         </button>
         {% endif %}
-        <button class="greedy-nav__toggle hidden" type="button">
-          <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
-          <div class="navicon"></div>
+        <button class="greedy-nav__toggle hidden" type="button" aria-label="{{ aa_labels.open_menu }}" aria-expanded="false" aria-controls="site-nav-hidden-links">
+          <span class="visually-hidden">{{ aa_labels.open_menu }}</span>
+          <div class="navicon" aria-hidden="true"></div>
         </button>
-        <ul class="hidden-links hidden"></ul>
+        <ul id="site-nav-hidden-links" class="hidden-links hidden"></ul>
       </nav>
     </div>
   </div>

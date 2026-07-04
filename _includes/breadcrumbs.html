@@ -12,132 +12,11 @@
   {% assign crumb_path = site.category_archive.path %}
 {% endif %}
 
-<style>
-.breadcrumbs {
-  background: rgba(102, 126, 234, 0.05) !important;
-  border-bottom: 1px solid rgba(102, 126, 234, 0.1) !important;
-  padding: 12px 0 !important;
-  margin-bottom: 30px !important;
-  font-size: 0.9em !important;
-  opacity: 0;
-  transform: translateY(-10px);
-  animation: breadcrumbLoad 0.5s ease-out 0.2s forwards;
-}
-
-.breadcrumbs ol {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0 auto;
-  padding: 0 20px;
-  max-width: 1200px;
-  gap: 8px;
-}
-
-.breadcrumbs li {
-  display: flex;
-  align-items: center;
-}
-
-.breadcrumbs a {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: #667eea;
-  text-decoration: none;
-  padding: 4px 8px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.breadcrumbs a:hover {
-  background: rgba(102, 126, 234, 0.1);
-  color: #764ba2;
-  text-decoration: none;
-  transform: translateY(-1px);
-}
-
-.breadcrumbs a::before {
-  content: '';
-  margin-right: 0px;
-}
-
-.breadcrumbs .sep {
-  color: #999;
-  margin: 0 4px;
-  font-weight: 300;
-}
-
-.breadcrumbs .current {
-  color: #333;
-  font-weight: 500;
-  padding: 4px 8px;
-}
-
-/* Dark theme support - Simple color fix */
-[data-theme="dark"] .breadcrumbs,
-.dark .breadcrumbs,
-body.dark .breadcrumbs,
-html[data-theme="dark"] .breadcrumbs {
-  background: rgba(45, 55, 72, 0.4) !important;
-  border-bottom-color: rgba(144, 205, 244, 0.2) !important;
-}
-
-[data-theme="dark"] .breadcrumbs a,
-.dark .breadcrumbs a,
-body.dark .breadcrumbs a,
-html[data-theme="dark"] .breadcrumbs a {
-  color: #90cdf4 !important;
-}
-
-[data-theme="dark"] .breadcrumbs a:hover,
-.dark .breadcrumbs a:hover,
-body.dark .breadcrumbs a:hover,
-html[data-theme="dark"] .breadcrumbs a:hover {
-  background: rgba(144, 205, 244, 0.2) !important;
-  color: #ffffff !important;
-}
-
-[data-theme="dark"] .breadcrumbs .sep,
-.dark .breadcrumbs .sep,
-body.dark .breadcrumbs .sep,
-html[data-theme="dark"] .breadcrumbs .sep {
-  color: #e2e8f0 !important;
-}
-
-[data-theme="dark"] .breadcrumbs .current,
-.dark .breadcrumbs .current,
-body.dark .breadcrumbs .current,
-html[data-theme="dark"] .breadcrumbs .current {
-  color: #ffffff !important;
-  font-weight: 600;
-}
 
 
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  .breadcrumbs {
-    font-size: 0.85em;
-    padding: 10px 0;
-  }
-  
-  .breadcrumbs ol {
-    padding: 0 15px;
-    gap: 6px;
-  }
-}
-
-@keyframes breadcrumbLoad {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-</style>
-
+{% assign aa_lang = page.lang | default: 'en' %}
+{% assign aa_ui = site.data.ui-text[aa_lang] | default: site.data.ui-text[site.locale] %}
+{% if aa_lang == 'ar' %}{% assign aa_home_url = '/ar/' %}{% else %}{% assign aa_home_url = '/' %}{% endif %}
 <nav class="breadcrumbs">
   <ol itemscope itemtype="https://schema.org/BreadcrumbList">
     {% assign crumbs = page.url | split: '/' %}
@@ -145,21 +24,23 @@ html[data-theme="dark"] .breadcrumbs .current {
     {% for crumb in crumbs offset: 1 %}
       {% if forloop.first %}
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="{{ '/' | relative_url }}" itemprop="item"><span itemprop="name">{{ site.data.ui-text[site.locale].breadcrumb_home_label | default: "Home" }}</span></a>
+          <a href="{{ aa_home_url | relative_url }}" itemprop="item"><span itemprop="name">{{ aa_ui.breadcrumb_home_label | default: "Home" }}</span></a>
           <meta itemprop="position" content="{{ i }}" />
         </li>
-        <span class="sep">{{ site.data.ui-text[site.locale].breadcrumb_separator | default: "/" }}</span>
+        <span class="sep">{{ aa_ui.breadcrumb_separator | default: "/" }}</span>
       {% endif %}
-      {% if forloop.last %}
-        <li class="current"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>{{ page.title }}</li>
-      {% else %}
-        {% assign i = i | plus: 1 %}
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="{{ crumb | downcase | replace: '%20', '-' | prepend: path_type | prepend: crumb_path | relative_url }}" itemprop="item"><span itemprop="name">{{ crumb | url_decode | replace: '-', ' ' | capitalize }}</span></a>
-          <meta itemprop="position" content="{{ i }}" />
-        </li>
-        <span class="sep">{{ site.data.ui-text[site.locale].breadcrumb_separator | default: "/" }}</span>
-      {% endif %}
+      {% unless aa_lang == 'ar' and crumb == 'ar' %}
+        {% if forloop.last %}
+          <li class="current"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>{{ page.title }}</li>
+        {% else %}
+          {% assign i = i | plus: 1 %}
+          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a href="{{ crumb | downcase | replace: '%20', '-' | prepend: path_type | prepend: crumb_path | relative_url }}" itemprop="item"><span itemprop="name">{{ crumb | url_decode | replace: '-', ' ' | capitalize }}</span></a>
+            <meta itemprop="position" content="{{ i }}" />
+          </li>
+          <span class="sep">{{ aa_ui.breadcrumb_separator | default: "/" }}</span>
+        {% endif %}
+      {% endunless %}
     {% endfor %}
   </ol>
 </nav>

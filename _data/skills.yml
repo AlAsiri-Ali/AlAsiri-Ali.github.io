@@ -1,0 +1,40 @@
+- group: AI Systems Engineering
+  items:
+  - Problem framing
+  - Intelligent workflows
+  - Model integration
+  - Data-to-decision pipelines
+  - Interface-aware design
+  - Responsible implementation
+- group: Machine Learning & Evaluation
+  items:
+  - Supervised learning
+  - Unsupervised learning
+  - Baselines and comparisons
+  - Metrics selection
+  - Error analysis
+  - Robustness checks
+- group: Data Science & Decision Modeling
+  items:
+  - Data preparation
+  - Feature engineering
+  - Exploratory analysis
+  - Time-aware analysis
+  - Segmentation
+  - Statistical interpretation
+- group: Generative AI Workflows
+  items:
+  - Controlled generation
+  - Prompt and workflow design
+  - Output comparison
+  - Human review
+  - Safety-aware use
+  - Multimodal experimentation
+- group: Software & Delivery Tools
+  items:
+  - Python
+  - Structured experiments
+  - Reusable workflows
+  - Dashboard prototyping
+  - Version control
+  - Reproducible workflows

@@ -1,0 +1,13 @@
+{% assign project = include.project %}
+{% assign aa_lang = include.lang | default: page.lang | default: 'en' %}
+{% assign aa_labels = site.data.aa_labels[aa_lang] | default: site.data.aa_labels.en %}
+{% if project.metrics %}
+<div class="aa-grid aa-grid-3" aria-label="{{ aa_labels.project_metrics }}">
+{% for metric in project.metrics %}
+  <div class="aa-card aa-metric-card">
+    <div class="aa-metric-label">{{ aa_labels.project_metrics }}</div>
+    <h3>{{ metric }}</h3>
+  </div>
+{% endfor %}
+</div>
+{% endif %}

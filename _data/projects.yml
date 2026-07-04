@@ -1,0 +1,971 @@
+- title: Frequency-Aware Deepfake Detection
+  slug: deepfake-detection-compression
+  image: /assets/images/projects/deepfake-detection-compression.png
+  status: Published project
+  year: '2026'
+  category: Computer Vision & AI Safety
+  featured: true
+  priority: 1
+  domain: Deepfake Detection · Digital Forensics · Robustness
+  impact: Research implementation comparing spatial and DCT-based frequency-aware deepfake detection under H.264 compression and cross-dataset evaluation.
+  stack:
+  - Python
+  - PyTorch
+  - XceptionNet
+  - DCT
+  - FaceForensics++
+  - Celeb-DF
+  metrics:
+  - 'FF++ c40 accuracy: 71.82% hybrid'
+  - 'Celeb-DF AUC: 86.67% hybrid'
+  - 5 random seeds
+  links:
+    project: /projects/deepfake-detection-compression/
+    repo: https://github.com/AlAsiri-Ali/frequency-aware-deepfake-detection
+  public_category: AI Evaluation & Robustness
+  public_summary: Research-oriented AI evaluation project focused on robustness, dataset shift, and performance under degraded inputs.
+  public_tags:
+  - AI evaluation
+  - Robustness
+  - Model comparison
+  - Research implementation
+  sort_date: '2026-06-05'
+  date_label: Jun 5, 2026
+- title: GovRAG Copilot
+  slug: govrag-copilot
+  image: /assets/images/projects/govrag-copilot.png
+  status: Published project
+  year: '2026'
+  category: Generative AI & RAG
+  featured: true
+  priority: 2
+  domain: RAG · Arabic/English NLP · Regulatory AI
+  impact: Evidence-grounded bilingual RAG system for Saudi PDPL and SDAIA guidance, with hybrid retrieval, article-level citations, compliance drafting, gap detection, and visual outputs.
+  stack:
+  - Python
+  - RAG
+  - BM25
+  - TF-IDF
+  - Qwen2.5
+  - Gradio
+  - Matplotlib
+  metrics:
+  - 238 article-level chunks
+  - 190 passing tests
+  - 5 Gradio workflow tabs
+  links:
+    project: /projects/govrag-copilot/
+    repo: https://github.com/AlAsiri-Ali/govrag-copilot
+  public_category: Intelligent Systems & Decision Support
+  public_summary: AI system for decision-support workflows where outputs need structure, traceability, and careful evaluation.
+  public_tags:
+  - AI systems
+  - Decision support
+  - Evaluation
+  - Workflow design
+  sort_date: '2026-05-09'
+  date_label: May 9, 2026
+- title: Cashew Leaf Disease Classification
+  slug: cashew-leaf-disease-classification
+  image: /assets/images/projects/cashew-leaf-disease-classification.png
+  status: Published project
+  year: '2026'
+  category: Visual Intelligence & Deep Learning
+  featured: false
+  priority: 3
+  domain: Agricultural Vision · Disease Classification · Transfer Learning
+  impact: Deep-learning image-classification pipeline for cashew leaf disease recognition, comparing EfficientNet-B0, ResNet-18, VGG-16, and DenseNet-121 under class imbalance.
+  stack:
+  - Python
+  - PyTorch
+  - timm
+  - EfficientNet-B0
+  - ResNet-18
+  - VGG-16
+  - DenseNet-121
+  metrics:
+  - 6,549 leaf images
+  - 5 disease/health classes
+  - EfficientNet-B0 accuracy 98.58%
+  links:
+    project: /projects/cashew-leaf-disease-classification/
+    repo: https://github.com/AlAsiri-Ali/cashew-leaf-disease-classification
+  public_category: Visual Intelligence & Deep Learning
+  public_summary: Visual-intelligence project focused on image classification, class imbalance, model comparison, and decision-support use cases.
+  public_tags:
+  - Visual AI
+  - Image classification
+  - Model comparison
+  - Evaluation
+  sort_date: '2025-12-05'
+  date_label: Dec 5, 2025
+- title: PPE Safety Detection
+  slug: ppe-safety-detection
+  image: /assets/images/projects/ppe-safety-detection.png
+  status: Published project
+  year: '2026'
+  category: Visual Intelligence & Safety Systems
+  featured: false
+  priority: 4
+  domain: Safety Detection · Real-Time Vision · Privacy-Aware AI
+  impact: Computer-vision system for construction safety monitoring using real-time PPE detection, interactive Streamlit workflows, reporting, and automatic face blurring for privacy protection.
+  stack:
+  - Python
+  - YOLOv8
+  - Streamlit
+  - OpenCV
+  - Pandas
+  - Privacy Blurring
+  - Detection Analytics
+  metrics:
+  - 10 object classes
+  - 6,630 augmented images
+  - mAP@50 80.2% · precision 89.3%
+  links:
+    project: /projects/ppe-safety-detection/
+    repo: https://github.com/AlAsiri-Ali/PPE-Safety-Detection
+  public_category: Visual Intelligence & Deep Learning
+  public_summary: Visual-intelligence system focused on workplace safety, real-time detection, privacy-aware outputs, and practical monitoring workflows.
+  public_tags:
+  - Visual AI
+  - Safety systems
+  - Monitoring
+  - Human-centered AI
+  sort_date: '2025-12-20'
+  date_label: Dec 20, 2025
+- title: Malicious URL Detection with ML
+  slug: malicious-url-detection-ml
+  image: /assets/images/projects/malicious-url-detection-ml.png
+  status: Published project
+  year: '2026'
+  category: Security Analytics & Risk Detection
+  featured: false
+  priority: 5
+  domain: Security Analytics · URL Classification · Model Evaluation
+  impact: Machine-learning workflow for detecting malicious URLs from lexical URL features, comparing Logistic Regression, Random Forest, and XGBoost with ROC and precision-recall analysis.
+  stack:
+  - Python
+  - Scikit-learn
+  - XGBoost
+  - Random Forest
+  - Logistic Regression
+  - Feature Engineering
+  - ROC/PR
+  metrics:
+  - 651,191 URLs
+  - 'Best model: Random Forest'
+  - Accuracy 0.876 · ROC AUC 0.934
+  links:
+    project: /projects/malicious-url-detection-ml/
+    repo: https://github.com/AlAsiri-Ali/malicious-url-detection-ml
+  public_category: AI Evaluation & Robustness
+  public_summary: Security-oriented classification project focused on evaluating model behavior, error tradeoffs, and decision-support reliability.
+  public_tags:
+  - Security analytics
+  - Risk detection
+  - Model evaluation
+  - Decision support
+  sort_date: '2025-12-05'
+  date_label: Dec 5, 2025
+- title: Android Galaxy Sentiment Analysis
+  slug: android-galaxy-sentiment-analysis-nlp
+  status: Published project
+  year: '2026'
+  category: Customer Intelligence & Text Analytics
+  featured: false
+  priority: 6
+  domain: Sentiment Analysis · Product Feedback · Text Classification
+  impact: End-to-end sentiment analysis pipeline for Android Galaxy discussions, comparing text representations and classification models on a balanced binary sentiment task.
+  stack:
+  - Python
+  - Scikit-learn
+  - NLTK
+  - TF-IDF
+  - Word2Vec
+  - BiLSTM
+  metrics:
+  - 1,000 raw Reddit comments
+  - 752 positive / 752 negative after balancing
+  - SVC + TF-IDF F1-score 97.07%
+  links:
+    project: /projects/android-galaxy-sentiment-analysis-nlp/
+    repo: https://github.com/AlAsiri-Ali/android-galaxy-sentiment-analysis-nlp
+  public_category: Customer Intelligence & Analytics
+  public_summary: Customer-intelligence project focused on extracting sentiment signals, comparing modeling choices, and evaluating text-classification behavior.
+  image: /assets/images/projects/android-galaxy-sentiment-analysis-nlp.png
+  public_tags:
+  - Customer intelligence
+  - Text analytics
+  - Classification
+  - Evaluation
+  sort_date: '2025-05-25'
+  date_label: May 25, 2025
+- title: Titanic Survival Prediction
+  slug: titanic-survival-prediction-ml
+  status: Published project
+  year: '2026'
+  category: Data Science & Decision Modeling
+  featured: false
+  priority: 7
+  domain: Predictive Modeling · Feature Engineering · Model Comparison
+  impact: Structured-data machine-learning workflow for Titanic survival prediction with EDA, feature engineering, preprocessing, class-imbalance review, and tuned model comparison.
+  stack:
+  - Python
+  - Pandas
+  - Scikit-learn
+  - SMOTE
+  - GridSearchCV
+  - Logistic Regression
+  - SVC
+  metrics:
+  - 891 passenger records
+  - 21 final features
+  - Tuned test accuracy 0.83799
+  links:
+    project: /projects/titanic-survival-prediction-ml/
+    repo: https://github.com/AlAsiri-Ali/titanic-survival-prediction-ml
+  public_category: Data Science & Decision Modeling
+  public_summary: Predictive modeling workflow focused on structured data preparation, feature engineering, model comparison, and tradeoff interpretation.
+  image: /assets/images/projects/titanic-survival-prediction-ml.png
+  public_tags:
+  - Predictive analytics
+  - Data preparation
+  - Model comparison
+  - Decision modeling
+  sort_date: '2025-05-08'
+  date_label: May 8, 2025
+- title: Gomoku Master
+  slug: gomoku-master
+  status: Published project
+  year: '2026'
+  category: Interactive AI & Algorithmic Systems
+  featured: false
+  priority: 8
+  domain: Game AI · Search Algorithms · Interactive Systems
+  impact: Interactive Python Gomoku implementation with configurable board sizes, adjustable difficulty, and AI opponents using search algorithms, alpha-beta pruning, and transposition tables.
+  stack:
+  - Python
+  - easyAI
+  - Negamax
+  - Alpha-beta pruning
+  - SSS*
+  - NumPy
+  - Matplotlib
+  metrics:
+  - 4 configurable board sizes
+  - 5 difficulty levels
+  - 2 supported AI search algorithms
+  links:
+    project: /projects/gomoku-master/
+    repo: https://github.com/AlAsiri-Ali/GomokuMaster
+  public_category: Interactive AI & Algorithmic Systems
+  public_summary: Interactive AI project focused on strategy search, board evaluation, difficulty control, and playable decision-making.
+  image: /assets/images/projects/gomoku-master.png
+  public_tags:
+  - Interactive AI
+  - Search algorithms
+  - Game systems
+  - Decision logic
+  sort_date: '2025-05-25'
+  date_label: May 25, 2025
+- title: Arabic Sentiment AraVec LSTM
+  slug: arabic-sentiment-aravec-lstm
+  image: /assets/images/projects/arabic-sentiment-aravec-lstm.png
+  status: Published project
+  year: '2026'
+  category: Customer Intelligence & Text Analytics
+  featured: false
+  priority: 9
+  domain: Arabic NLP · Sentiment Analysis · Sequence Modeling
+  impact: Arabic sentiment-analysis workflow comparing averaged AraVec representations with a sequence-aware LSTM model on a balanced tweet sentiment dataset.
+  stack:
+  - Python
+  - Arabic NLP
+  - AraVec
+  - ANN
+  - LSTM
+  - Embeddings
+  - PCA
+  metrics:
+  - 5,000 Arabic tweets
+  - 2,500 positive / 2,500 negative
+  - LSTM accuracy 83%
+  - ANN baseline about 68%
+  links:
+    project: /projects/arabic-sentiment-aravec-lstm/
+    repo: https://github.com/AlAsiri-Ali/arabic-sentiment-aravec-lstm
+  public_category: Customer Intelligence & Analytics
+  public_summary: Arabic text-analytics workflow focused on sentiment signals, language representation, sequence modeling, and evaluation.
+  public_tags:
+  - Arabic NLP
+  - Text analytics
+  - Sentiment analysis
+  - Model evaluation
+  sort_date: '2025-05-04'
+  date_label: May 4, 2025
+- title: SMS Spam Traditional NLP Classification
+  slug: sms-spam-traditional-nlp-classification
+  image: /assets/images/projects/sms-spam-traditional-nlp-classification.png
+  status: Published project
+  year: '2026'
+  category: AI Evaluation & Robustness
+  featured: false
+  priority: 10
+  domain: Text Classification · Spam Detection · Model Comparison
+  impact: Traditional NLP spam-detection workflow comparing Bag of Words, TF-IDF, Naive Bayes, Logistic Regression, and SVM with confusion matrices and ROC-AUC analysis.
+  stack:
+  - Python
+  - Scikit-learn
+  - Bag of Words
+  - TF-IDF
+  - Naive Bayes
+  - Logistic Regression
+  - SVM
+  metrics:
+  - 5,574 SMS messages
+  - 6 model/representation combinations
+  - SVM + TF-IDF accuracy 97.67%
+  - Spam F1-score 0.90
+  links:
+    project: /projects/sms-spam-traditional-nlp-classification/
+    repo: https://github.com/AlAsiri-Ali/sms-spam-traditional-nlp-classification
+  public_category: AI Evaluation & Robustness
+  public_summary: Text-classification workflow focused on representation choices, model comparison, class imbalance, and evaluation tradeoffs.
+  public_tags:
+  - Text classification
+  - Model comparison
+  - Evaluation
+  - Security analytics
+  sort_date: '2025-03-24'
+  date_label: Mar 24, 2025
+- title: Retail Segmentation & Market Basket Analysis
+  slug: retail-segmentation-market-basket
+  image: /assets/images/projects/retail-segmentation-market-basket.png
+  status: Published project
+  year: '2026'
+  category: Customer Analytics
+  featured: true
+  priority: 11
+  domain: Unsupervised Learning · RFM · Association Rules
+  impact: Customer analytics workflow combining RFM segmentation, clustering, Apriori association rules, and business interpretation on Online Retail data.
+  stack:
+  - Python
+  - Pandas
+  - Scikit-learn
+  - K-Means
+  - Apriori
+  - Association Rules
+  metrics:
+  - 541,909 raw rows
+  - 3 customer segments
+  - 23 final association rules
+  links:
+    project: /projects/retail-segmentation-market-basket/
+    repo: https://github.com/AlAsiri-Ali/retail-segmentation-market-basket
+  public_category: Customer Intelligence & Analytics
+  public_summary: Customer analytics workflow for segmentation, behavior patterns, and interpretable business insights.
+  public_tags:
+  - Customer analytics
+  - Segmentation
+  - Pattern mining
+  - Business insight
+  sort_date: '2026-05-04'
+  date_label: May 4, 2026
+- title: Long-Tailed Object Classification with VGG16
+  slug: long-tailed-object-classification-vgg16
+  image: /assets/images/projects/long-tailed-object-classification-vgg16.png
+  status: Published project
+  year: '2026'
+  category: Visual Intelligence & Deep Learning
+  featured: false
+  priority: 12
+  domain: Long-Tailed Classification · Transfer Learning · Visual Recognition
+  impact: Computer-vision classification workflow comparing a HOG+SVM baseline with VGG16 transfer learning, augmentation, tuning, and fine-tuning on imbalanced in-the-wild images.
+  stack:
+  - Python
+  - TensorFlow
+  - Keras
+  - VGG16
+  - HOG
+  - SVM
+  - Open Images
+  metrics:
+  - 2,402 training images / 598 validation images
+  - HOG+SVM accuracy 67.00%
+  - Tuned VGG16 accuracy 92.00%
+  links:
+    project: /projects/long-tailed-object-classification-vgg16/
+    repo: https://github.com/AlAsiri-Ali/long-tailed-object-classification-vgg16
+  public_category: Visual Intelligence & Deep Learning
+  public_summary: Visual-classification workflow focused on class imbalance, baseline comparison, transfer learning, and model interpretation.
+  public_tags:
+  - Visual AI
+  - Transfer learning
+  - Classification
+  - Model comparison
+  sort_date: '2025-12-10'
+  date_label: Dec 10, 2025
+- title: UCF50 CNN-LSTM Action Recognition
+  slug: ucf50-cnn-lstm-action-recognition
+  image: /assets/images/projects/ucf50-cnn-lstm-action-recognition.png
+  status: Published project
+  year: '2026'
+  category: Visual Intelligence & Deep Learning
+  featured: false
+  priority: 13
+  domain: Video Classification · CNN Features · Sequence Modeling
+  impact: Video action-recognition workflow combining CNN spatial feature extraction with RNN/LSTM temporal modeling and comparative performance evaluation.
+  stack:
+  - Python
+  - TensorFlow
+  - Keras
+  - CNN
+  - RNN
+  - LSTM
+  metrics:
+  - 6,681 videos
+  - 50 action classes
+  - CNN+LSTM validation F1 0.4548
+  links:
+    project: /projects/ucf50-cnn-lstm-action-recognition/
+    repo: https://github.com/AlAsiri-Ali/ucf50-cnn-lstm-action-recognition
+  public_category: Visual Intelligence & Deep Learning
+  public_summary: Video-understanding workflow focused on spatial features, temporal modeling, and comparative evaluation.
+  public_tags:
+  - Visual AI
+  - Video modeling
+  - Sequence modeling
+  - Comparison
+  sort_date: '2025-11-06'
+  date_label: Nov 6, 2025
+- title: Phishing Email Detection with ML
+  slug: phishing-email-detection-ml
+  image: /assets/images/projects/phishing-email-detection-ml.png
+  status: Published project
+  year: '2026'
+  category: AI Evaluation & Robustness
+  featured: false
+  priority: 14
+  domain: Security Analytics · Text Classification · Model Comparison
+  impact: Security-oriented text-classification workflow using TF-IDF features and classical machine-learning models to compare phishing detection performance, recall, false positives, and feature signals.
+  stack:
+  - Python
+  - Scikit-learn
+  - TF-IDF
+  - Random Forest
+  - SVM
+  - Logistic Regression
+  metrics:
+  - 17,538 cleaned email rows
+  - 5,000 TF-IDF features
+  - Selected linear SVM accuracy 0.9763
+  links:
+    project: /projects/phishing-email-detection-ml/
+    repo: https://github.com/AlAsiri-Ali/phishing-email-detection-ml
+  public_category: AI Evaluation & Robustness
+  public_summary: Security-classification workflow focused on model comparison, recall, false positives, and interpretable text signals.
+  public_tags:
+  - Security analytics
+  - Classification
+  - Model comparison
+  - Evaluation
+  sort_date: '2025-10-02'
+  date_label: Oct 2, 2025
+- title: Moving Average Backtest with PyFolio
+  slug: moving-average-backtest-pyfolio
+  image: /assets/images/projects/moving-average-backtest-pyfolio.png
+  status: Published project
+  year: '2026'
+  category: Financial ML & Market Analytics
+  featured: false
+  priority: 15
+  domain: Backtesting · Risk Metrics · Strategy Evaluation
+  impact: Backtesting workflow for a 50/200 moving-average crossover strategy on AAPL using Backtrader and PyFolio-style risk analysis.
+  stack:
+  - Python
+  - Backtrader
+  - PyFolio
+  - Empyrical
+  - yfinance
+  - Pandas
+  metrics:
+  - Starting value $100,000
+  - Total return 16.23%
+  - Maximum drawdown 15.73%
+  links:
+    project: /projects/moving-average-backtest-pyfolio/
+    repo: https://github.com/AlAsiri-Ali/moving-average-backtest-pyfolio
+  public_category: Data Science & Decision Modeling
+  public_summary: Strategy evaluation workflow focused on performance measurement, risk interpretation, and reproducible analysis.
+  public_tags:
+  - Data science
+  - Backtesting
+  - Risk analysis
+  - Evaluation
+  sort_date: '2026-05-13'
+  date_label: May 13, 2026
+- title: SMS Spam Transformer Classification
+  slug: sms-spam-transformer-classification
+  image: /assets/images/projects/sms-spam-transformer-classification.png
+  status: Published project
+  year: '2026'
+  category: Language Systems & Model Evaluation
+  featured: false
+  priority: 16
+  domain: Text Classification · Transformers · Prompting Comparison
+  impact: Transformer-based SMS spam-classification workflow comparing zero-shot classification, fine-tuned BERT, few-shot BERT, and Flan-T5 prompting.
+  stack:
+  - Python
+  - Transformers
+  - BERT
+  - Flan-T5
+  - Zero-shot
+  - Few-shot
+  metrics:
+  - 5,572 SMS messages
+  - Fine-tuned BERT accuracy 0.9952
+  - Few-shot BERT accuracy 0.9294
+  links:
+    project: /projects/sms-spam-transformer-classification/
+    repo: https://github.com/AlAsiri-Ali/sms-spam-transformer-classification
+  public_category: AI Evaluation & Robustness
+  public_summary: Language-classification workflow comparing training strategies, prompt framing, and evaluation behavior.
+  public_tags:
+  - Language systems
+  - Classification
+  - Model comparison
+  - Evaluation
+  sort_date: '2025-12-08'
+  date_label: Dec 8, 2025
+- title: Heart Disease DNN Classification
+  slug: heart-disease-dnn-classification
+  image: /assets/images/projects/heart-disease-dnn-classification.png
+  status: Published project
+  year: '2026'
+  category: Healthcare AI & Model Evaluation
+  featured: false
+  priority: 17
+  domain: Clinical Tabular Modeling · Neural Networks · Diagnostic Evaluation
+  impact: Deep neural network workflow for binary heart-disease prediction using tabular preprocessing, model tuning, ROC/AUC evaluation, and error analysis.
+  stack:
+  - Python
+  - TensorFlow
+  - Keras
+  - DNN
+  - StandardScaler
+  - ROC-AUC
+  metrics:
+  - 1,025 clinical-style records
+  - Test accuracy 0.9659
+  - AUC 0.9813
+  links:
+    project: /projects/heart-disease-dnn-classification/
+    repo: https://github.com/AlAsiri-Ali/heart-disease-dnn-classification
+  public_category: AI Evaluation & Robustness
+  public_summary: Supervised-learning workflow focused on preprocessing, tuning, diagnostic metrics, and careful error interpretation.
+  public_tags:
+  - Model evaluation
+  - Tabular modeling
+  - Error analysis
+  - Decision support
+  sort_date: '2025-10-11'
+  date_label: Oct 11, 2025
+- title: CelebA DCGAN Face Generation
+  slug: celeba-dcgan-face-generation
+  image: /assets/images/projects/celeba-dcgan-face-generation.png
+  status: Published project
+  year: '2026'
+  category: Generative AI Workflows
+  featured: false
+  priority: 18
+  domain: Adversarial Learning · Image Generation · Training Analysis
+  impact: DCGAN workflow for synthetic face-image generation using generator-discriminator training, generated samples, checkpoints, and training-behavior analysis.
+  stack:
+  - Python
+  - TensorFlow
+  - Keras
+  - DCGAN
+  - Generator
+  - Discriminator
+  metrics:
+  - 202,599 source images
+  - 64×64 generated outputs
+  - 15 training epochs
+  links:
+    project: /projects/celeba-dcgan-face-generation/
+    repo: https://github.com/AlAsiri-Ali/celeba-dcgan-face-generation
+  public_category: Generative AI Workflows
+  public_summary: Generative modeling workflow focused on adversarial training dynamics, sample inspection, and output progression.
+  public_tags:
+  - Generative AI
+  - Training dynamics
+  - Image synthesis
+  - Experimentation
+  sort_date: '2025-11-06'
+  date_label: Nov 6, 2025
+- title: Animal Faces CNN Classification
+  slug: animal-faces-cnn-classification
+  image: /assets/images/projects/animal-faces-cnn-classification.png
+  status: Published project
+  year: '2026'
+  category: Visual Intelligence & Deep Learning
+  featured: false
+  priority: 19
+  domain: Image Classification · CNN Training · Evaluation
+  impact: CNN image-classification workflow for animal-face recognition across Cat, Dog, and Wild classes using augmentation, callbacks, and visual evaluation.
+  stack:
+  - Python
+  - TensorFlow
+  - Keras
+  - CNN
+  - Data Augmentation
+  - Callbacks
+  metrics:
+  - 11,706 training images
+  - 2,924 test/validation images
+  - Overall accuracy 0.9593
+  links:
+    project: /projects/animal-faces-cnn-classification/
+    repo: https://github.com/AlAsiri-Ali/animal-faces-cnn-classification
+  public_category: Visual Intelligence & Deep Learning
+  public_summary: Visual-classification workflow for image preprocessing, model training, callbacks, and balanced evaluation across classes.
+  public_tags:
+  - Visual AI
+  - Classification
+  - Model training
+  - Evaluation
+  sort_date: '2025-10-11'
+  date_label: Oct 11, 2025
+- title: MNIST ViT vs CNN Comparison
+  slug: mnist-vit-cnn-comparison
+  image: /assets/images/projects/mnist-vit-cnn-comparison.png
+  status: Published project
+  year: '2026'
+  category: Visual Intelligence & Deep Learning
+  featured: false
+  priority: 20
+  domain: Vision Transformers · CNN Baseline · Accuracy–Efficiency Tradeoff
+  impact: Image-classification comparison between a fine-tuned Vision Transformer and a lightweight CNN baseline with accuracy, runtime, and confusion-matrix analysis.
+  stack:
+  - Python
+  - PyTorch
+  - TensorFlow
+  - ViT
+  - CNN
+  - MNIST
+  metrics:
+  - 4,000 training images
+  - ViT accuracy 98.10%
+  - CNN trained about 117× faster
+  links:
+    project: /projects/mnist-vit-cnn-comparison/
+    repo: https://github.com/AlAsiri-Ali/mnist-vit-cnn-comparison
+  public_category: Visual Intelligence & Deep Learning
+  public_summary: Model-comparison workflow focused on accuracy, training time, and practical tradeoffs in visual classification.
+  public_tags:
+  - Visual AI
+  - Model comparison
+  - Efficiency
+  - Evaluation
+  sort_date: '2025-12-08'
+  date_label: Dec 8, 2025
+- title: SDXL ControlNet Image Workflow
+  slug: sdxl-controlnet-image-workflow
+  image: /assets/images/projects/sdxl-controlnet-image-workflow.png
+  status: Published project
+  year: '2026'
+  category: Generative Media
+  featured: true
+  priority: 21
+  domain: Diffusion Models · ControlNet · Image Evaluation
+  impact: Diffusion image workflow comparing SDXL text-to-image generation, Img2Img semantic editing, ControlNet Canny guidance, and LPIPS/PSNR evaluation.
+  stack:
+  - Python
+  - Diffusers
+  - SDXL
+  - ControlNet
+  - Img2Img
+  - LPIPS
+  - PSNR
+  metrics:
+  - 40 SDXL inference steps
+  - ControlNet Canny guidance
+  - LPIPS 0.4527 / PSNR 12.71 dB
+  links:
+    project: /projects/sdxl-controlnet-image-workflow/
+    repo: https://github.com/AlAsiri-Ali/sdxl-controlnet-image-workflow
+  public_category: Generative AI Workflows
+  public_summary: Controlled generative workflow for comparing image outputs, structure preservation, and measurable output changes.
+  public_tags:
+  - Generative AI
+  - Output comparison
+  - Visual workflow
+  - Evaluation
+  sort_date: '2026-03-31'
+  date_label: Mar 31, 2026
+- title: Asthma RAG Diagnostic Assistant
+  slug: asthma-rag-diagnostic-assistant
+  image: /assets/images/projects/asthma-rag-diagnostic-assistant.png
+  status: Published project
+  year: '2026'
+  category: Generative AI & RAG
+  featured: true
+  priority: 22
+  domain: Medical RAG · Prompting · Evaluation
+  impact: Controlled RAG experiment for asthma-related reasoning using a custom knowledge base, FAISS retrieval, prompt variants, and text-generation metrics.
+  stack:
+  - Python
+  - LangChain
+  - FAISS
+  - HuggingFace
+  - Qwen2.5
+  - RAG
+  metrics:
+  - 10 synthetic patient cases
+  - 3 prompting styles
+  - BLEU / ROUGE-L / METEOR / Self-BLEU
+  links:
+    project: /projects/asthma-rag-diagnostic-assistant/
+    repo: https://github.com/AlAsiri-Ali/asthma-rag-diagnostic-assistant
+  public_category: Intelligent Systems & Decision Support
+  public_summary: Experimental assistant workflow focused on structured reasoning, knowledge use, and evaluation in a sensitive domain.
+  public_tags:
+  - AI systems
+  - Reasoning workflow
+  - Evaluation
+  - Safety-aware design
+  sort_date: '2026-03-09'
+  date_label: Mar 9, 2026
+- title: Speech & Music Generation with Transformers
+  slug: speech-music-generation-transformers
+  image: /assets/images/projects/speech-music-generation-transformers.png
+  status: Published project
+  year: '2026'
+  category: Generative Media
+  featured: false
+  priority: 23
+  domain: Text-to-Speech · Expressive Speech · Music Generation
+  impact: Generative audio workflow comparing spoken narration, expressive speech, and text-conditioned music.
+  stack:
+  - Python
+  - Transformers
+  - SpeechT5
+  - Bark
+  - MusicGen
+  - HiFi-GAN
+  metrics:
+  - 3 generative audio tasks
+  - SpeechT5 / Bark / MusicGen
+  - Speech waveform and spectrogram outputs
+  links:
+    project: /projects/speech-music-generation-transformers/
+    repo: https://github.com/AlAsiri-Ali/speech-music-generation-transformers
+  public_category: Generative AI Workflows
+  public_summary: Generative audio workflow comparing different output styles and reviewing model behavior across tasks.
+  public_tags:
+  - Generative AI
+  - Audio workflow
+  - Output review
+  - Experimentation
+  sort_date: '2026-05-02'
+  date_label: May 2, 2026
+- title: OpenCV Image Enhancement & Edge Detection
+  slug: opencv-image-enhancement-edge-detection
+  image: /assets/images/projects/opencv-image-enhancement-edge-detection.png
+  status: Published project
+  year: '2026'
+  category: Visual Intelligence & Deep Learning
+  featured: false
+  priority: 24
+  domain: Classical Computer Vision · Image Preprocessing · Edge Detection
+  impact: Classical vision workflow using contrast enhancement, thresholding, Canny edge detection, contour analysis, and video-frame processing to make object boundaries more interpretable.
+  stack:
+  - Python
+  - OpenCV
+  - CLAHE
+  - Thresholding
+  - Canny
+  - Contour Analysis
+  - Video Processing
+  metrics:
+  - Open Images visual samples
+  - CLAHE / adaptive threshold / Canny pipeline
+  - Image and video preprocessing workflow
+  links:
+    project: /projects/opencv-image-enhancement-edge-detection/
+    repo: https://github.com/AlAsiri-Ali/opencv-image-enhancement-edge-detection
+  public_category: Visual Intelligence & Deep Learning
+  public_summary: Visual-processing workflow focused on enhancing image structure, extracting boundaries, and comparing preprocessing quality.
+  public_tags:
+  - Visual AI
+  - Image processing
+  - Preprocessing
+  - Evaluation
+  sort_date: '2025-11-07'
+  date_label: Nov 7, 2025
+- title: AAPL Regression & Direction Models
+  slug: aapl-regression-trading-models
+  image: /assets/images/projects/aapl-regression-trading-models.png
+  status: Published project
+  year: '2026'
+  category: Financial ML & Market Analytics
+  featured: false
+  priority: 25
+  domain: Financial ML · Regression · Direction Classification
+  impact: Supervised learning workflow on Apple stock data comparing next-day price regression with next-day directional classification using technical features.
+  stack:
+  - Python
+  - yfinance
+  - Pandas
+  - Scikit-learn
+  - Linear Regression
+  - Logistic Regression
+  metrics:
+  - 'AAPL data: 2014–2024'
+  - RMSE 2.8188
+  - Direction accuracy 51.42%
+  links:
+    project: /projects/aapl-regression-trading-models/
+    repo: https://github.com/AlAsiri-Ali/aapl-regression-trading-models
+  public_category: Data Science & Decision Modeling
+  public_summary: Predictive modeling workflow for time-aware data, feature design, and careful interpretation of model signals.
+  public_tags:
+  - Data science
+  - Prediction
+  - Feature engineering
+  - Decision modeling
+  sort_date: '2026-03-31'
+  date_label: Mar 31, 2026
+- title: S&P 500 Market Regime Classification
+  slug: sp500-market-regime-classification
+  image: /assets/images/projects/sp500-market-regime-classification.png
+  status: Published project
+  year: '2026'
+  category: Financial ML & Market Analytics
+  featured: false
+  priority: 26
+  domain: Market Regimes · Technical Indicators · Classification
+  impact: Classification workflow for short-term S&P 500 regimes using technical indicators and time-series-aware model comparison.
+  stack:
+  - Python
+  - yfinance
+  - Scikit-learn
+  - Logistic Regression
+  - Random Forest
+  - SVM
+  metrics:
+  - 956 modeling observations
+  - 3 market regimes
+  - Best accuracy 52.08%
+  links:
+    project: /projects/sp500-market-regime-classification/
+    repo: https://github.com/AlAsiri-Ali/sp500-market-regime-classification
+  public_category: Data Science & Decision Modeling
+  public_summary: Classification workflow for changing market conditions using time-aware features and model comparison.
+  public_tags:
+  - Data science
+  - Classification
+  - Time-aware analysis
+  - Model comparison
+  sort_date: '2026-03-31'
+  date_label: Mar 31, 2026
+- title: Stock Market EDA with yfinance
+  slug: stock-market-eda-yfinance
+  image: /assets/images/projects/stock-market-eda-yfinance.png
+  status: Published project
+  year: '2026'
+  category: Financial ML & Market Analytics
+  featured: false
+  priority: 27
+  domain: Market EDA · Risk Analysis · Statistical Visualization
+  impact: Exploratory market-data workflow comparing multi-asset price behavior, returns, volatility, cumulative performance, and cross-asset relationships.
+  stack:
+  - Python
+  - yfinance
+  - Pandas
+  - NumPy
+  - Matplotlib
+  - Seaborn
+  metrics:
+  - 7 large-cap assets
+  - Daily data from 2019 onward
+  - AAPL/MSFT return correlation ~0.69
+  links:
+    project: /projects/stock-market-eda-yfinance/
+    repo: https://github.com/AlAsiri-Ali/stock-market-eda-yfinance
+  public_category: Data Science & Decision Modeling
+  public_summary: Exploratory analysis workflow for understanding patterns, volatility, relationships, and market behavior.
+  public_tags:
+  - Data analysis
+  - Exploration
+  - Visualization
+  - Interpretation
+  sort_date: '2026-03-31'
+  date_label: Mar 31, 2026
+- title: Breast Cancer Naive Bayes Classification
+  slug: breast-cancer-naive-bayes-classification
+  image: /assets/images/projects/breast-cancer-naive-bayes-classification.png
+  status: Published project
+  year: '2026'
+  category: AI Evaluation & Robustness
+  featured: false
+  priority: 28
+  domain: Health Data · Probabilistic Classification · Evaluation
+  impact: Health-data classification workflow using diagnostic features, exploratory analysis, feature scaling, Gaussian Naive Bayes, and class-level evaluation on the Breast Cancer Wisconsin dataset.
+  stack:
+  - Python
+  - Scikit-learn
+  - Gaussian Naive Bayes
+  - Pandas
+  - EDA
+  - Feature scaling
+  metrics:
+  - 569 samples
+  - 30 diagnostic features
+  - 96% test accuracy
+  - 0.99 malignant recall
+  links:
+    project: /projects/breast-cancer-naive-bayes-classification/
+    repo: https://github.com/AlAsiri-Ali/breast-cancer-naive-bayes-classification
+  public_category: AI Evaluation & Robustness
+  public_summary: Health-data classification workflow focused on diagnostic feature analysis, baseline modeling, and careful evaluation of class-level behavior.
+  public_tags:
+  - Health analytics
+  - Classification
+  - Model evaluation
+  - Data science
+  sort_date: '2025-03-07'
+  date_label: Mar 7, 2025
+- title: Regex Text Preprocessing NLP
+  slug: regex-text-preprocessing-nlp
+  image: /assets/images/projects/regex-text-preprocessing-nlp.png
+  status: Published project
+  year: '2026'
+  category: Customer Intelligence & Text Analytics
+  featured: false
+  priority: 29
+  domain: Text Analytics · Preprocessing · Linguistic Normalization
+  impact: Practical NLP preprocessing workflow for noisy English text using regular expressions, tokenization, normalization, stemming, lemmatization, POS tagging, and ambiguity inspection.
+  stack:
+  - Python
+  - Regex
+  - NLTK
+  - spaCy
+  - Text normalization
+  - POS tagging
+  metrics:
+  - Emails / URLs / dates handled
+  - Tokenization and normalization pipeline
+  - Stemming, lemmatization, POS review
+  links:
+    project: /projects/regex-text-preprocessing-nlp/
+    repo: https://github.com/AlAsiri-Ali/regex-text-preprocessing-nlp
+  public_category: Customer Intelligence & Analytics
+  public_summary: Text-analytics workflow focused on cleaning, normalizing, and preparing noisy language data for downstream analysis.
+  public_tags:
+  - Text analytics
+  - Preprocessing
+  - Linguistic analysis
+  - Data preparation
+  sort_date: '2025-02-25'
+  date_label: Feb 25, 2025
