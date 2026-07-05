@@ -8,12 +8,16 @@ Live site: https://AlAsiri-Ali.github.io
 
 ## Credits
 
-This website is built on the [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes) by Michael Rose and contributors, released under the MIT License.
+This website includes portions of the [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes) by Michael Rose and contributors.
 
-## Rights
+Retained Minimal Mistakes theme components remain under the MIT License.
 
-The theme code remains under its original MIT License.
+## Rights and ownership
 
-All original website content, writing, project descriptions, generated images, and custom visual assets are © Ali AlAsiri unless otherwise noted. They may not be reused as standalone content or assets without permission.
+This website includes retained third-party theme components under their original license.
 
-See `NOTICE.md` for additional attribution and ownership notes.
+All original website content, writing, project descriptions, original images, custom visual assets, portfolio structure, and personal branding are © Ali AlAsiri. All rights reserved.
+
+Sharing links to the website, blog posts, project pages, or portfolio pages is welcome.
+
+See `LICENSE` and `NOTICE.md` for full attribution, ownership, and usage details.
