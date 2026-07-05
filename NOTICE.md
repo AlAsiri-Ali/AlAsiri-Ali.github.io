@@ -1,31 +1,46 @@
-# Notices and Credits
+# Notices and Ownership
 
-## Theme
+## Website ownership
 
-This website is built on the Minimal Mistakes Jekyll theme by Michael Rose and contributors.
+This repository contains Ali AlAsiri’s personal website and professional portfolio.
 
-Minimal Mistakes is released under the MIT License. The `LICENSE` file in this repository preserves the original license notice for the theme code and related theme assets.
+Unless otherwise noted, all original website content, writing, project descriptions, original images, custom visual assets, portfolio structure, and personal branding are:
 
-## Site content and original assets
+**© Ali AlAsiri. All rights reserved.**
 
-Unless otherwise noted, the following are © Ali AlAsiri. All rights reserved:
+These materials may not be copied, reused, republished, redistributed, modified, or used as standalone content or assets without prior permission.
+
+## Sharing and attribution
+
+Sharing links to this website, blog posts, project pages, or portfolio pages on social media, messaging apps, newsletters, or personal websites is welcome.
+
+Short excerpts, titles, summaries, and link previews may be shared for attribution, discussion, recommendation, or citation purposes, provided that they clearly link back to the original page and do not reproduce the full content or present it as someone else’s work.
+
+This permission does not allow copying full pages, republishing full blog posts, reusing original images or custom visual assets as standalone assets, or presenting project descriptions, portfolio material, or personal branding as someone else’s work.
+
+## Protected original materials
+
+Protected original materials include, but are not limited to:
 
 - Website writing and page content
-- Project descriptions and portfolio narratives
-- Custom bilingual structure and presentation
-- Generated project cover images and custom visual assets
-- Custom styling, layout refinements, and site-specific design work
+- Project descriptions and portfolio structure
+- Blog posts and bilingual content
+- Original images and custom visual assets
+- Personal branding, visual presentation, and identity elements
+- Custom content organization and presentation
 
-The presence of the MIT theme license does not grant permission to reuse Ali AlAsiri’s original writing, project descriptions, portfolio images, or custom visual identity as standalone assets.
+## Third-party components
 
-## Linked project repositories
+This website includes portions of the Minimal Mistakes Jekyll theme by Michael Rose and contributors.
 
-Individual project repositories linked from this website may have their own README files, dependencies, data notes, and licensing terms. Those repositories should be reviewed separately.
+Retained Minimal Mistakes theme components remain licensed under the MIT License. See `LICENSE` for the full license text.
 
-## Trademarks and third-party names
+Third-party libraries, frameworks, icons, fonts, or assets included in the website remain under their respective licenses.
 
-Product names, company names, datasets, platforms, and logos referenced on the site or in linked repositories may be trademarks of their respective owners. They are used only for identification and context.
+## Custom implementation
 
-## Contact
+Custom code, website styling, site structure, content organization, and original implementation work created specifically for this website are owned by Ali AlAsiri unless otherwise noted.
 
-For questions about content, attribution, or reuse, use the contact information provided on the website.
+## Repository note
+
+The presence of an MIT License in this repository applies to retained Minimal Mistakes theme components and does not grant permission to reuse Ali AlAsiri’s original content, writing, images, project descriptions, original assets, portfolio structure, or personal branding as standalone materials.
