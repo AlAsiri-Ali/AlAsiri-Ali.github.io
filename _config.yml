@@ -6,9 +6,9 @@ locale                       : "en-US"
 rtl                          : false
 title                        : "Ali AlAsiri"
 title_separator              : "|"
-subtitle                     : "AI & Information Systems Professional"
+subtitle                     : "AI Systems Engineer"
 name                         : "Ali AlAsiri"
-description                  : "Ali AlAsiri portfolio: Artificial Intelligence, Information Systems, intelligent systems, model evaluation, and data-driven workflows."
+description                  : "Ali AlAsiri - AI Systems Engineer building reliable systems across RAG, computer vision, language, and model evaluation."
 url                          : "https://AlAsiri-Ali.github.io"
 baseurl                      : ""
 repository                   : "AlAsiri-Ali/AlAsiri-Ali.github.io"
@@ -44,7 +44,7 @@ analytics:
 author:
   name                       : "Ali AlAsiri"
   avatar                     : /assets/images/profile-visual.png
-  bio                        : "AI & Information Systems professional focused on building reliable, measurable, and human-centered intelligent systems."
+  bio                        : "AI Systems Engineer focused on reliable RAG, computer vision robustness, and measurable model evaluation."
   location                   : "Saudi Arabia"
   email                      : "aliasiri.dev@gmail.com"
   links:
@@ -174,12 +174,14 @@ defaults:
     values:
       layout: single
       author_profile: false
-      read_time: true
+      read_time: false
       comments: false
-      share: true
-      related: true
-      toc: true
-      toc_sticky: true
+      share: false
+      related: false
+      toc: false
+      toc_sticky: false
+      hide_meta_footer: true
+      hide_pagination: true
   - scope:
       path: ""
       type: portfolio

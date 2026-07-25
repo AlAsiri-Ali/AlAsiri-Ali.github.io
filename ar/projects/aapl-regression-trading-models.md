@@ -1,7 +1,7 @@
 ---
 title: "AAPL Regression & Direction Models"
 excerpt: "سير عمل تعلم آلي على بيانات سهم Apple يقارن بين توقع سعر الإغلاق التالي وتصنيف اتجاه الحركة باستخدام خصائص فنية."
-image: /assets/images/projects/aapl-regression-trading-models.png
+image: /assets/images/projects/webp/aapl-regression-trading-models.webp
 lang: ar
 dir: rtl
 alternate_url: "/projects/aapl-regression-trading-models/"

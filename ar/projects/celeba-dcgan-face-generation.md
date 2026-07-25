@@ -18,7 +18,7 @@ hide_pagination: true
 share: false
 breadcrumbs: false
 toc_h_min: 2
-image: /assets/images/projects/celeba-dcgan-face-generation.png
+image: /assets/images/projects/webp/celeba-dcgan-face-generation.webp
 ---
 
 {% assign project = site.data.projects_ar | where: "slug", "celeba-dcgan-face-generation" | first %}

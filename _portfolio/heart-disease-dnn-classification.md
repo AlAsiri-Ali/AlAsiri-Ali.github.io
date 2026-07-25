@@ -1,7 +1,7 @@
 ---
 title: "Heart Disease DNN Classification"
 excerpt: "Deep neural network workflow for binary heart-disease prediction using tabular preprocessing, model tuning, ROC/AUC evaluation, and error analysis."
-image: /assets/images/projects/heart-disease-dnn-classification.png
+image: /assets/images/projects/webp/heart-disease-dnn-classification.webp
 lang: en
 dir: ltr
 alternate_url: "/ar/projects/heart-disease-dnn-classification/"

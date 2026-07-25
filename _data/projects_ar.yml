@@ -1,6 +1,6 @@
 - title: Frequency-Aware Deepfake Detection
   slug: deepfake-detection-compression
-  image: /assets/images/projects/deepfake-detection-compression.png
+  image: /assets/images/projects/webp/deepfake-detection-compression.webp
   status: مشروع منشور
   year: '2026'
   category: الرؤية الحاسوبية وسلامة الذكاء الاصطناعي
@@ -33,7 +33,7 @@
   date_label: 5 يونيو 2026
 - title: GovRAG Copilot
   slug: govrag-copilot
-  image: /assets/images/projects/govrag-copilot.png
+  image: /assets/images/projects/webp/govrag-copilot.webp
   status: مشروع منشور
   year: '2026'
   category: الذكاء التوليدي وRAG
@@ -67,7 +67,7 @@
   date_label: 9 مايو 2026
 - title: Cashew Leaf Disease Classification
   slug: cashew-leaf-disease-classification
-  image: /assets/images/projects/cashew-leaf-disease-classification.png
+  image: /assets/images/projects/webp/cashew-leaf-disease-classification.webp
   status: مشروع منشور
   year: '2026'
   category: الذكاء البصري والتعلم العميق
@@ -101,7 +101,7 @@
   date_label: 5 ديسمبر 2025
 - title: PPE Safety Detection
   slug: ppe-safety-detection
-  image: /assets/images/projects/ppe-safety-detection.png
+  image: /assets/images/projects/webp/ppe-safety-detection.webp
   status: مشروع منشور
   year: '2026'
   category: أنظمة السلامة والذكاء البصري
@@ -135,7 +135,7 @@
   date_label: 20 ديسمبر 2025
 - title: Malicious URL Detection with ML
   slug: malicious-url-detection-ml
-  image: /assets/images/projects/malicious-url-detection-ml.png
+  image: /assets/images/projects/webp/malicious-url-detection-ml.webp
   status: مشروع منشور
   year: '2026'
   category: تحليلات أمنية وكشف المخاطر
@@ -192,7 +192,7 @@
     repo: https://github.com/AlAsiri-Ali/android-galaxy-sentiment-analysis-nlp
   public_category: ذكاء العملاء والتحليلات
   public_summary: مشروع ذكاء عملاء يركز على استخراج إشارات المشاعر، مقارنة اختيارات النمذجة، وتقييم سلوك تصنيف النصوص.
-  image: /assets/images/projects/android-galaxy-sentiment-analysis-nlp.png
+  image: /assets/images/projects/webp/android-galaxy-sentiment-analysis-nlp.webp
   public_tags:
   - ذكاء عملاء
   - تحليل نصوص
@@ -226,7 +226,7 @@
     repo: https://github.com/AlAsiri-Ali/titanic-survival-prediction-ml
   public_category: علوم البيانات ونمذجة القرار
   public_summary: سير عمل نمذجة تنبؤية يركز على إعداد البيانات المنظمة، هندسة الخصائص، مقارنة النماذج، وتفسير مفاضلات القرار.
-  image: /assets/images/projects/titanic-survival-prediction-ml.png
+  image: /assets/images/projects/webp/titanic-survival-prediction-ml.webp
   public_tags:
   - تحليلات تنبؤية
   - إعداد بيانات
@@ -260,7 +260,7 @@
     repo: https://github.com/AlAsiri-Ali/GomokuMaster
   public_category: أنظمة الذكاء التفاعلية والخوارزميات
   public_summary: مشروع ذكاء تفاعلي يركز على البحث الاستراتيجي، تقييم حالات اللوحة، التحكم بالصعوبة، ومنطق اتخاذ القرار داخل اللعبة.
-  image: /assets/images/projects/gomoku-master.png
+  image: /assets/images/projects/webp/gomoku-master.webp
   public_tags:
   - ذكاء تفاعلي
   - خوارزميات بحث
@@ -270,7 +270,7 @@
   date_label: 25 مايو 2025
 - title: تحليل المشاعر العربية باستخدام AraVec وLSTM
   slug: arabic-sentiment-aravec-lstm
-  image: /assets/images/projects/arabic-sentiment-aravec-lstm.png
+  image: /assets/images/projects/webp/arabic-sentiment-aravec-lstm.webp
   status: مشروع منشور
   year: '2026'
   category: ذكاء العملاء وتحليل النصوص
@@ -305,7 +305,7 @@
   date_label: 4 مايو 2025
 - title: تصنيف رسائل SMS المزعجة بنماذج NLP تقليدية
   slug: sms-spam-traditional-nlp-classification
-  image: /assets/images/projects/sms-spam-traditional-nlp-classification.png
+  image: /assets/images/projects/webp/sms-spam-traditional-nlp-classification.webp
   status: مشروع منشور
   year: '2026'
   category: تقييم الذكاء الاصطناعي والمتانة
@@ -340,7 +340,7 @@
   date_label: 24 مارس 2025
 - title: Retail Segmentation & Market Basket Analysis
   slug: retail-segmentation-market-basket
-  image: /assets/images/projects/retail-segmentation-market-basket.png
+  image: /assets/images/projects/webp/retail-segmentation-market-basket.webp
   status: مشروع منشور
   year: '2026'
   category: تحليلات العملاء والتجزئة
@@ -373,7 +373,7 @@
   date_label: 4 مايو 2026
 - title: Long-Tailed Object Classification with VGG16
   slug: long-tailed-object-classification-vgg16
-  image: /assets/images/projects/long-tailed-object-classification-vgg16.png
+  image: /assets/images/projects/webp/long-tailed-object-classification-vgg16.webp
   status: مشروع منشور
   year: '2026'
   category: الذكاء البصري والتعلم العميق
@@ -407,7 +407,7 @@
   date_label: 10 ديسمبر 2025
 - title: UCF50 CNN-LSTM Action Recognition
   slug: ucf50-cnn-lstm-action-recognition
-  image: /assets/images/projects/ucf50-cnn-lstm-action-recognition.png
+  image: /assets/images/projects/webp/ucf50-cnn-lstm-action-recognition.webp
   status: مشروع منشور
   year: '2026'
   category: الذكاء البصري والتعلم العميق
@@ -440,7 +440,7 @@
   date_label: 6 نوفمبر 2025
 - title: Phishing Email Detection with ML
   slug: phishing-email-detection-ml
-  image: /assets/images/projects/phishing-email-detection-ml.png
+  image: /assets/images/projects/webp/phishing-email-detection-ml.webp
   status: مشروع منشور
   year: '2026'
   category: تقييم الذكاء الاصطناعي والمتانة
@@ -473,7 +473,7 @@
   date_label: 2 أكتوبر 2025
 - title: Moving Average Backtest with PyFolio
   slug: moving-average-backtest-pyfolio
-  image: /assets/images/projects/moving-average-backtest-pyfolio.png
+  image: /assets/images/projects/webp/moving-average-backtest-pyfolio.webp
   status: مشروع منشور
   year: '2026'
   category: تعلم الآلة المالي وتحليل السوق
@@ -506,7 +506,7 @@
   date_label: 13 مايو 2026
 - title: SMS Spam Transformer Classification
   slug: sms-spam-transformer-classification
-  image: /assets/images/projects/sms-spam-transformer-classification.png
+  image: /assets/images/projects/webp/sms-spam-transformer-classification.webp
   status: مشروع منشور
   year: '2026'
   category: أنظمة لغة وتقييم نماذج
@@ -539,7 +539,7 @@
   date_label: 8 ديسمبر 2025
 - title: Heart Disease DNN Classification
   slug: heart-disease-dnn-classification
-  image: /assets/images/projects/heart-disease-dnn-classification.png
+  image: /assets/images/projects/webp/heart-disease-dnn-classification.webp
   status: مشروع منشور
   year: '2026'
   category: ذكاء صحي وتقييم النماذج
@@ -572,7 +572,7 @@
   date_label: 11 أكتوبر 2025
 - title: CelebA DCGAN Face Generation
   slug: celeba-dcgan-face-generation
-  image: /assets/images/projects/celeba-dcgan-face-generation.png
+  image: /assets/images/projects/webp/celeba-dcgan-face-generation.webp
   status: مشروع منشور
   year: '2026'
   category: سير عمل الذكاء التوليدي
@@ -605,7 +605,7 @@
   date_label: 6 نوفمبر 2025
 - title: Animal Faces CNN Classification
   slug: animal-faces-cnn-classification
-  image: /assets/images/projects/animal-faces-cnn-classification.png
+  image: /assets/images/projects/webp/animal-faces-cnn-classification.webp
   status: مشروع منشور
   year: '2026'
   category: الذكاء البصري والتعلم العميق
@@ -638,7 +638,7 @@
   date_label: 11 أكتوبر 2025
 - title: MNIST ViT vs CNN Comparison
   slug: mnist-vit-cnn-comparison
-  image: /assets/images/projects/mnist-vit-cnn-comparison.png
+  image: /assets/images/projects/webp/mnist-vit-cnn-comparison.webp
   status: مشروع منشور
   year: '2026'
   category: الذكاء البصري والتعلم العميق
@@ -671,7 +671,7 @@
   date_label: 8 ديسمبر 2025
 - title: SDXL ControlNet Image Workflow
   slug: sdxl-controlnet-image-workflow
-  image: /assets/images/projects/sdxl-controlnet-image-workflow.png
+  image: /assets/images/projects/webp/sdxl-controlnet-image-workflow.webp
   status: مشروع منشور
   year: '2026'
   category: الوسائط التوليدية
@@ -705,7 +705,7 @@
   date_label: 31 مارس 2026
 - title: Asthma RAG Diagnostic Assistant
   slug: asthma-rag-diagnostic-assistant
-  image: /assets/images/projects/asthma-rag-diagnostic-assistant.png
+  image: /assets/images/projects/webp/asthma-rag-diagnostic-assistant.webp
   status: مشروع منشور
   year: '2026'
   category: الذكاء التوليدي وRAG
@@ -738,7 +738,7 @@
   date_label: 9 مارس 2026
 - title: Speech & Music Generation with Transformers
   slug: speech-music-generation-transformers
-  image: /assets/images/projects/speech-music-generation-transformers.png
+  image: /assets/images/projects/webp/speech-music-generation-transformers.webp
   status: مشروع منشور
   year: '2026'
   category: الوسائط التوليدية
@@ -771,7 +771,7 @@
   date_label: 2 مايو 2026
 - title: OpenCV Image Enhancement & Edge Detection
   slug: opencv-image-enhancement-edge-detection
-  image: /assets/images/projects/opencv-image-enhancement-edge-detection.png
+  image: /assets/images/projects/webp/opencv-image-enhancement-edge-detection.webp
   status: مشروع منشور
   year: '2026'
   category: الذكاء البصري والتعلم العميق
@@ -805,7 +805,7 @@
   date_label: 7 نوفمبر 2025
 - title: AAPL Regression & Direction Models
   slug: aapl-regression-trading-models
-  image: /assets/images/projects/aapl-regression-trading-models.png
+  image: /assets/images/projects/webp/aapl-regression-trading-models.webp
   status: مشروع منشور
   year: '2026'
   category: تعلم الآلة المالي وتحليل السوق
@@ -838,7 +838,7 @@
   date_label: 31 مارس 2026
 - title: S&P 500 Market Regime Classification
   slug: sp500-market-regime-classification
-  image: /assets/images/projects/sp500-market-regime-classification.png
+  image: /assets/images/projects/webp/sp500-market-regime-classification.webp
   status: مشروع منشور
   year: '2026'
   category: تعلم الآلة المالي وتحليل السوق
@@ -871,7 +871,7 @@
   date_label: 31 مارس 2026
 - title: Stock Market EDA with yfinance
   slug: stock-market-eda-yfinance
-  image: /assets/images/projects/stock-market-eda-yfinance.png
+  image: /assets/images/projects/webp/stock-market-eda-yfinance.webp
   status: مشروع منشور
   year: '2026'
   category: تعلم الآلة المالي وتحليل السوق
@@ -904,7 +904,7 @@
   date_label: 31 مارس 2026
 - title: تصنيف سرطان الثدي باستخدام Naive Bayes
   slug: breast-cancer-naive-bayes-classification
-  image: /assets/images/projects/breast-cancer-naive-bayes-classification.png
+  image: /assets/images/projects/webp/breast-cancer-naive-bayes-classification.webp
   status: مشروع منشور
   year: '2026'
   category: تقييم الذكاء الاصطناعي والمتانة
@@ -938,7 +938,7 @@
   date_label: 7 مارس 2025
 - title: معالجة النصوص باستخدام Regex وNLP
   slug: regex-text-preprocessing-nlp
-  image: /assets/images/projects/regex-text-preprocessing-nlp.png
+  image: /assets/images/projects/webp/regex-text-preprocessing-nlp.webp
   status: مشروع منشور
   year: '2026'
   category: ذكاء العملاء وتحليل النصوص

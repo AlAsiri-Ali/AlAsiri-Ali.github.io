@@ -18,7 +18,7 @@ hide_pagination: true
 share: false
 breadcrumbs: false
 toc_h_min: 2
-image: /assets/images/projects/ucf50-cnn-lstm-action-recognition.png
+image: /assets/images/projects/webp/ucf50-cnn-lstm-action-recognition.webp
 ---
 
 {% assign project = site.data.projects_ar | where: "slug", "ucf50-cnn-lstm-action-recognition" | first %}

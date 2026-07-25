@@ -1,7 +1,7 @@
 ---
 title: "Titanic Survival Prediction"
 excerpt: "سير عمل نمذجة تنبؤية على بيانات منظمة مع تحليل استكشافي، هندسة خصائص، معالجة مسبقة، مراجعة عدم توازن الفئات، ومقارنة نماذج مضبوطة."
-image: /assets/images/projects/titanic-survival-prediction-ml.png
+image: /assets/images/projects/webp/titanic-survival-prediction-ml.webp
 lang: ar
 dir: rtl
 alternate_url: "/projects/titanic-survival-prediction-ml/"

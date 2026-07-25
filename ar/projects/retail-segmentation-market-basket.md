@@ -1,7 +1,7 @@
 ---
 title: "Retail Segmentation & Market Basket Analysis"
 excerpt: "سير عمل لتحليلات العملاء يجمع بين تقسيم RFM، التجميع، قواعد Apriori، والتفسير التجاري على بيانات Online Retail."
-image: /assets/images/projects/retail-segmentation-market-basket.png
+image: /assets/images/projects/webp/retail-segmentation-market-basket.webp
 lang: ar
 dir: rtl
 alternate_url: "/projects/retail-segmentation-market-basket/"

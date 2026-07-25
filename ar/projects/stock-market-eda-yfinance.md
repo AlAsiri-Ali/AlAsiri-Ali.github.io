@@ -1,7 +1,7 @@
 ---
 title: "Stock Market EDA with yfinance"
 excerpt: "سير عمل لاستكشاف بيانات السوق يقارن سلوك الأسعار، العوائد، التقلب، الأداء التراكمي، والعلاقات بين عدة أصول."
-image: /assets/images/projects/stock-market-eda-yfinance.png
+image: /assets/images/projects/webp/stock-market-eda-yfinance.webp
 lang: ar
 dir: rtl
 alternate_url: "/projects/stock-market-eda-yfinance/"

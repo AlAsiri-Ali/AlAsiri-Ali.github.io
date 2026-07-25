@@ -1,7 +1,7 @@
 ---
 title: "Android Galaxy Sentiment Analysis"
 excerpt: "Customer sentiment analysis workflow comparing text representations, classical models, and a neural sequence model on product-related comments."
-image: /assets/images/projects/android-galaxy-sentiment-analysis-nlp.png
+image: /assets/images/projects/webp/android-galaxy-sentiment-analysis-nlp.webp
 lang: en
 dir: ltr
 alternate_url: "/ar/projects/android-galaxy-sentiment-analysis-nlp/"

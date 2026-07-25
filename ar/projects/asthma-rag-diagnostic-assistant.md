@@ -1,7 +1,7 @@
 ---
 title: "Asthma RAG Diagnostic Assistant"
 excerpt: "تجربة RAG مضبوطة للتفكير المرتبط بالربو، تستخدم قاعدة معرفة مخصصة، استرجاع FAISS، أنماط أوامر مختلفة، ومقاييس لتقييم التوليد."
-image: /assets/images/projects/asthma-rag-diagnostic-assistant.png
+image: /assets/images/projects/webp/asthma-rag-diagnostic-assistant.webp
 lang: ar
 dir: rtl
 alternate_url: "/projects/asthma-rag-diagnostic-assistant/"

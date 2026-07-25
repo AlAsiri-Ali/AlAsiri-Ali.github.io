@@ -1,7 +1,7 @@
 ---
 title: "S&P 500 Market Regime Classification"
 excerpt: "سير عمل لتصنيف أنظمة السوق قصيرة الأجل في S&P 500 باستخدام مؤشرات فنية ومقارنة نماذج تراعي الترتيب الزمني."
-image: /assets/images/projects/sp500-market-regime-classification.png
+image: /assets/images/projects/webp/sp500-market-regime-classification.webp
 lang: ar
 dir: rtl
 alternate_url: "/projects/sp500-market-regime-classification/"

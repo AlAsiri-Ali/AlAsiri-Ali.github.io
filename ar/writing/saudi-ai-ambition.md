@@ -4,10 +4,17 @@ permalink: /ar/writing/saudi-ai-ambition/
 title: "مملكة الطموح: كيف تبني السعودية مستقبلها بوقود الذكاء الاصطناعي"
 excerpt: "قراءة في طموح السعودية في الذكاء الاصطناعي والتحول الرقمي وبناء الابتكار المحلي."
 author_profile: false
+read_time: false
+share: false
+related: false
+toc: false
+toc_sticky: false
+hide_meta_footer: true
+hide_pagination: true
 lang: ar
 dir: rtl
 header:
-  teaser: /assets/images/posts/saudi-ambition.jpg
+  teaser: /assets/images/posts/saudi-ambition.webp
 alternate_url: "/artificial-intelligence/saudi-arabia/saudi-of-ambition/"
 ---
 

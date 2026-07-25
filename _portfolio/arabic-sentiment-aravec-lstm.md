@@ -1,7 +1,7 @@
 ---
 title: "Arabic Sentiment AraVec LSTM"
 excerpt: "Arabic text-analytics workflow focused on sentiment signals, language representation, sequence modeling, and evaluation."
-image: /assets/images/projects/arabic-sentiment-aravec-lstm.png
+image: /assets/images/projects/webp/arabic-sentiment-aravec-lstm.webp
 lang: en
 dir: ltr
 alternate_url: "/ar/projects/arabic-sentiment-aravec-lstm/"

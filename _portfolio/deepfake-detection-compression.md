@@ -1,7 +1,7 @@
 ---
 title: "Frequency-Aware Deepfake Detection"
 excerpt: "Research implementation of spatial and frequency-aware deepfake detection under H.264 lossy compression and cross-dataset evaluation."
-image: /assets/images/projects/deepfake-detection-compression.png
+image: /assets/images/projects/webp/deepfake-detection-compression.webp
 lang: en
 dir: ltr
 alternate_url: "/ar/projects/deepfake-detection-compression/"

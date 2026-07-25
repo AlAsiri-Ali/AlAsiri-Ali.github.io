@@ -1,7 +1,7 @@
 ---
 title: "S&P 500 Market Regime Classification"
 excerpt: "Classification workflow for short-term S&P 500 regimes using technical indicators and time-series-aware model comparison."
-image: /assets/images/projects/sp500-market-regime-classification.png
+image: /assets/images/projects/webp/sp500-market-regime-classification.webp
 lang: en
 dir: ltr
 alternate_url: "/ar/projects/sp500-market-regime-classification/"

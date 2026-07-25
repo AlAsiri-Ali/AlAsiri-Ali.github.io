@@ -4,7 +4,7 @@ permalink: /ar/projects/opencv-image-enhancement-edge-detection/
 title: "OpenCV Image Enhancement & Edge Detection"
 excerpt: "سير عمل رؤية حاسوبية كلاسيكي يستخدم CLAHE وthresholding وكشف الحواف Canny وتحليل contours ومعالجة إطارات الفيديو."
 author_profile: false
-image: /assets/images/projects/opencv-image-enhancement-edge-detection.png
+image: /assets/images/projects/webp/opencv-image-enhancement-edge-detection.webp
 lang: ar
 dir: rtl
 alternate_url: "/projects/opencv-image-enhancement-edge-detection/"

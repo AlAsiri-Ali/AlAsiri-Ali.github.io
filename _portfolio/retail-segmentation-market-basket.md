@@ -1,7 +1,7 @@
 ---
 title: "Retail Segmentation & Market Basket Analysis"
 excerpt: "Customer analytics workflow combining RFM segmentation, clustering, Apriori association rules, and business interpretation on Online Retail data."
-image: /assets/images/projects/retail-segmentation-market-basket.png
+image: /assets/images/projects/webp/retail-segmentation-market-basket.webp
 lang: en
 dir: ltr
 alternate_url: "/ar/projects/retail-segmentation-market-basket/"

@@ -1,7 +1,7 @@
 ---
 title: "UCF50 CNN-LSTM Action Recognition"
 excerpt: "Video action-recognition workflow combining CNN spatial feature extraction with RNN/LSTM temporal modeling and comparative performance evaluation."
-image: /assets/images/projects/ucf50-cnn-lstm-action-recognition.png
+image: /assets/images/projects/webp/ucf50-cnn-lstm-action-recognition.webp
 lang: en
 dir: ltr
 alternate_url: "/ar/projects/ucf50-cnn-lstm-action-recognition/"

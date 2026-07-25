@@ -1,7 +1,7 @@
 ---
 title: "Gomoku Master"
 excerpt: "تطبيق ذكاء ألعاب تفاعلي مع أحجام لوحات قابلة للتخصيص، مستويات صعوبة، ومنطق قرار قائم على البحث."
-image: /assets/images/projects/gomoku-master.png
+image: /assets/images/projects/webp/gomoku-master.webp
 lang: ar
 dir: rtl
 alternate_url: "/projects/gomoku-master/"

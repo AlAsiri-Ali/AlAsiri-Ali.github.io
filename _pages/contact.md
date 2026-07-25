@@ -11,6 +11,11 @@ classes:
 alternate_url: "/ar/contact/"
 ---
 
+<div class="aa-availability aa-card">
+  <strong>Open to full-time opportunities</strong>
+  <span>AI Systems Engineering · Applied AI · Machine Learning · RAG · Model Evaluation</span>
+</div>
+
 <p class="aa-lede">I am open to thoughtful conversations around AI systems, model evaluation, data workflows, intelligent automation, and technical collaboration.</p>
 
 <div class="aa-contact-panel">

@@ -1,7 +1,7 @@
 ---
 title: "تصنيف سرطان الثدي باستخدام Naive Bayes"
 excerpt: "سير عمل لتصنيف بيانات صحية يركز على تحليل الخصائص التشخيصية، بناء نموذج مرجعي، وقراءة سلوك التقييم على مستوى الفئات."
-image: /assets/images/projects/breast-cancer-naive-bayes-classification.png
+image: /assets/images/projects/webp/breast-cancer-naive-bayes-classification.webp
 lang: ar
 dir: rtl
 permalink: /ar/projects/breast-cancer-naive-bayes-classification/

@@ -1,7 +1,7 @@
 ---
 title: "تحليل المشاعر العربية باستخدام AraVec وLSTM"
 excerpt: "سير عمل لتحليل النصوص العربية يركز على إشارات المشاعر، تمثيل اللغة، النمذجة التسلسلية، والتقييم."
-image: /assets/images/projects/arabic-sentiment-aravec-lstm.png
+image: /assets/images/projects/webp/arabic-sentiment-aravec-lstm.webp
 lang: ar
 dir: rtl
 permalink: /ar/projects/arabic-sentiment-aravec-lstm/

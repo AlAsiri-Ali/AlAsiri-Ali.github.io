@@ -1,7 +1,7 @@
 ---
 title: "SDXL ControlNet Image Workflow"
 excerpt: "Diffusion image workflow comparing SDXL text-to-image generation, Img2Img semantic editing, ControlNet Canny guidance, and LPIPS/PSNR evaluation."
-image: /assets/images/projects/sdxl-controlnet-image-workflow.png
+image: /assets/images/projects/webp/sdxl-controlnet-image-workflow.webp
 lang: en
 dir: ltr
 alternate_url: "/ar/projects/sdxl-controlnet-image-workflow/"

@@ -1,7 +1,7 @@
 ---
 title: "Stock Market EDA with yfinance"
 excerpt: "Exploratory market-data workflow comparing multi-asset price behavior, returns, volatility, cumulative performance, and cross-asset relationships."
-image: /assets/images/projects/stock-market-eda-yfinance.png
+image: /assets/images/projects/webp/stock-market-eda-yfinance.webp
 lang: en
 dir: ltr
 alternate_url: "/ar/projects/stock-market-eda-yfinance/"

@@ -1,7 +1,7 @@
 ---
 title: "SMS Spam Traditional NLP Classification"
 excerpt: "Text-classification workflow focused on representation choices, model comparison, class imbalance, and evaluation tradeoffs."
-image: /assets/images/projects/sms-spam-traditional-nlp-classification.png
+image: /assets/images/projects/webp/sms-spam-traditional-nlp-classification.webp
 lang: en
 dir: ltr
 alternate_url: "/ar/projects/sms-spam-traditional-nlp-classification/"

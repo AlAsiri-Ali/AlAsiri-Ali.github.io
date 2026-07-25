@@ -1,7 +1,7 @@
 ---
 title: "Titanic Survival Prediction"
 excerpt: "Structured-data predictive modeling workflow with EDA, feature engineering, preprocessing, class-imbalance review, and tuned model comparison."
-image: /assets/images/projects/titanic-survival-prediction-ml.png
+image: /assets/images/projects/webp/titanic-survival-prediction-ml.webp
 lang: en
 dir: ltr
 alternate_url: "/ar/projects/titanic-survival-prediction-ml/"

@@ -3,7 +3,7 @@ layout: single
 title: "Long-Tailed Object Classification with VGG16"
 excerpt: "Computer-vision classification workflow comparing HOG+SVM with VGG16 transfer learning, augmentation, tuning, and fine-tuning on imbalanced images."
 author_profile: false
-image: /assets/images/projects/long-tailed-object-classification-vgg16.png
+image: /assets/images/projects/webp/long-tailed-object-classification-vgg16.webp
 lang: en
 dir: ltr
 alternate_url: "/ar/projects/long-tailed-object-classification-vgg16/"

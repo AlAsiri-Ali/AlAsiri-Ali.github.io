@@ -1,7 +1,7 @@
 ---
 title: "Moving Average Backtest with PyFolio"
 excerpt: "Backtesting workflow for a 50/200 moving-average crossover strategy on AAPL using Backtrader and PyFolio-style risk analysis."
-image: /assets/images/projects/moving-average-backtest-pyfolio.png
+image: /assets/images/projects/webp/moving-average-backtest-pyfolio.webp
 lang: en
 dir: ltr
 alternate_url: "/ar/projects/moving-average-backtest-pyfolio/"

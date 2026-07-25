@@ -1,110 +1,74 @@
 ---
 layout: splash
-title: "Ali AlAsiri | AI & Information Systems"
-excerpt: "AI and Information Systems portfolio focused on intelligent systems, model evaluation, data workflows, and practical decision support."
+title: "Ali AlAsiri | AI Systems Engineer"
+excerpt: "AI Systems Engineer building reliable systems across RAG, computer vision, language, and model evaluation."
 permalink: /
 image:
   path: /assets/images/OGImage.png
-  alt: "Ali AlAsiri AI and Information Systems"
+  alt: "Ali AlAsiri - AI Systems Engineer"
 lang: en
 dir: ltr
 alternate_url: "/ar/"
 ---
 
 {% assign aa_profile = site.data.profile.en %}
-{% assign aa_labels = site.data.aa_labels.en %}
+{% assign govrag = site.data.projects | where: "slug", "govrag-copilot" | first %}
+{% assign deepfake = site.data.projects | where: "slug", "deepfake-detection-compression" | first %}
+{% assign ppe = site.data.projects | where: "slug", "ppe-safety-detection" | first %}
 
-<section class="aa-hero" aria-labelledby="home-title">
+<section class="aa-hero aa-hero--focused" aria-labelledby="home-title">
   <div class="aa-hero-inner">
     <div class="aa-eyebrow">{{ aa_profile.hero_eyebrow }}</div>
     <h1 id="home-title">{{ aa_profile.hero_title }}</h1>
     <p>{{ aa_profile.hero_summary }}</p>
     <div class="aa-actions">
-      <a class="aa-button aa-button-primary" href="/projects/">{{ aa_labels.explore_projects }}</a>
-      <a class="aa-button aa-button-secondary" href="/cv/">{{ aa_labels.view_profile }}</a>
-      <a class="aa-button aa-button-secondary" href="/skills/">{{ aa_labels.view_skills }}</a>
-    </div>
-    <div class="aa-stats" aria-label="Highlights">
-      <div class="aa-stat"><strong>AI</strong><span>Professional master’s degree</span></div>
-      <div class="aa-stat"><strong>IS</strong><span>Information Systems foundation</span></div>
-      <div class="aa-stat"><strong>Systems</strong><span>Modeling, evaluation, data, and decisions</span></div>
+      <a class="aa-button aa-button-primary" href="#selected-work">View selected work</a>
+      <a class="aa-button aa-button-secondary" href="https://drive.google.com/file/d/1tUsEhE5urM8c5VnqiSdbE4-_r_KTw8ao/view?usp=sharing" target="_blank" rel="noopener noreferrer">View CV</a>
+      <a class="aa-button aa-button-secondary" href="/contact/">Contact</a>
     </div>
   </div>
 </section>
 
 <div class="aa-container">
-  <section class="aa-section" aria-labelledby="proof-title">
+  <section class="aa-section" id="selected-work" aria-labelledby="selected-title">
     <div class="aa-section-head">
-      <div>
-        <div class="aa-eyebrow">Professional profile</div>
-        <h2 id="proof-title">AI with information-systems depth.</h2>
-      </div>
-      <p class="aa-lede">My work combines AI methods with systems thinking: data flow, evaluation, interfaces, maintainability, and responsible interpretation.</p>
+      <div><div class="aa-eyebrow">Selected work</div><h2 id="selected-title">Projects that show how I approach AI systems.</h2></div>
+      <p class="aa-lede">A selection of work across RAG, computer vision, model evaluation, and practical software workflows. Each case study explains the problem, implementation choices, results, and limitations.</p>
+    </div>
+    <div class="aa-grid aa-grid-3 aa-home-projects">
+      {% include aa/project-card.html project=govrag lang='en' %}
+      {% include aa/project-card.html project=deepfake lang='en' %}
+      {% include aa/project-card.html project=ppe lang='en' %}
+    </div>
+    <div class="aa-actions aa-actions--center"><a class="aa-button" href="/projects/">Explore all projects</a></div>
+  </section>
+
+  <section class="aa-section" aria-labelledby="value-title">
+    <div class="aa-section-head">
+      <div><div class="aa-eyebrow">How I work</div><h2 id="value-title">A systems perspective from problem definition to evaluation.</h2></div>
+      <p class="aa-lede">My Information Systems foundation keeps the focus on users, data flow, maintainability, and decisions. My AI work adds modeling, experimentation, implementation, and structured evaluation.</p>
     </div>
     <div class="aa-proof-strip" aria-label="Professional strengths">
-      <div class="aa-proof-item"><strong>Intelligent workflows</strong><span>Designing systems that connect models, data, interfaces, and practical user needs.</span></div>
-      <div class="aa-proof-item"><strong>Robust evaluation</strong><span>Using baselines, comparisons, metrics, error analysis, and careful interpretation.</span></div>
-      <div class="aa-proof-item"><strong>Systems mindset</strong><span>Understanding processes, data pipelines, constraints, and maintainable implementation.</span></div>
-      <div class="aa-proof-item"><strong>Technical judgment</strong><span>Clear problem framing, transparent methods, careful tradeoffs, and measurable outcomes.</span></div>
+      <div class="aa-proof-item"><strong>AI systems and RAG</strong><span>Retrieval, grounded generation, citations, workflow design, and evaluation.</span></div>
+      <div class="aa-proof-item"><strong>Computer vision</strong><span>Classification, detection, transfer learning, robustness, and practical visual workflows.</span></div>
+      <div class="aa-proof-item"><strong>Model evaluation</strong><span>Baselines, model comparison, error analysis, suitable metrics, and clearly stated limits.</span></div>
+      <div class="aa-proof-item"><strong>Decision-support design</strong><span>Interfaces and outputs structured around practical users and reviewable decisions.</span></div>
     </div>
   </section>
 
-  <section class="aa-section" aria-labelledby="systems-title">
-    <div class="aa-section-head">
-      <div>
-        <div class="aa-eyebrow">Selected work</div>
-        <h2 id="systems-title">AI systems and data workflows focused on evidence, reliability, and evaluation.</h2>
-      </div>
-      <p class="aa-lede">The project portfolio shows how I translate broad AI study into practical systems, experiments, and decision-support workflows.</p>
-    </div>
-    <div class="aa-grid aa-grid-4 aa-domain-grid">
-      <a class="aa-card aa-domain-card" href="/projects/#intelligent-systems"><span class="aa-icon" aria-hidden="true">{% include aa/icon.html name="system" %}</span><h3>Intelligent Systems</h3><p>Model-centered workflows connected to real data, users, and practical constraints.</p></a>
-      <a class="aa-card aa-domain-card" href="/projects/#evaluation-robustness"><span class="aa-icon" aria-hidden="true">{% include aa/icon.html name="flask" %}</span><h3>Evaluation & Robustness</h3><p>Measured work with baselines, comparisons, uncertainty, and responsible interpretation.</p></a>
-      <a class="aa-card aa-domain-card" href="/projects/#generative-workflows"><span class="aa-icon" aria-hidden="true">{% include aa/icon.html name="ai" %}</span><h3>Generative Workflows</h3><p>Controlled AI workflows for producing, comparing, and refining model outputs.</p></a>
-      <a class="aa-card aa-domain-card" href="/projects/#data-decision-modeling"><span class="aa-icon" aria-hidden="true">{% include aa/icon.html name="chart" %}</span><h3>Data & Decision Modeling</h3><p>Analytical workflows that turn data into interpretable signals and decisions.</p></a>
-    </div>
-  </section>
-
-  <section class="aa-section" aria-labelledby="foundation-title">
-    <div class="aa-eyebrow">Foundation</div>
-    <h2 id="foundation-title">A profile built on AI study, systems thinking, and measurable work.</h2>
+  <section class="aa-section" aria-labelledby="path-title">
+    <div class="aa-section-head"><div><div class="aa-eyebrow">Background</div><h2 id="path-title">Information Systems foundation. Advanced AI specialization.</h2></div></div>
     <div class="aa-grid aa-grid-3">
-      <div class="aa-card"><div class="aa-icon" aria-hidden="true">{% include aa/icon.html name="graduation" %}</div><h3>Academic base</h3><p>Bachelor’s degree in Information Systems from King Khalid University and Professional Master in Artificial Intelligence from King Abdulaziz University.</p></div>
-      <div class="aa-card"><div class="aa-icon" aria-hidden="true">{% include aa/icon.html name="flask" %}</div><h3>Measured work</h3><p>My technical work emphasizes methods, metrics, comparisons, error analysis, and responsible use boundaries.</p></div>
-      <div class="aa-card"><div class="aa-icon" aria-hidden="true">{% include aa/icon.html name="system" %}</div><h3>System perspective</h3><p>The work connects models with data pipelines, interfaces, evaluation context, and decision support.</p></div>
-    </div>
-  </section>
-
-  <section class="aa-section" aria-labelledby="writing-title">
-    <div class="aa-section-head">
-      <div>
-        <div class="aa-eyebrow">Writing</div>
-        <h2 id="writing-title">Technical notes and reflections</h2>
-      </div>
-      <p class="aa-lede">Short essays on AI, learning, digital transformation, and the way technical systems are designed and evaluated.</p>
-    </div>
-    <div class="aa-grid aa-grid-2">
-      {% for post in site.posts limit:2 %}
-      <a class="aa-card aa-post-card" href="{{ post.url | relative_url }}">
-        {% assign post_teaser = post.header.teaser | default: post.image.path | default: site.teaser %}
-        <div class="aa-post-thumb"><img src="{{ post_teaser | relative_url }}" alt="" loading="lazy"></div>
-        <div class="aa-post-body">
-          <div class="aa-meta"><span>{{ post.date | date: "%b %-d, %Y" }}</span>{% if post.categories %}<span aria-hidden="true">·</span><span>{{ post.categories | join: ", " }}</span>{% endif %}</div>
-          <h3>{{ post.title }}</h3>
-          <p>{{ post.excerpt | strip_html | truncate: 170 }}</p>
-        </div>
-      </a>
-      {% endfor %}
+      <div class="aa-card"><div class="aa-icon" aria-hidden="true">{% include aa/icon.html name="graduation" %}</div><h3>Professional Master in AI</h3><p>King Abdulaziz University, 2026. Advanced study in machine learning, intelligent systems, and applied AI.</p></div>
+      <div class="aa-card"><div class="aa-icon" aria-hidden="true">{% include aa/icon.html name="system" %}</div><h3>Bachelor in Information Systems</h3><p>King Khalid University, 2020. Foundation in systems analysis, databases, and organizational workflows.</p></div>
+      <div class="aa-card"><div class="aa-icon" aria-hidden="true">{% include aa/icon.html name="flask" %}</div><h3>Project portfolio</h3><p>Work spanning RAG, computer vision, language systems, security analytics, generative AI, and data modeling.</p></div>
     </div>
   </section>
 
   <section class="aa-section aa-card aa-center aa-cta-card" aria-labelledby="cta-title">
-    <div class="aa-eyebrow">Connect</div>
-    <h2 id="cta-title">Interested in AI, data, or intelligent systems?</h2>
-    <p class="aa-lede">Explore the project work or get in touch for collaboration, technical discussion, or professional opportunities.</p>
-    <div class="aa-actions">
-      <a class="aa-button aa-button-primary" href="/projects/">View projects</a>
-      <a class="aa-button" href="/contact/">Contact</a>
-    </div>
+    <div class="aa-eyebrow">Open to opportunities</div>
+    <h2 id="cta-title">Looking for an AI engineer who can connect models, systems, and practical use?</h2>
+    <p class="aa-lede">I am interested in full-time roles and technical collaboration in AI systems, applied machine learning, RAG, computer vision, and model evaluation.</p>
+    <div class="aa-actions"><a class="aa-button aa-button-primary" href="/contact/">Start a conversation</a><a class="aa-button" href="/cv/">View professional profile</a></div>
   </section>
 </div>

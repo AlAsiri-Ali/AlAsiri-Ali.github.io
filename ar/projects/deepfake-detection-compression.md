@@ -18,7 +18,7 @@ hide_pagination: true
 share: false
 breadcrumbs: false
 toc_h_min: 2
-image: /assets/images/projects/deepfake-detection-compression.png
+image: /assets/images/projects/webp/deepfake-detection-compression.webp
 ---
 
 {% assign project = site.data.projects_ar | where: "slug", "deepfake-detection-compression" | first %}

@@ -3,7 +3,7 @@ layout: single
 title: "Phishing Email Detection with ML"
 excerpt: "Security-focused email classification workflow comparing TF-IDF features, Random Forest, SVM, and Logistic Regression for phishing detection."
 author_profile: false
-image: /assets/images/projects/phishing-email-detection-ml.png
+image: /assets/images/projects/webp/phishing-email-detection-ml.webp
 lang: en
 dir: ltr
 alternate_url: "/ar/projects/phishing-email-detection-ml/"

@@ -4,7 +4,7 @@ permalink: /ar/projects/phishing-email-detection-ml/
 title: "Phishing Email Detection with ML"
 excerpt: "سير عمل أمني لتصنيف البريد الإلكتروني يقارن TF-IDF وRandom Forest وSVM وLogistic Regression لكشف رسائل التصيد."
 author_profile: false
-image: /assets/images/projects/phishing-email-detection-ml.png
+image: /assets/images/projects/webp/phishing-email-detection-ml.webp
 lang: ar
 dir: rtl
 alternate_url: "/projects/phishing-email-detection-ml/"

@@ -1,7 +1,7 @@
 ---
 title: "Malicious URL Detection with ML"
 excerpt: "Security analytics workflow for malicious URL classification using lexical feature engineering, model comparison, ROC analysis, and precision-recall review."
-image: /assets/images/projects/malicious-url-detection-ml.png
+image: /assets/images/projects/webp/malicious-url-detection-ml.webp
 lang: en
 dir: ltr
 alternate_url: "/ar/projects/malicious-url-detection-ml/"

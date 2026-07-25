@@ -1,6 +1,6 @@
 - title: Frequency-Aware Deepfake Detection
   slug: deepfake-detection-compression
-  image: /assets/images/projects/deepfake-detection-compression.png
+  image: /assets/images/projects/webp/deepfake-detection-compression.webp
   status: Published project
   year: '2026'
   category: Computer Vision & AI Safety
@@ -33,7 +33,7 @@
   date_label: Jun 5, 2026
 - title: GovRAG Copilot
   slug: govrag-copilot
-  image: /assets/images/projects/govrag-copilot.png
+  image: /assets/images/projects/webp/govrag-copilot.webp
   status: Published project
   year: '2026'
   category: Generative AI & RAG
@@ -67,7 +67,7 @@
   date_label: May 9, 2026
 - title: Cashew Leaf Disease Classification
   slug: cashew-leaf-disease-classification
-  image: /assets/images/projects/cashew-leaf-disease-classification.png
+  image: /assets/images/projects/webp/cashew-leaf-disease-classification.webp
   status: Published project
   year: '2026'
   category: Visual Intelligence & Deep Learning
@@ -101,7 +101,7 @@
   date_label: Dec 5, 2025
 - title: PPE Safety Detection
   slug: ppe-safety-detection
-  image: /assets/images/projects/ppe-safety-detection.png
+  image: /assets/images/projects/webp/ppe-safety-detection.webp
   status: Published project
   year: '2026'
   category: Visual Intelligence & Safety Systems
@@ -135,7 +135,7 @@
   date_label: Dec 20, 2025
 - title: Malicious URL Detection with ML
   slug: malicious-url-detection-ml
-  image: /assets/images/projects/malicious-url-detection-ml.png
+  image: /assets/images/projects/webp/malicious-url-detection-ml.webp
   status: Published project
   year: '2026'
   category: Security Analytics & Risk Detection
@@ -192,7 +192,7 @@
     repo: https://github.com/AlAsiri-Ali/android-galaxy-sentiment-analysis-nlp
   public_category: Customer Intelligence & Analytics
   public_summary: Customer-intelligence project focused on extracting sentiment signals, comparing modeling choices, and evaluating text-classification behavior.
-  image: /assets/images/projects/android-galaxy-sentiment-analysis-nlp.png
+  image: /assets/images/projects/webp/android-galaxy-sentiment-analysis-nlp.webp
   public_tags:
   - Customer intelligence
   - Text analytics
@@ -226,7 +226,7 @@
     repo: https://github.com/AlAsiri-Ali/titanic-survival-prediction-ml
   public_category: Data Science & Decision Modeling
   public_summary: Predictive modeling workflow focused on structured data preparation, feature engineering, model comparison, and tradeoff interpretation.
-  image: /assets/images/projects/titanic-survival-prediction-ml.png
+  image: /assets/images/projects/webp/titanic-survival-prediction-ml.webp
   public_tags:
   - Predictive analytics
   - Data preparation
@@ -260,7 +260,7 @@
     repo: https://github.com/AlAsiri-Ali/GomokuMaster
   public_category: Interactive AI & Algorithmic Systems
   public_summary: Interactive AI project focused on strategy search, board evaluation, difficulty control, and playable decision-making.
-  image: /assets/images/projects/gomoku-master.png
+  image: /assets/images/projects/webp/gomoku-master.webp
   public_tags:
   - Interactive AI
   - Search algorithms
@@ -270,7 +270,7 @@
   date_label: May 25, 2025
 - title: Arabic Sentiment AraVec LSTM
   slug: arabic-sentiment-aravec-lstm
-  image: /assets/images/projects/arabic-sentiment-aravec-lstm.png
+  image: /assets/images/projects/webp/arabic-sentiment-aravec-lstm.webp
   status: Published project
   year: '2026'
   category: Customer Intelligence & Text Analytics
@@ -305,7 +305,7 @@
   date_label: May 4, 2025
 - title: SMS Spam Traditional NLP Classification
   slug: sms-spam-traditional-nlp-classification
-  image: /assets/images/projects/sms-spam-traditional-nlp-classification.png
+  image: /assets/images/projects/webp/sms-spam-traditional-nlp-classification.webp
   status: Published project
   year: '2026'
   category: AI Evaluation & Robustness
@@ -340,7 +340,7 @@
   date_label: Mar 24, 2025
 - title: Retail Segmentation & Market Basket Analysis
   slug: retail-segmentation-market-basket
-  image: /assets/images/projects/retail-segmentation-market-basket.png
+  image: /assets/images/projects/webp/retail-segmentation-market-basket.webp
   status: Published project
   year: '2026'
   category: Customer Analytics
@@ -373,7 +373,7 @@
   date_label: May 4, 2026
 - title: Long-Tailed Object Classification with VGG16
   slug: long-tailed-object-classification-vgg16
-  image: /assets/images/projects/long-tailed-object-classification-vgg16.png
+  image: /assets/images/projects/webp/long-tailed-object-classification-vgg16.webp
   status: Published project
   year: '2026'
   category: Visual Intelligence & Deep Learning
@@ -407,7 +407,7 @@
   date_label: Dec 10, 2025
 - title: UCF50 CNN-LSTM Action Recognition
   slug: ucf50-cnn-lstm-action-recognition
-  image: /assets/images/projects/ucf50-cnn-lstm-action-recognition.png
+  image: /assets/images/projects/webp/ucf50-cnn-lstm-action-recognition.webp
   status: Published project
   year: '2026'
   category: Visual Intelligence & Deep Learning
@@ -440,7 +440,7 @@
   date_label: Nov 6, 2025
 - title: Phishing Email Detection with ML
   slug: phishing-email-detection-ml
-  image: /assets/images/projects/phishing-email-detection-ml.png
+  image: /assets/images/projects/webp/phishing-email-detection-ml.webp
   status: Published project
   year: '2026'
   category: AI Evaluation & Robustness
@@ -473,7 +473,7 @@
   date_label: Oct 2, 2025
 - title: Moving Average Backtest with PyFolio
   slug: moving-average-backtest-pyfolio
-  image: /assets/images/projects/moving-average-backtest-pyfolio.png
+  image: /assets/images/projects/webp/moving-average-backtest-pyfolio.webp
   status: Published project
   year: '2026'
   category: Financial ML & Market Analytics
@@ -506,7 +506,7 @@
   date_label: May 13, 2026
 - title: SMS Spam Transformer Classification
   slug: sms-spam-transformer-classification
-  image: /assets/images/projects/sms-spam-transformer-classification.png
+  image: /assets/images/projects/webp/sms-spam-transformer-classification.webp
   status: Published project
   year: '2026'
   category: Language Systems & Model Evaluation
@@ -539,7 +539,7 @@
   date_label: Dec 8, 2025
 - title: Heart Disease DNN Classification
   slug: heart-disease-dnn-classification
-  image: /assets/images/projects/heart-disease-dnn-classification.png
+  image: /assets/images/projects/webp/heart-disease-dnn-classification.webp
   status: Published project
   year: '2026'
   category: Healthcare AI & Model Evaluation
@@ -572,7 +572,7 @@
   date_label: Oct 11, 2025
 - title: CelebA DCGAN Face Generation
   slug: celeba-dcgan-face-generation
-  image: /assets/images/projects/celeba-dcgan-face-generation.png
+  image: /assets/images/projects/webp/celeba-dcgan-face-generation.webp
   status: Published project
   year: '2026'
   category: Generative AI Workflows
@@ -605,7 +605,7 @@
   date_label: Nov 6, 2025
 - title: Animal Faces CNN Classification
   slug: animal-faces-cnn-classification
-  image: /assets/images/projects/animal-faces-cnn-classification.png
+  image: /assets/images/projects/webp/animal-faces-cnn-classification.webp
   status: Published project
   year: '2026'
   category: Visual Intelligence & Deep Learning
@@ -638,7 +638,7 @@
   date_label: Oct 11, 2025
 - title: MNIST ViT vs CNN Comparison
   slug: mnist-vit-cnn-comparison
-  image: /assets/images/projects/mnist-vit-cnn-comparison.png
+  image: /assets/images/projects/webp/mnist-vit-cnn-comparison.webp
   status: Published project
   year: '2026'
   category: Visual Intelligence & Deep Learning
@@ -671,7 +671,7 @@
   date_label: Dec 8, 2025
 - title: SDXL ControlNet Image Workflow
   slug: sdxl-controlnet-image-workflow
-  image: /assets/images/projects/sdxl-controlnet-image-workflow.png
+  image: /assets/images/projects/webp/sdxl-controlnet-image-workflow.webp
   status: Published project
   year: '2026'
   category: Generative Media
@@ -705,7 +705,7 @@
   date_label: Mar 31, 2026
 - title: Asthma RAG Diagnostic Assistant
   slug: asthma-rag-diagnostic-assistant
-  image: /assets/images/projects/asthma-rag-diagnostic-assistant.png
+  image: /assets/images/projects/webp/asthma-rag-diagnostic-assistant.webp
   status: Published project
   year: '2026'
   category: Generative AI & RAG
@@ -738,7 +738,7 @@
   date_label: Mar 9, 2026
 - title: Speech & Music Generation with Transformers
   slug: speech-music-generation-transformers
-  image: /assets/images/projects/speech-music-generation-transformers.png
+  image: /assets/images/projects/webp/speech-music-generation-transformers.webp
   status: Published project
   year: '2026'
   category: Generative Media
@@ -771,7 +771,7 @@
   date_label: May 2, 2026
 - title: OpenCV Image Enhancement & Edge Detection
   slug: opencv-image-enhancement-edge-detection
-  image: /assets/images/projects/opencv-image-enhancement-edge-detection.png
+  image: /assets/images/projects/webp/opencv-image-enhancement-edge-detection.webp
   status: Published project
   year: '2026'
   category: Visual Intelligence & Deep Learning
@@ -805,7 +805,7 @@
   date_label: Nov 7, 2025
 - title: AAPL Regression & Direction Models
   slug: aapl-regression-trading-models
-  image: /assets/images/projects/aapl-regression-trading-models.png
+  image: /assets/images/projects/webp/aapl-regression-trading-models.webp
   status: Published project
   year: '2026'
   category: Financial ML & Market Analytics
@@ -838,7 +838,7 @@
   date_label: Mar 31, 2026
 - title: S&P 500 Market Regime Classification
   slug: sp500-market-regime-classification
-  image: /assets/images/projects/sp500-market-regime-classification.png
+  image: /assets/images/projects/webp/sp500-market-regime-classification.webp
   status: Published project
   year: '2026'
   category: Financial ML & Market Analytics
@@ -871,7 +871,7 @@
   date_label: Mar 31, 2026
 - title: Stock Market EDA with yfinance
   slug: stock-market-eda-yfinance
-  image: /assets/images/projects/stock-market-eda-yfinance.png
+  image: /assets/images/projects/webp/stock-market-eda-yfinance.webp
   status: Published project
   year: '2026'
   category: Financial ML & Market Analytics
@@ -904,7 +904,7 @@
   date_label: Mar 31, 2026
 - title: Breast Cancer Naive Bayes Classification
   slug: breast-cancer-naive-bayes-classification
-  image: /assets/images/projects/breast-cancer-naive-bayes-classification.png
+  image: /assets/images/projects/webp/breast-cancer-naive-bayes-classification.webp
   status: Published project
   year: '2026'
   category: AI Evaluation & Robustness
@@ -938,7 +938,7 @@
   date_label: Mar 7, 2025
 - title: Regex Text Preprocessing NLP
   slug: regex-text-preprocessing-nlp
-  image: /assets/images/projects/regex-text-preprocessing-nlp.png
+  image: /assets/images/projects/webp/regex-text-preprocessing-nlp.webp
   status: Published project
   year: '2026'
   category: Customer Intelligence & Text Analytics

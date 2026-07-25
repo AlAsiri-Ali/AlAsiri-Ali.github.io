@@ -18,7 +18,7 @@ hide_pagination: true
 share: false
 breadcrumbs: false
 toc_h_min: 2
-image: /assets/images/projects/sms-spam-transformer-classification.png
+image: /assets/images/projects/webp/sms-spam-transformer-classification.webp
 ---
 
 {% assign project = site.data.projects_ar | where: "slug", "sms-spam-transformer-classification" | first %}

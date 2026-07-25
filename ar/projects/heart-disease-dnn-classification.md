@@ -18,7 +18,7 @@ hide_pagination: true
 share: false
 breadcrumbs: false
 toc_h_min: 2
-image: /assets/images/projects/heart-disease-dnn-classification.png
+image: /assets/images/projects/webp/heart-disease-dnn-classification.webp
 ---
 
 {% assign project = site.data.projects_ar | where: "slug", "heart-disease-dnn-classification" | first %}

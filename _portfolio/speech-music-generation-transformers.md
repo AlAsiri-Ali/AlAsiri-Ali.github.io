@@ -1,7 +1,7 @@
 ---
 title: "Speech & Music Generation with Transformers"
 excerpt: "Generative audio workflow comparing text-to-speech, expressive speech synthesis, and text-conditioned music generation."
-image: /assets/images/projects/speech-music-generation-transformers.png
+image: /assets/images/projects/webp/speech-music-generation-transformers.webp
 lang: en
 dir: ltr
 alternate_url: "/ar/projects/speech-music-generation-transformers/"

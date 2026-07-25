@@ -1,7 +1,7 @@
 ---
 title: "PPE Safety Detection"
 excerpt: "سير عمل لمراقبة السلامة في مواقع البناء باستخدام كشف بصري فوري، واجهة تفاعلية، تقارير، وطمس وجوه لحماية الخصوصية."
-image: /assets/images/projects/ppe-safety-detection.png
+image: /assets/images/projects/webp/ppe-safety-detection.webp
 lang: ar
 dir: rtl
 alternate_url: "/projects/ppe-safety-detection/"

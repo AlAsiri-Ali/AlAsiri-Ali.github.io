@@ -1,7 +1,7 @@
 ---
 title: "Animal Faces CNN Classification"
 excerpt: "CNN image-classification workflow for animal-face recognition across Cat, Dog, and Wild classes using augmentation, callbacks, and visual evaluation."
-image: /assets/images/projects/animal-faces-cnn-classification.png
+image: /assets/images/projects/webp/animal-faces-cnn-classification.webp
 lang: en
 dir: ltr
 alternate_url: "/ar/projects/animal-faces-cnn-classification/"

@@ -19,9 +19,6 @@
     <link rel="alternate" hreflang="x-default" href="{{ page.url | absolute_url }}">
   {% endif %}
 {% endif %}
-{% if page.url == '/' or page.url == '/ar/' %}
-  <link rel="preload" as="image" href="{{ '/assets/images/homephoto.webp' | relative_url }}" type="image/webp">
-{% endif %}
 <script>
 (function () {
   try {
@@ -33,3 +30,37 @@
 })();
 </script>
 <!-- end custom head snippets -->
+
+{% if page.lang == 'ar' %}{% assign aa_profile_schema = site.data.profile.ar %}{% else %}{% assign aa_profile_schema = site.data.profile.en %}{% endif %}
+<script id="aa-person-schema" type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ aa_profile_schema.name | jsonify }},
+  "url": {{ site.url | append: aa_profile_schema.home | jsonify }},
+  "jobTitle": {{ aa_profile_schema.role | jsonify }},
+  "email": "mailto:{{ aa_profile_schema.email }}",
+  "address": {"@type":"PostalAddress","addressCountry":"SA"},
+  "sameAs": ["https://github.com/AlAsiri-Ali","https://linkedin.com/in/ali-asiri-b85038206","https://x.com/Ali_M_Asiri"]
+}
+</script>
+{% if page.classes contains 'aa-project-page' %}
+{% assign aa_url_parts = page.url | split: '/' %}
+{% assign aa_schema_slug = aa_url_parts | last %}
+{% if page.lang == 'ar' %}
+  {% assign aa_schema_project = site.data.projects_ar | where: 'slug', aa_schema_slug | first %}
+{% else %}
+  {% assign aa_schema_project = site.data.projects | where: 'slug', aa_schema_slug | first %}
+{% endif %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": {{ page.title | jsonify }},
+  "description": {{ page.excerpt | strip_html | jsonify }},
+  "codeRepository": {{ aa_schema_project.links.repo | default: site.repository | jsonify }},
+  "author": {"@type":"Person","name":"Ali AlAsiri"},
+  "programmingLanguage": "Python"
+}
+</script>
+{% endif %}

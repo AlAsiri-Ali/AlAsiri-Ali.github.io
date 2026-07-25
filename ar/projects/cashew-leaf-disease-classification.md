@@ -1,7 +1,7 @@
 ---
 title: "Cashew Leaf Disease Classification"
 excerpt: "سير عمل تصنيف صور زراعية يقارن معماريات CNN بالتعلم النقلي تحت عدم توازن الفئات ويقيّم أداء التعرف على الأمراض."
-image: /assets/images/projects/cashew-leaf-disease-classification.png
+image: /assets/images/projects/webp/cashew-leaf-disease-classification.webp
 lang: ar
 dir: rtl
 alternate_url: "/projects/cashew-leaf-disease-classification/"

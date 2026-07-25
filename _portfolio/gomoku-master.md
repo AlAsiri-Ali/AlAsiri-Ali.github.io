@@ -1,7 +1,7 @@
 ---
 title: "Gomoku Master"
 excerpt: "Interactive strategy-game AI implementation with configurable board sizes, difficulty levels, and search-based decision logic."
-image: /assets/images/projects/gomoku-master.png
+image: /assets/images/projects/webp/gomoku-master.webp
 lang: en
 dir: ltr
 alternate_url: "/ar/projects/gomoku-master/"

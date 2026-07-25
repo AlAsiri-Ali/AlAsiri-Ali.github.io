@@ -1,7 +1,7 @@
 ---
 title: "Regex Text Preprocessing NLP"
 excerpt: "Text-analytics workflow focused on cleaning, normalizing, and preparing noisy language data for downstream analysis."
-image: /assets/images/projects/regex-text-preprocessing-nlp.png
+image: /assets/images/projects/webp/regex-text-preprocessing-nlp.webp
 lang: en
 dir: ltr
 alternate_url: "/ar/projects/regex-text-preprocessing-nlp/"

@@ -11,6 +11,11 @@ classes:
 alternate_url: "/contact/"
 ---
 
+<div class="aa-availability aa-card">
+  <strong>متاح للفرص الوظيفية بدوام كامل</strong>
+  <span>هندسة أنظمة الذكاء الاصطناعي · الذكاء الاصطناعي التطبيقي · تعلم الآلة · RAG · تقييم النماذج</span>
+</div>
+
 <p class="aa-lede">أنا متاح للنقاش الهادف حول أنظمة الذكاء الاصطناعي، تقييم النماذج، مسارات البيانات، الأتمتة الذكية، والتعاون التقني.</p>
 
 <div class="aa-contact-panel">

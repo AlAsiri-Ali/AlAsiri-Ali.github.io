@@ -62,11 +62,10 @@
     </div>
 
     <figure class="aa-project-hero__visual" aria-label="{{ project.title }} visual system diagram">
-      <img src="{{ aa_visual | relative_url }}" alt="" loading="eager">
+      <img src="{{ aa_visual | relative_url }}" alt="{% if aa_is_ar %}صورة توضيحية لمشروع {{ project.title }}{% else %}Visual overview of the {{ project.title }} project{% endif %}" loading="eager" decoding="async" width="1200" height="675">
     </figure>
   </div>
 </section>
-
 
 <div class="aa-project-sharebar" aria-label="{{ aa_share_label }}">
   <div class="aa-project-sharebar__inner">

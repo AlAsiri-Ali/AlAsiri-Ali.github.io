@@ -1,7 +1,7 @@
 ---
 title: "AAPL Regression & Direction Models"
 excerpt: "Supervised learning workflow on Apple stock data comparing next-day price regression with next-day directional classification using technical features."
-image: /assets/images/projects/aapl-regression-trading-models.png
+image: /assets/images/projects/webp/aapl-regression-trading-models.webp
 lang: en
 dir: ltr
 alternate_url: "/ar/projects/aapl-regression-trading-models/"

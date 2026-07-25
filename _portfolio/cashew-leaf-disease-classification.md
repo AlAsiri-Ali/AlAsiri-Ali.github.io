@@ -1,7 +1,7 @@
 ---
 title: "Cashew Leaf Disease Classification"
 excerpt: "Agricultural image-classification workflow comparing transfer-learning CNN architectures under class imbalance and evaluating disease recognition performance."
-image: /assets/images/projects/cashew-leaf-disease-classification.png
+image: /assets/images/projects/webp/cashew-leaf-disease-classification.webp
 lang: en
 dir: ltr
 alternate_url: "/ar/projects/cashew-leaf-disease-classification/"

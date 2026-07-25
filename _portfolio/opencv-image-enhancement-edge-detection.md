@@ -3,7 +3,7 @@ layout: single
 title: "OpenCV Image Enhancement & Edge Detection"
 excerpt: "Classical computer-vision preprocessing workflow using CLAHE, thresholding, Canny edge detection, contour analysis, and video-frame processing."
 author_profile: false
-image: /assets/images/projects/opencv-image-enhancement-edge-detection.png
+image: /assets/images/projects/webp/opencv-image-enhancement-edge-detection.webp
 lang: en
 dir: ltr
 alternate_url: "/ar/projects/opencv-image-enhancement-edge-detection/"

@@ -1,63 +1,55 @@
 ---
 layout: single
 permalink: /ar/cv/
-title: "الملف المهني"
-excerpt: "الملف المهني لعلي العسيري: التعليم، المهارات، واتجاهات العمل في أنظمة الذكاء الاصطناعي."
+title: "السيرة الذاتية"
+excerpt: "الملف المهني والتعليم والخبرة والمشاريع المختارة والقدرات التقنية لعلي العسيري."
 author_profile: false
 lang: ar
 dir: rtl
 alternate_url: "/cv/"
 ---
 
-## الملف المهني
+<div class="aa-cv-header aa-card">
+  <div><div class="aa-eyebrow">مهندس أنظمة ذكاء اصطناعي</div><h2>علي العسيري</h2><p>المملكة العربية السعودية · <a href="mailto:aliasiri.dev@gmail.com">aliasiri.dev@gmail.com</a></p></div>
+  <div class="aa-actions"><a class="aa-button aa-button-primary" href="https://drive.google.com/file/d/1tUsEhE5urM8c5VnqiSdbE4-_r_KTw8ao/view?usp=sharing" target="_blank" rel="noopener noreferrer">عرض السيرة</a><a class="aa-button" href="/ar/contact/">تواصل</a></div>
+</div>
 
-**علي العسيري** — مختص في الذكاء الاصطناعي ونظم المعلومات، أركز على الأنظمة الذكية، تعلم الآلة، مسارات البيانات، تقييم النماذج، وتطبيقات دعم القرار.
+## الملخص المهني
 
-أجمع بين أساس **نظم المعلومات** والدراسة المتقدمة في الذكاء الاصطناعي والعمل في تعلم الآلة. أركز على بناء أنظمة مفيدة، قابلة للقياس، مقيمة بوضوح، وواعية بحدودها العملية.
+مهندس أنظمة ذكاء اصطناعي بخلفية في نظم المعلومات وماجستير مهني في الذكاء الاصطناعي. أركز على أنظمة RAG والرؤية الحاسوبية وتحليلات الأمن وتقييم النماذج بالاعتماد على الأدلة. أبني سير عمل واضحة المدخلات والمخرجات والمقاييس والحدود وسياق القرار.
 
 ## التعليم
 
 <div class="aa-grid aa-grid-2">
-  <div class="aa-card">
-    <h3>الماجستير المهني في الذكاء الاصطناعي</h3>
-    <p><strong>جامعة الملك عبدالعزيز</strong>، كلية الحاسبات وتقنية المعلومات</p>
-    <p><strong>التقدير:</strong> ممتاز — المعدل 4.98</p>
-    <p><strong>التخرج:</strong> 22 يونيو 2026</p>
-  </div>
-  <div class="aa-card">
-    <h3>بكالوريوس نظم المعلومات</h3>
-    <p><strong>جامعة الملك خالد</strong>، كلية العلوم والآداب</p>
-    <p><strong>التخرج:</strong> 26 يوليو 2020</p>
-    <p><strong>الأساس:</strong> تحليل النظم، قواعد البيانات، مواءمة الأعمال وتقنية المعلومات، وإدارة المعلومات.</p>
-  </div>
+  <div class="aa-card"><h3>الماجستير المهني في الذكاء الاصطناعي</h3><p><strong>جامعة الملك عبدالعزيز</strong>، كلية الحاسبات وتقنية المعلومات</p><p><strong>2024-2026 · المعدل 4.98/5.00 · ممتاز</strong></p></div>
+  <div class="aa-card"><h3>بكالوريوس نظم المعلومات</h3><p><strong>جامعة الملك خالد</strong></p><p><strong>2015-2020</strong></p><p>تحليل النظم وقواعد البيانات وإدارة المعلومات ومواءمة الأعمال مع التقنية.</p></div>
 </div>
 
-## المهارات التقنية
+## الخبرة
 
-{% for group in site.data.skills_ar %}
-### {{ group.group }}
-<div class="aa-chip-row">
-{% for item in group.items %}<span class="aa-chip">{{ item }}</span>{% endfor %}
-</div>
-{% endfor %}
+<div class="aa-card"><h3>موظف عمليات عملاء ونقاط بيع</h3><p><strong>2021-2023</strong></p><p>إدارة معاملات وخدمات مباشرة للعملاء مع الالتزام بالدقة والتواصل والمسؤولية والانضباط في الورديات.</p></div>
 
-## المسارات المناسبة
+## مشاريع مختارة
 
-<div class="aa-card">
-  <div class="aa-chip-row">
-    <span class="aa-chip">AI Engineer</span>
-    <span class="aa-chip">Machine Learning Engineer</span>
-    <span class="aa-chip">Data Scientist</span>
-    <span class="aa-chip">AI Systems Engineer</span>
-    <span class="aa-chip">Model Evaluation Analyst</span>
-    <span class="aa-chip">Information Systems + AI</span>
-  </div>
-</div>
+- **GovRAG Copilot:** نظام RAG تنظيمي باسترجاع هجين واستشهادات على مستوى المواد وسير عمل امتثال منظمة واختبارات ومخرجات بصرية.
+- **كشف التزييف العميق الواعي بالتردد:** مقارنة نموذج مكاني ونموذج هجين يعتمد DCT تحت ضغط H.264 وتقييم عبر مجموعة بيانات خارجية.
+- **كشف معدات السلامة PPE:** نظام YOLOv8 للرصد الفوري وتقارير Streamlit وتمويه الوجوه لحماية الخصوصية.
+- **كشف الروابط الخبيثة:** مصنف أمني بخصائص لغوية وبنيوية على 651,191 رابطًا، مع ROC AUC بلغ 0.934 لأفضل نموذج مذكور.
 
-## المحفظة
+## القدرات التقنية
 
-تعرض صفحة المشاريع أعمالًا مختارة تعكس اهتمامي ببناء أنظمة ذكاء اصطناعي قابلة للقياس ومرتبطة بمشكلات عملية.
+| المجال | الأدوات والدليل |
+|---|---|
+| أنظمة الذكاء الاصطناعي وRAG | Python، مسارات استرجاع، BM25، TF-IDF، Qwen، Gradio، دعم العربية والإنجليزية |
+| تعلم الآلة والتقييم | Scikit-learn، PyTorch، خطوط أساس، بذور متكررة، مصفوفات ارتباك، ROC/PR، مقاييس الفئات |
+| الرؤية الحاسوبية | PyTorch، YOLOv8، OpenCV، نقل التعلم، خصائص DCT، اختبارات المتانة |
+| مسارات البيانات | Pandas، هندسة الخصائص، تقسيم البيانات، معالجة عدم التوازن، تنظيم التجارب |
+| التنفيذ | Git/GitHub، اختبارات آلية، نماذج Streamlit وGradio، مستودعات منظمة، توثيق تقني |
 
-## التواصل
+## اللغات
 
-للتعاون أو النقاش حول المشاريع، يمكن التواصل عبر [صفحة التواصل](/ar/contact/) أو البريد الإلكتروني <a href="mailto:aliasiri.dev@gmail.com">aliasiri.dev@gmail.com</a>.
+العربية - اللغة الأم · الإنجليزية - كفاءة مهنية تقنية
+
+## الروابط
+
+[GitHub](https://github.com/AlAsiri-Ali) · [LinkedIn](https://linkedin.com/in/ali-asiri-b85038206) · [المشاريع](/ar/projects/) · [التواصل](/ar/contact/)

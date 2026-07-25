@@ -1,7 +1,7 @@
 ---
 title: "GovRAG Copilot"
 excerpt: "Evidence-grounded bilingual RAG assistant for Saudi PDPL and SDAIA guidance with retrieval, citations, drafting, gap detection, and visual outputs."
-image: /assets/images/projects/govrag-copilot.png
+image: /assets/images/projects/webp/govrag-copilot.webp
 lang: en
 dir: ltr
 alternate_url: "/ar/projects/govrag-copilot/"

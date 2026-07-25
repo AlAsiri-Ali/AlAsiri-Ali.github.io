@@ -6,11 +6,18 @@ categories: [personal, ai]
 tags: [artificial-intelligence, learning, data-science]
 excerpt: "A personal introduction to the blog and the learning journey behind it."
 author_profile: false
+read_time: false
+share: false
+related: false
+toc: false
+toc_sticky: false
+hide_meta_footer: true
+hide_pagination: true
 lang: en
 dir: ltr
 alternate_url: "/ar/writing/ai-journey/"
 header:
-  teaser: /assets/images/posts/ai-systems-journey.png
+  teaser: /assets/images/posts/ai-systems-journey.webp
 ---
 
 Hello and welcome.

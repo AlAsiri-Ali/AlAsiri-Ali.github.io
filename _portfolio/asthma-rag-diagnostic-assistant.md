@@ -1,7 +1,7 @@
 ---
 title: "Asthma RAG Diagnostic Assistant"
 excerpt: "Controlled RAG experiment for asthma-related reasoning using a custom knowledge base, FAISS retrieval, prompt variants, and text-generation metrics."
-image: /assets/images/projects/asthma-rag-diagnostic-assistant.png
+image: /assets/images/projects/webp/asthma-rag-diagnostic-assistant.webp
 lang: en
 dir: ltr
 alternate_url: "/ar/projects/asthma-rag-diagnostic-assistant/"

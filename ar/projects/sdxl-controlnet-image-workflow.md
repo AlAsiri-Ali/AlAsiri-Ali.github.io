@@ -1,7 +1,7 @@
 ---
 title: "SDXL ControlNet Image Workflow"
 excerpt: "سير عمل لتوليد الصور يقارن بين SDXL، التحرير الدلالي عبر Img2Img، توجيه ControlNet Canny، وتقييم LPIPS/PSNR."
-image: /assets/images/projects/sdxl-controlnet-image-workflow.png
+image: /assets/images/projects/webp/sdxl-controlnet-image-workflow.webp
 lang: ar
 dir: rtl
 alternate_url: "/projects/sdxl-controlnet-image-workflow/"

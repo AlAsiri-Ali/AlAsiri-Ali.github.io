@@ -1,7 +1,7 @@
 ---
 title: "Speech & Music Generation with Transformers"
 excerpt: "سير عمل لتجارب صوتية توليدية يقارن السرد الصوتي، الكلام التعبيري، والموسيقى الموجهة بالنص."
-image: /assets/images/projects/speech-music-generation-transformers.png
+image: /assets/images/projects/webp/speech-music-generation-transformers.webp
 lang: ar
 dir: rtl
 alternate_url: "/projects/speech-music-generation-transformers/"

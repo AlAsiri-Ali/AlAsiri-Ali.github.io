@@ -1,7 +1,7 @@
 ---
 title: "CelebA DCGAN Face Generation"
 excerpt: "DCGAN workflow for synthetic face-image generation using generator-discriminator training, generated samples, checkpoints, and training-behavior analysis."
-image: /assets/images/projects/celeba-dcgan-face-generation.png
+image: /assets/images/projects/webp/celeba-dcgan-face-generation.webp
 lang: en
 dir: ltr
 alternate_url: "/ar/projects/celeba-dcgan-face-generation/"

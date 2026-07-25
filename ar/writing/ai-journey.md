@@ -4,10 +4,17 @@ permalink: /ar/writing/ai-journey/
 title: "بداية رحلتي في الذكاء الاصطناعي: لماذا بدأت هذه المدونة؟"
 excerpt: "تدوينة افتتاحية عن التعلم، مشاركة المعرفة، والرحلة في الذكاء الاصطناعي."
 author_profile: false
+read_time: false
+share: false
+related: false
+toc: false
+toc_sticky: false
+hide_meta_footer: true
+hide_pagination: true
 lang: ar
 dir: rtl
 header:
-  teaser: /assets/images/posts/ai-systems-journey.png
+  teaser: /assets/images/posts/ai-systems-journey.webp
 alternate_url: "/personal/ai/welcome-to-my-ai-journey/"
 ---
 

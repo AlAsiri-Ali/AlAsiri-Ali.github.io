@@ -1,7 +1,7 @@
 ---
 title: "PPE Safety Detection"
 excerpt: "Real-time safety monitoring workflow for construction sites using object detection, interactive analysis, reporting, and privacy-aware face blurring."
-image: /assets/images/projects/ppe-safety-detection.png
+image: /assets/images/projects/webp/ppe-safety-detection.webp
 lang: en
 dir: ltr
 alternate_url: "/ar/projects/ppe-safety-detection/"

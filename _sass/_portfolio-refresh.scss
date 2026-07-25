@@ -1,0 +1,29 @@
+/* Focused homepage, CV, and contact-page refinements. */
+.aa-hero--focused .aa-hero-inner { max-width: 1120px; }
+.aa-hero--focused h1 { max-width: 900px; }
+.aa-actions--center { justify-content: center; margin-top: 1.5rem; }
+.aa-home-projects .aa-project-card { height: 100%; }
+.aa-home-projects .aa-project-body p { min-height: 5.8em; }
+
+.aa-cv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.aa-cv-header h2 { margin: .25rem 0; }
+.aa-availability {
+  display: grid;
+  gap: .25rem;
+  margin-bottom: 1.5rem;
+  border-inline-start: 4px solid #2454d6;
+}
+.aa-availability span { color: var(--aa-muted, #59677c); }
+
+@media (max-width: 760px) {
+  .aa-cv-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

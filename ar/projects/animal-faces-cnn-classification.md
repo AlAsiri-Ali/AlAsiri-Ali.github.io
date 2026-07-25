@@ -18,7 +18,7 @@ hide_pagination: true
 share: false
 breadcrumbs: false
 toc_h_min: 2
-image: /assets/images/projects/animal-faces-cnn-classification.png
+image: /assets/images/projects/webp/animal-faces-cnn-classification.webp
 ---
 
 {% assign project = site.data.projects_ar | where: "slug", "animal-faces-cnn-classification" | first %}

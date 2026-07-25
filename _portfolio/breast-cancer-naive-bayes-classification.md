@@ -1,7 +1,7 @@
 ---
 title: "Breast Cancer Naive Bayes Classification"
 excerpt: "Health-data classification workflow focused on diagnostic feature analysis, baseline modeling, and careful evaluation of class-level behavior."
-image: /assets/images/projects/breast-cancer-naive-bayes-classification.png
+image: /assets/images/projects/webp/breast-cancer-naive-bayes-classification.webp
 lang: en
 dir: ltr
 alternate_url: "/ar/projects/breast-cancer-naive-bayes-classification/"

@@ -1,7 +1,7 @@
 ---
 title: "Malicious URL Detection with ML"
 excerpt: "سير عمل تحليلات أمنية لتصنيف الروابط الخبيثة باستخدام هندسة خصائص نصية، مقارنة نماذج، وتحليل ROC وprecision-recall."
-image: /assets/images/projects/malicious-url-detection-ml.png
+image: /assets/images/projects/webp/malicious-url-detection-ml.webp
 lang: ar
 dir: rtl
 alternate_url: "/projects/malicious-url-detection-ml/"

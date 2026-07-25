@@ -1,7 +1,7 @@
 ---
 title: "SMS Spam Transformer Classification"
 excerpt: "Transformer-based SMS spam-classification workflow comparing zero-shot classification, fine-tuned BERT, few-shot BERT, and Flan-T5 prompting."
-image: /assets/images/projects/sms-spam-transformer-classification.png
+image: /assets/images/projects/webp/sms-spam-transformer-classification.webp
 lang: en
 dir: ltr
 alternate_url: "/ar/projects/sms-spam-transformer-classification/"

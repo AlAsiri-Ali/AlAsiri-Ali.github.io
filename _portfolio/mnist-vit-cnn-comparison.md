@@ -1,7 +1,7 @@
 ---
 title: "MNIST ViT vs CNN Comparison"
 excerpt: "Image-classification comparison between a fine-tuned Vision Transformer and a lightweight CNN baseline with accuracy, runtime, and confusion-matrix analysis."
-image: /assets/images/projects/mnist-vit-cnn-comparison.png
+image: /assets/images/projects/webp/mnist-vit-cnn-comparison.webp
 lang: en
 dir: ltr
 alternate_url: "/ar/projects/mnist-vit-cnn-comparison/"

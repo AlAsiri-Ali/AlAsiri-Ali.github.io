@@ -7,10 +7,18 @@ categories:
   - Saudi Arabia
 permalink: /artificial-intelligence/saudi-arabia/saudi-of-ambition/
 excerpt: "A reflection on Saudi Arabia’s national AI ambition, digital transformation, and locally grounded innovation."
+read_time: false
+share: false
+related: false
+toc: false
+toc_sticky: false
+hide_meta_footer: true
+hide_pagination: true
 lang: en
 dir: ltr
+alternate_url: "/ar/writing/saudi-ai-ambition/"
 header:
-  teaser: /assets/images/posts/saudi-ambition.jpg
+  teaser: /assets/images/posts/saudi-ambition.webp
 ---
 
 Have you ever wondered how a nation can redraw its future in only a few years?

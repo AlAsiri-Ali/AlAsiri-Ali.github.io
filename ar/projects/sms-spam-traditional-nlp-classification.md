@@ -1,7 +1,7 @@
 ---
 title: "تصنيف رسائل SMS المزعجة بنماذج NLP تقليدية"
 excerpt: "سير عمل لتصنيف النصوص يركز على اختيارات التمثيل، مقارنة النماذج، عدم توازن الفئات، ومفاضلات التقييم."
-image: /assets/images/projects/sms-spam-traditional-nlp-classification.png
+image: /assets/images/projects/webp/sms-spam-traditional-nlp-classification.webp
 lang: ar
 dir: rtl
 permalink: /ar/projects/sms-spam-traditional-nlp-classification/

@@ -4,7 +4,7 @@ permalink: /ar/projects/long-tailed-object-classification-vgg16/
 title: "Long-Tailed Object Classification with VGG16"
 excerpt: "سير عمل تصنيف بصري يقارن HOG+SVM مع VGG16 بالتعلم النقلي والضبط وfine-tuning على صور غير متوازنة."
 author_profile: false
-image: /assets/images/projects/long-tailed-object-classification-vgg16.png
+image: /assets/images/projects/webp/long-tailed-object-classification-vgg16.webp
 lang: ar
 dir: rtl
 alternate_url: "/projects/long-tailed-object-classification-vgg16/"

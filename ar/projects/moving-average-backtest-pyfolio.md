@@ -1,7 +1,7 @@
 ---
 title: "Moving Average Backtest with PyFolio"
 excerpt: "سير عمل لاختبار استراتيجية تقاطع متوسطات 50/200 على سهم AAPL باستخدام Backtrader وتحليل مخاطر بأسلوب PyFolio."
-image: /assets/images/projects/moving-average-backtest-pyfolio.png
+image: /assets/images/projects/webp/moving-average-backtest-pyfolio.webp
 lang: ar
 dir: rtl
 alternate_url: "/projects/moving-average-backtest-pyfolio/"

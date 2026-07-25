@@ -1,7 +1,7 @@
 ---
 title: "Android Galaxy Sentiment Analysis"
 excerpt: "سير عمل لتحليل مشاعر العملاء يقارن تمثيلات النصوص والنماذج التقليدية ونموذجًا تسلسليًا عصبيًا على تعليقات مرتبطة بالمنتجات."
-image: /assets/images/projects/android-galaxy-sentiment-analysis-nlp.png
+image: /assets/images/projects/webp/android-galaxy-sentiment-analysis-nlp.webp
 lang: ar
 dir: rtl
 alternate_url: "/projects/android-galaxy-sentiment-analysis-nlp/"

@@ -1,7 +1,7 @@
 ---
 title: "معالجة النصوص باستخدام Regex وNLP"
 excerpt: "سير عمل لتحليل النصوص يركز على تنظيف اللغة غير المنظمة وتطبيعها وتجهيزها للتحليل أو النمذجة اللاحقة."
-image: /assets/images/projects/regex-text-preprocessing-nlp.png
+image: /assets/images/projects/webp/regex-text-preprocessing-nlp.webp
 lang: ar
 dir: rtl
 permalink: /ar/projects/regex-text-preprocessing-nlp/
